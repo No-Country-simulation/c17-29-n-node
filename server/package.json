@@ -1,8 +1,11 @@
 {
+  "$schema": "https://json.schemastore.org/package",
   "name": "server",
+  "author": "No-country-Back-c17-29-ft-node-react",
+  "homepage": "https://github.com/No-Country/c17-29-n-node",
   "version": "1.0.0",
+  "license": "MIT",
   "description": "Api del equipo No-country-c17-29-ft-node-react",
-  "main": "index.js",
   "keywords": [
     "Api",
     "Viajes",
@@ -16,17 +19,23 @@
     "Docs",
     "Web"
   ],
-  "engines": {
-    "node": ">=20.0.0"
+  "bugs": {
+    "url": "https://github.com/No-Country/c17-29-n-node"
   },
-  "homepage": "https://github.com/No-Country/c17-29-n-node",
-  "author": "No-country-Back-c17-29-ft-node-react",
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/No-Country/c17-29-n-node.git"
+  },
+  "main": "index.js",
+  "engines": {
+    "node": ">=18.x",
+    "npm": ">=9.x"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@vercel/node": "^16.13.0",
+    "@vercel/node": "^3.0.25",
     "bcrypt": "^5.1.1",
     "connect-mongo": "^5.1.0",
     "cookie-parse": "^0.4.0",
