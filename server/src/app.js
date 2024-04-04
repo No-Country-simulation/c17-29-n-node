@@ -17,9 +17,8 @@ const PORT = process.env.PORT || 3000;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const root = join(__dirname, "/assets/ico", "favicon.ico");
-config()
 
-// TODO: hola
+config()
 
 app.use(express.json());
 app.use(express.urlencoded({ extends: true }));
