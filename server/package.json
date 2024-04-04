@@ -1,15 +1,62 @@
 {
+  "$schema": "https://json.schemastore.org/package",
   "name": "server",
+  "author": "No-country-Back-c17-29-ft-node-react",
+  "homepage": "https://github.com/No-Country/c17-29-n-node",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "license": "MIT",
+  "description": "Api del equipo No-country-c17-29-ft-node-react",
+  "keywords": [
+    "Api",
+    "Viajes",
+    "Backend",
+    "Express",
+    "Node",
+    "TypeScript",
+    "Swagger",
+    "Swagger-ui",
+    "Documentation",
+    "Docs",
+    "Web"
+  ],
+  "bugs": {
+    "url": "https://github.com/No-Country/c17-29-n-node"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/No-Country/c17-29-n-node.git"
+  },
+  "main": "index.js",
+  "engines": {
+    "node": ">=18.x",
+    "npm": ">=9.x"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js",
+    "dev": "node --watch src/app.js",
+    "dev-start": "nodemon src/app.js"
+  },
   "dependencies": {
-    "express": "^4.19.2"
+    "@vercel/node": "^3.0.26",
+    "bcrypt": "^5.1.1",
+    "connect-mongo": "^5.1.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "jws": "^4.0.0",
+    "mongoose": "^8.3.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "passport": "^0.7.0",
+    "serve-favicon": "^2.5.0",
+    "nodemon": "^3.1.0"
+  },
+  "devDependencies": {
+    "husky": "^9.0.11",
+    "node-cron": "^3.0.3"
   }
 }
