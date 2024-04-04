@@ -11,4 +11,15 @@ export const createUserService = async (payload) => {
 
 export const getUserByIdService = async (id) => {
   return await userModel.findById(id);
+};
+
+export const editUserService = async (id, payload) => {
+  const options = {
+    new: true
+  };
+  return await userModel.findByIdAndUpdate(id, payload, options);
+};
+
+export const deleteUserService = async (id) => {
+  return await userModel.findByIdAndDelete(id);
 }
