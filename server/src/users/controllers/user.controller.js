@@ -1,8 +1,10 @@
+import { createUserService, getAllUsersService, getUserByIdService } from "../services/user.services.js";
+
 export const postUser = async (req, res) => {
   try {
     //-- Get the payload from the body in order to use it as a param in the post user service
     const payload = req.body;
-    //-- Waiting for the service to post a new user
+    await createUserService(payload);
     res.status(201).json(payload);
   } catch (error) {
     res.status(500).json(error)
@@ -11,8 +13,7 @@ export const postUser = async (req, res) => {
 
 export const getUsers = async (req, res) => {
   try {
-    //-- Waiting for the service to set servResponse
-    const servResponse = 'test user2';
+    const servResponse = await getAllUsersService();
     res.status(200).json(servResponse);
   } catch (error) {
     res.status(500).json(error);
@@ -23,8 +24,7 @@ export const getUserById = async (req, res) => {
   try {
     //-- get ID from the url params in order to use it as a param in the service function
     const { id } = req.params;
-    //-- Waiting for the service to set servResponse
-    const servResponse = `test(${id})`;
+    const servResponse = await getUserByIdService(id);
     !servResponse ? res.status(404).json('user not found') : res.status(200).json(servResponse);
   } catch (error) {
     res.status(500).json(error);
