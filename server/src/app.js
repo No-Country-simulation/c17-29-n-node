@@ -19,6 +19,8 @@ const __dirname = dirname(__filename);
 const root = join(__dirname, "/assets/ico", "favicon.ico");
 config()
 
+// TODO: hola
+
 app.use(express.json());
 app.use(express.urlencoded({ extends: true }));
 app.use(logger("dev"));
