@@ -1,12 +1,1 @@
-# ingore
 .lh
-.tmp
-.idea
-.env*
-.npm
-.vscode
-.nyc_output
-dist
-coverage
-node_modules
-package-lock.json
