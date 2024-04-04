@@ -10,6 +10,8 @@ import { dirname, join } from "path";
 import { connectDB } from "./database/db.js";
 import { config } from "dotenv";
 
+
+
 // TODO: Implement route creation and CRUD API logic
 
 const app = express();
