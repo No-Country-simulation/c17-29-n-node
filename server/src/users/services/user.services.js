@@ -13,6 +13,10 @@ export const getUserByIdService = async (id) => {
   return await userModel.findById(id);
 };
 
+export const getUserBy = (param) => {
+  return userModel.findOne(param)
+}; //agregado por agustin para el login
+
 export const editUserService = async (id, payload) => {
   const options = {
     new: true

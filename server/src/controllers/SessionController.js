@@ -1,18 +1,20 @@
-//hacer importacion del dao, manager o servicio que trae los metodos para la db.
 //hacer importacion de bcrypt en donde sea que se guarde.
+import { createUserService, getUserBy } from "../users/services/user.services.js"
+import { createHash, validatePassword } from "../utils/bcrypt.js"
+import jwt from 'jsonwebtoken'
 
 const register = async (req, res) => {
-    const { name, email, password, age, phoneNumber } = req.body //Son los campos con los que Luis armo el schema, despues vemos si se lo pedimos al usuario aca o luego de registrarse.
+    const { name, email, password, age, phoneNumber } = req.body
 
-    if (!name || !email || !password || !age || !phoneNumber) {
+    if (!email || !password) {
         return "Incomplete Values"
     }
+    const hashedPassword = await createHash(password)
+    const newUser = { name, email, password: hashedPassword, age, phoneNumber }
 
-    const newUser = { name, email, password, age, phoneNumber }
-
-    const result = await userDao / userManager.createUser(newUser)//aca llamamos a la db ya sea a un servicio que llama a la db o al manager directo de la db.
-    return result
-
+    const result = await createUserService(newUser)
+    // console.log(result)
+    return res.send(result)
 
 }
 
@@ -23,13 +25,28 @@ const login = async (req, res) => {
         return "Incomplete Values"
     }
 
-    const user = await userDao / userManager.getUserBY({ email })
+    const user = await getUserBy({ email })
 
     if (!user) {
         return "User doesn't exist / Incorrect Credentials"
     }
-    if ({ password } != user.password) {
-        return "Incorrect Password / Incorrect Credentials"
+    const isValidPassword = await validatePassword(password, user.password)
+    if (!isValidPassword) {
+        return res.send("Incorrect Password / Incorrect Credentials")
     }
-    return res.send({ status: "Success", message: 'Logged in' })
+    const token = jwt.sign(
+        {
+            id: user._id,
+            email: user.email,
+            role: user.role,
+        }, 'secretjwt', { expiresIn: '1h' });
+
+    return res.send({ status: "Success", token })
 }
+
+const profile = async (req, res) => {
+    console.log("Your profile!")
+    res.send(req.user)
+}
+
+export { register, login, profile }
