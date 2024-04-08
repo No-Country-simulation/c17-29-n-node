@@ -8,6 +8,7 @@ import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 import { connectDB } from "./shared/database/db.js";
 import { config } from "dotenv";
+import { controller, middleware } from "./config/sawgger/swagger.config.js";
 
 // TODO: Implement route creation and CRUD API logic
 
@@ -23,13 +24,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extends: true }));
 app.use(logger("dev"));
 app.use(cookieParser());
-
 app.use(favicon(root));
+app.use("/docs", middleware, controller);
+app.use(appRouter);
+
 app.post("/file", uploader.single("myFile"), (req, res) => {
   res.send("Image uploaded");
 });
-
-app.use(appRouter);
 
 app.listen(PORT, (err) => {
   if (err) console.log(err);
