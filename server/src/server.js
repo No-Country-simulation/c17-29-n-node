@@ -1,5 +1,4 @@
 import express from "express";
-
 import logger from "morgan";
 import cookieParser from "cookie-parser";
 import favicon from 'serve-favicon';
@@ -9,8 +8,6 @@ import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 import { connectDB } from "./shared/database/db.js";
 import { config } from "dotenv";
-
-
 
 // TODO: Implement route creation and CRUD API logic
 
