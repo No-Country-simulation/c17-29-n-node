@@ -24,7 +24,6 @@
  *          type: string
  *          description: time up
  *        data:
- *          type: array
  *          description: data
  *          type: schemas/data
  *          $ref: '#/components/schemas/data'

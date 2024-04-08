@@ -41,7 +41,7 @@ const swaggerConfig = {
           basePath: {
             enum: [
               "",
-              "/api"
+              "api"
             ],
             default: "",
             description: "this value is assigned by the service provider",
