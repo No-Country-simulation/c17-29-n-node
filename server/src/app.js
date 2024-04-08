@@ -4,10 +4,10 @@ import logger from "morgan";
 import cookieParser from "cookie-parser";
 import favicon from 'serve-favicon';
 import appRouter from "./routers/index.js";
-import { uploader } from "./utils/multer.js";
+import { uploader } from "./shared/multer/multer.js";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
-import { connectDB } from "./database/db.js";
+import { connectDB } from "./shared/database/db.js";
 import { config } from "dotenv";
 
 
@@ -36,6 +36,6 @@ app.use(appRouter);
 
 app.listen(PORT, (err) => {
   if (err) console.log(err);
-  console.log(`✅ Server 🆗 is running 💯 on http://localhost:${PORT}`);
+  console.log(`✅ Server 🆗 is running 💯 on http://localhost:${PORT}/docs`);
   connectDB();
 });

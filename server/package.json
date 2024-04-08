@@ -12,7 +12,7 @@
     "Backend",
     "Express",
     "Node",
-    "TypeScript",
+    "JavaScript",
     "Swagger",
     "Swagger-ui",
     "Documentation",
@@ -51,9 +51,12 @@
     "mongoose": "^8.3.0",
     "morgan": "^1.10.0",
     "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.1.0",
     "passport": "^0.7.0",
     "serve-favicon": "^2.5.0",
-    "nodemon": "^3.1.0"
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-themes": "^1.4.3",
+    "swagger-ui-express": "^5.0.0"
   },
   "devDependencies": {
     "husky": "^9.0.11",
