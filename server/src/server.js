@@ -25,7 +25,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extends: true }));
 app.use(logger("dev"));
 app.use(cookieParser());
-a pp.use(favicon(root));
+app.use(favicon(root));
 app.post("/file", uploader.single("myFile"), (req, res) => {
   res.send("Image uploaded");
 });
