@@ -20,12 +20,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extends: true }));
 app.use(logger("dev"));
 //app.use(cookieParser());
+app.post("/file", uploader.single("myFile"), (req, res) => {
+  res.send("Image uploaded");
 app.use(favicon(root));
 app.use("/docs", middleware, controller);
 app.use(appRouter);
 
-app.post("/file", uploader.single("myFile"), (req, res) => {
-  res.send("Image uploaded");
 });
 
 app.listen(PORT, (err) => {
