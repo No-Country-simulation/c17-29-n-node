@@ -3,12 +3,12 @@ import { config } from "dotenv";
 config();
 const PORT = process.env.PORT || 3000;
 
-export const getStart = Router();
-getStart.get("/", (req, res) => {
+export const getInvalid= Router();
+getInvalid.get("/", (req, res) => {
   res.status(200).json({
     uptime: `${process.uptime()}`,
     data: {
-      msg: `✅ Api 🆗 online 💯 % ✨`,
+      msg: `💀 Invalid route ☠️.`,
     },
     timestamp: `${Date.now()}`,
   });

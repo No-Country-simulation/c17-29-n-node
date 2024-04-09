@@ -25,6 +25,19 @@
  *        createdAt: 2021-01-01T00:00:00.000Z
  *        updateAt: 2021-01-01T00:00:00.000Z
  *
+ *    Data:
+ *      description: The data entity
+ *      type: object
+ *      properties:
+ *        msg:
+ *          type: object
+ *          description: message
+ *      required:
+ *      notRequired:
+ *      example:
+ *        data:
+ *          msg: message.
+ *
  *    NotFound:
  *      type: object
  *      description: Not found

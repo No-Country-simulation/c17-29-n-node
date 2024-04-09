@@ -3,9 +3,8 @@
  *  @swagger
  * components:
  *  schemas:
- *
- *    Start:
- *      description: The user entity
+ *    Invalid:
+ *      description: The Invalid Router
  *      type: object
  *      properties:
  *        uptime:
@@ -21,18 +20,19 @@
  *      example:
  *        uptime: 264.0613527,
  *        data:
- *           msg: ✅ Api 🆗 online 💯 % ✨
+ *          msg: 💀 Ruta no valida ☠️.
  *        timestamp: 1712613566149
  */
 
 /**
  * @swagger
- *  /start:
+ *  /*:
  *    get:
- *      tags: [Start Route]
- *      summary: start api.
+ *      tags: [Invalid Route]
+ *      summary:
+ *        the Invalid router api.
  *      description:
- *        Start api.
+ *        the Invalid router api.
  *      responses:
  *        200:
  *          description: Success
@@ -41,7 +41,7 @@
  *              schema:
  *                type: array
  *                items:
- *                  $ref: '#/components/schemas/Start'
+ *                  $ref: '#/components/schemas/Invalid'
  *        404:
  *          description: Not Found
  *          content:
