@@ -26,11 +26,11 @@ app.use(logger("dev"));
 app.use(cookieParser());
 app.use(favicon(root));
 
-app.use(appRouter);
-
 app.post("/file", uploader.single("myFile"), (req, res) => {
   res.send("Image uploaded");
 });
+
+app.use(appRouter);
 
 app.listen(PORT, (err) => {
   if (err) console.log(err);
