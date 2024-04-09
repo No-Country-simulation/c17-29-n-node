@@ -27,6 +27,10 @@
     "url": "https://github.com/No-Country/c17-29-n-node.git"
   },
   "main": " src/server.js",
+  "engines": {
+    "node": ">=18.x",
+    "npm": ">=9.x"
+  },
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

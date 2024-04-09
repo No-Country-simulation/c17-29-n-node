@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { getStart } from "../controller/start.controller.js";
+import { start } from "../controller/start.controller.js";
 
-export const start = Router();
+export const startRouter = Router();
 
-start.use("/start",getStart);
+startRouter.get("/", start);

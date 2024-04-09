@@ -1,15 +1,11 @@
-import { Router } from "express";
-import { config } from "dotenv";
-config();
-const PORT = process.env.PORT || 3000;
+import { getStart } from "../services/start.services.js";
 
-export const getStart = Router();
-getStart.get("/", (req, res) => {
-  res.status(200).json({
-    uptime: `${process.uptime()}`,
-    data: {
-      msg: `✅ Api 🆗 online 💯 % ✨`,
-    },
-    timestamp: `${Date.now()}`,
-  });
-});
+
+export const start = async (req, res) => {
+  try {
+    const startResponse =await getStart();
+    res.status(200).json(startResponse);
+  } catch (error) {
+    res.status(500).json(error)
+  }
+};

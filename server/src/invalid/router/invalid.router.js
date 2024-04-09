@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { getInvalid } from "../controller/Invalid.controller.js";
+import { invalid } from "../controller/invalid.controller.js";
 
-export const invalid = Router();
+export const invalidRouter = Router();
 
-invalid.use("*", getInvalid);
+invalidRouter.get("*", invalid);
