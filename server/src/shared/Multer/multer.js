@@ -2,12 +2,12 @@ import multer from 'multer'
 import { fileURLToPath } from 'url'
 import { dirname } from 'path'
 
-export const __filename = fileURLToPath(import.meta.url)
-export const __dirname = dirname(__filename)
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
 
 const storage = multer.diskStorage({
   destination: function (req, file, callback) {
-    callback(null, `${__dirname}/public/image`)
+    callback(null, `${__dirname}/assets/img`)
   },
   filename: function (req, file, callback) {
     callback(null, `${Date.now()}-${file.originalname}`)
