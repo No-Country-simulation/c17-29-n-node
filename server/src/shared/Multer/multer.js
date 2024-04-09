@@ -1,9 +1,13 @@
 import multer from "multer";
-import { dirNamePath } from "../dirNamePath/dirNamePath.js";
+import { dirname, } from "path";
+import { fileURLToPath } from "url";
 
 const storage = multer.diskStorage({
   destination: function (req, file, callback) {
-    callback(null, `${dirNamePath}/assets/img/posts`);
+    callback(
+      null,
+      `${dirname(fileURLToPath(import.meta.url))}/assets/img/posts`
+    );
   },
   filename: function (req, file, callback) {
     callback(null, `${Date.now()}-${file.originalname}`);
