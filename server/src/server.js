@@ -3,12 +3,11 @@ import logger from "morgan";
 import favicon from "serve-favicon";
 import appRouter from "./routers/index.js";
 import { config } from "dotenv";
-import { fileURLToPath } from "url";
-import { dirname, join } from "path";
-import { uploader } from "./shared/multer/multer.js";
-import { connectDB } from "./shared/database/db.js";
-//import { controller, middleware } from "./config/sawgger/swagger.config.js";
+import { join } from "path";
 import { dirNamePath } from "./shared/dirNamePath/dirNamePath.js";
+import { connectDB } from "./shared/database/db.js";
+//import { uploader } from "./shared/multer/multer.js";
+//import { controller, middleware } from "./config/sawgger/swagger.config.js";
 config();
 
 const app = express();
