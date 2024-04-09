@@ -6,7 +6,6 @@ import appRouter from "./routers/index.js";
 import { config } from "dotenv";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
-import { controller, middleware } from "./config/sawgger/swagger.config.js";
 import { uploader } from "./shared/multer/multer.js";
 import { connectDB } from "./shared/database/db.js";
 
@@ -26,7 +25,7 @@ app.use(express.urlencoded({ extends: true }));
 app.use(logger("dev"));
 app.use(cookieParser());
 app.use(favicon(root));
-app.use("/docs", middleware, controller);
+
 app.use(appRouter);
 
 app.post("/file", uploader.single("myFile"), (req, res) => {
