@@ -1,6 +1,5 @@
 import express from "express";
 import logger from "morgan";
-//import cookieParser from "cookie-parser";
 import favicon from "serve-favicon";
 import appRouter from "./routers/index.js";
 import { config } from "dotenv";
@@ -19,14 +18,13 @@ const root = join(dirNamePath, "/assets/ico/favicon.ico");
 app.use(express.json());
 app.use(express.urlencoded({ extends: true }));
 app.use(logger("dev"));
-//app.use(cookieParser());
 app.post("/file", uploader.single("myFile"), (req, res) => {
   res.send("Image uploaded");
+});
 app.use(favicon(root));
 app.use("/docs", middleware, controller);
 app.use(appRouter);
 
-});
 
 app.listen(PORT, (err) => {
   if (err) console.log(err);
