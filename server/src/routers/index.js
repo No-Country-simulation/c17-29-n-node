@@ -5,6 +5,6 @@ const router = Router();
 
 //use /api/nameOfFeature as standard for the endpoints
 
-router.use("*", start);
+router.use("/", start);
 
 export default router;
