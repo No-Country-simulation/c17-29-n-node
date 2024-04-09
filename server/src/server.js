@@ -7,8 +7,8 @@ import { config } from "dotenv";
 import { dirname, join } from "path";
 import { connectDB } from "./shared/database/db.js";
 import { controller, middleware } from "./config/sawgger/swagger.config.js";
-import { uploader } from "./shared/multer/multer.js";
 import { fileURLToPath } from "url";
+import { uploader } from "./shared/multer/multer.js";
 config();
 
 const __filename = fileURLToPath(import.meta.url);
