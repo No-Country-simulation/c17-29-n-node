@@ -18,9 +18,9 @@ const root = join(dirNamePath, "/assets/ico/favicon.ico");
 app.use(express.json());
 app.use(express.urlencoded({ extends: true }));
 app.use(logger("dev"));
-app.post("/file", uploader.single("myFile"), (req, res) => {
+/*app.post("/file", uploader.single("myFile"), (req, res) => {
   res.send("Image uploaded");
-});
+});*/
 app.use(favicon(root));
 //app.use("/docs", middleware, controller);
 app.use(appRouter);
