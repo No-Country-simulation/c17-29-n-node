@@ -3,7 +3,7 @@
  *  @swagger
  * components:
  *  schemas:
- *    data:
+ *    Data:
  *      description: The data entity
  *      type: object
  *      properties:
@@ -16,7 +16,7 @@
  *        data:
  *          error: 💀 Ruta no valida ☠️.
  *
- *    start:
+ *    Start:
  *      description: The user entity
  *      type: object
  *      properties:
@@ -26,7 +26,7 @@
  *        data:
  *          description: data
  *          type: schemas/data
- *          $ref: '#/components/schemas/data'
+ *          $ref: '#/components/schemas/Data'
  *        timestamp:
  *          type: string
  *          description: time the server
@@ -55,7 +55,7 @@
  *              schema:
  *                type: array
  *                items:
- *                  $ref: '#/components/schemas/start'
+ *                  $ref: '#/components/schemas/Start'
  *        404:
  *          description: Not Found
  *          content:
