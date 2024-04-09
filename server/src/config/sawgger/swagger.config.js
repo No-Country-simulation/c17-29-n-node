@@ -8,7 +8,8 @@ const theme = new SwaggerTheme();
 const darkStyle = theme.getBuffer(SwaggerThemeNameEnum.DARK);
 const serverUrl =
   env?.trim() === "production"
-    ? "https://c17-29-n-node.vercel.app/{basePath}"
+    //? "https://c17-29-n-node.vercel.app/{basePath}"
+    ?  "https://c17-29-n-node-git-feat-swaggerdocumentation-c17node29s-projects.vercel.app//{basePath}"
     : `http://localhost:${port}/{basePath}`;
 
 const swaggerConfig = {
@@ -18,7 +19,7 @@ const swaggerConfig = {
     info: {
       title: "Api del equipo c17-29-ft-node-react",
       summary: "Un Sistema de Viajes",
-      description: "Sistema De Viajes <br /><br />By",
+      description: "Sistema De Viajes By",
       termsOfService: "http://swagger.io/terms/",
       contact: {
         name: "c17-29-ft-node-react",
@@ -30,6 +31,7 @@ const swaggerConfig = {
         url: "https://opensource.org/license/mit/",
       },
       version: "1.0.0",
+      logo: "https://i.imgur.com/fPaQMKf.png",
     },
     servers: [
       {
@@ -61,7 +63,19 @@ const swaggerOptions = {
   docExpansion: "list",
   filter: true,
   customSiteTitle: "Api Rest Full Dynamic",
-  customCss: `${darkStyle} .swagger-ui .topbar {display: none;}`,
+  customCss: `${darkStyle}
+     .swagger-ui .main{
+      background-image: url("https://i.imgur.com/fPaQMKf.png");
+      background-size: 60px 60px;
+      background-repeat: no-repeat;
+      padding-left: 70px;
+      height: 60px;
+      align-content: center;
+      }
+    }
+    a{ visibility: hidden;}
+    .topbar-wrapper{visibility: hidden}
+    .download-url-wrapper{visibility: hidden}`,
   customCssUrl:
     "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.1.0/swagger-ui.min.css",
   customfavIcon: "https://i.imgur.com/fPaQMKf.png",
