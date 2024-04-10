@@ -17,6 +17,7 @@ const __dirname = dirname(__filename);
 app.use(express.json());
 app.use(express.urlencoded({ extends: true }));
 app.use(logger("dev"));
+app.use("/assets", express.static(join(__dirname, "assets")));
 
 app.use(favicon(join(__dirname, "/assets/ico/favicon.ico")));
 
