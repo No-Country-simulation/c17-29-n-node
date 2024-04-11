@@ -4,7 +4,7 @@ import express from "express";
 import helmet from "helmet";
 import logger from "morgan";
 import { config } from "dotenv";
-import appRouter from "./routers/index.js";
+import { appRouter } from "./routers/index.js";
 import { connectDB } from "./shared/database/db.js";
 import { apiLimiter } from "./shared/rateLimit/rateLimit.js";
 

@@ -9,26 +9,25 @@ import { authRoutes } from "../apis/auth/router/auth.router.js";
 import { userRoutes } from "../apis/users/router/user.router.js";
 import { uploader } from "../shared/multer/multer.js";
 
-const router = express.Router();
+export const appRouter = express.Router();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const root = join(__dirname, "..");
 
-router.use("/assets", express.static(join(root, "assets")));
+appRouter.use("/assets", express.static(join(root, "assets")));
 
-router.post("/api/file", uploader.single("myFile"), (req, res) => {
+appRouter.post("/api/file", uploader.single("myFile"), (req, res) => {
   if (!req.file) {
     return res.status(400).send("No file uploaded.");
   }
   res.send("File uploaded successfully!");
 });
 
-router.use(favicon(join(root, "assets/ico/favicon.ico")));
-router.use("/api/docs", middleware, controller);
-router.use("/api/start", startRouter);
-router.use("/api/users", userRoutes);
-router.use("/api/auth", authRoutes);
-router.use("/api", invalidRouter);
-
-export default router;
+appRouter.use(favicon(join(root, "assets/ico/favicon.ico")));
+appRouter.use("/api/docs", middleware, controller);
+appRouter.use("/api/start", startRouter);
+appRouter.use("/api/users", userRoutes);
+appRouter.use("/api/auth", authRoutes);
+appRouter.use("/api", invalidRouter);
+appRouter.use("/", invalidRouter);
