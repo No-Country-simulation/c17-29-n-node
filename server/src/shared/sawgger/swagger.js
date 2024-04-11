@@ -8,8 +8,7 @@ const theme = new SwaggerTheme();
 const darkStyle = theme.getBuffer(SwaggerThemeNameEnum.DARK);
 const serverUrl =
   env?.trim() === "production"
-    ? //? "https://c17-29-n-node.vercel.app/{basePath}"
-      "https://c17-29-n-node-git-feat-swaggerdocumentation-c17node29s-projects.vercel.app//{basePath}"
+    ? "https://c17-29-n-node.vercel.app/{basePath}"
     : `http://localhost:${port}/{basePath}`;
 
 const swaggerConfig = {
