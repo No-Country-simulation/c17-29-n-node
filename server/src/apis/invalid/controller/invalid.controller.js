@@ -4,6 +4,6 @@ export const invalid = async (req, res) => {
     const startResponse = await getInvalid();
     res.status(200).json(startResponse);
   } catch (error) {
-    res.status(500).json(error);
+    res.status(501).json(error);
   }
 };
