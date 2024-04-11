@@ -39,6 +39,9 @@
  *          type: string
  *          example: success
  *        msg:
+ *          type: string
+ *          example: usuario creado
+ *        data:
  *          type: object
  *          example: data{}
  *    NotFound:
