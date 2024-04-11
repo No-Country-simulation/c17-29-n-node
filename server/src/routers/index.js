@@ -16,7 +16,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const root = join(__dirname, "..");
 
-router.use("/assets", express.static(join(__dirname, "assets")));
+router.use("/assets", express.static(join(root, "assets")));
 
 router.post("/api/file", uploader.single("myFile"), (req, res) => {
   if (!req.file) {
