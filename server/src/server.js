@@ -24,7 +24,7 @@ app.use(apiLimiter);
 app.use(appRouter);
 
 app.listen(PORT, (err) => {
-  if (err) console.error(err);
+  if (err) console.error('Error starting server',err);
   console.log(
     `✅ Server 🆗 is running 💯 on http://localhost:${PORT}/api/docs`
   );
