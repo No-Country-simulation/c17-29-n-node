@@ -2,7 +2,7 @@ import express from "express";
 import favicon from "serve-favicon";
 import { dirname, join } from "path";
 import { fileURLToPath } from "url";
-import { controller, middleware } from "../shared/sawgger/swagger.config.js";
+import { controller, middleware } from "../shared/sawgger/swagger.js";
 import { invalidRouter } from "../apis/invalid/router/invalid.router.js";
 import { startRouter } from "../apis/start/router/start.router.js";
 import { authRoutes } from "../apis/auth/router/auth.router.js";
