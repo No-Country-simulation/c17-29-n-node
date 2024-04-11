@@ -2,7 +2,7 @@ import swaggerUI from "swagger-ui-express";
 import swaggerJsDoc from "swagger-jsdoc";
 import { SwaggerTheme, SwaggerThemeNameEnum } from "swagger-themes";
 
-const env = process.env.NODE_ENV;
+const env = process.env.NODE_ENV || "development";
 const port = process.env.PORT || 3000;
 const theme = new SwaggerTheme();
 const darkStyle = theme.getBuffer(SwaggerThemeNameEnum.DARK);
@@ -76,7 +76,7 @@ const swaggerOptions = {
     .topbar{ display: none;}`,
   customCssUrl:
     "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.1.0/swagger-ui.min.css",
-  customfavIcon: "https://i.imgur.com/fPaQMKf.png",
+  customfavIcon: "/assets/ico/favicon.ico",
 };
 
 const config = swaggerJsDoc(swaggerConfig);
