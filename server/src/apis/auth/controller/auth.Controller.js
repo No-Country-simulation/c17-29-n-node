@@ -2,7 +2,7 @@ import jwt from "jsonwebtoken";
 import {
   createUserService,
   getUserBy,
-} from "../../../users/services/user.services.js";
+} from "../../../apis/users/services/user.services.js";
 import { createHash, validatePassword } from "../../../shared/bcrypt/bcrypt.js";
 
 const register = async (req, res) => {

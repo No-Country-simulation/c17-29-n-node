@@ -1,10 +1,10 @@
 import { Router } from "express";
 
 import { controller, middleware } from "../config/sawgger/swagger.config.js";
-import { invalidRouter } from "../Invalid/router/invalid.router.js";
-import { startRouter } from "../start/router/start.router.js";
+import { invalidRouter } from "../apis/Invalid/router/invalid.router.js";
+import { startRouter } from "../apis/start/router/start.router.js";
 import { authRoutes } from "../apis/auth/router/auth.router.js";
-import { userRoutes } from "../users/router/user.router.js";
+import { userRoutes } from "../apis/users/router/user.router.js";
 
 const router = Router();
 
