@@ -22,15 +22,22 @@ const root = join(__dirname, "/assets/ico/favicon.ico");
 
 const app = express();
 app.use(express.json());
-app.use(cookieParser());
 app.use(express.urlencoded({ extends: true }));
+app.use(cookieParser());
 app.use(logger("dev"));
-app.use(cors({ credentials: true, origin: true }));
+app.use(cors());
 app.use(helmet());
+app.use(favicon(root));
 
 app.use("/assets", express.static(join(__dirname, "assets")));
-app.use(favicon(root));
-app.use(uploader.single("file"));
+
+app.post("/api/file", uploader.single("myFile"), (req, res) => {
+  if (!req.file) {
+    return res.status(400).send("No file uploaded.");
+  }
+  res.send("File uploaded successfully!");
+});
+
 app.use(appRouter);
 
 app.listen(PORT, (err) => {
