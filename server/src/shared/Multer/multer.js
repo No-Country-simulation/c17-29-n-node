@@ -1,13 +1,8 @@
 import multer from "multer";
-import { fileURLToPath } from "url";
-import { dirname, join } from "path";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
 
 const storage = multer.diskStorage({
   destination: function (req, file, callback) {
-    callback(null, join(__dirname,'/assets/img'));
+    callback(null, '/assets/img');
   },
   filename: function (req, file, callback) {
     callback(null, `${Date.now()}-${file.originalname}`);
