@@ -1,11 +1,5 @@
 import jwt from "jsonwebtoken";
 import { config } from "dotenv";
-
-config();
-
-const secreto = process.env.JWT_SECRET;
-const expToken = "1h";
-
 import {
   createUserService,
   getUserBy,

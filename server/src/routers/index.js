@@ -24,12 +24,11 @@ router.post("/api/file", uploader.single("myFile"), (req, res) => {
   res.send("File uploaded successfully!");
 });
 
-console.log('ico', join(root,"/assets/ico/favicon.ico"));
-router.use(favicon(join(root,"/assets/ico/favicon.ico")));
+router.use(favicon(join(root, "assets/ico/favicon.ico")));
 router.use("/api/docs", middleware, controller);
 router.use("/api/start", startRouter);
 router.use("/api/users", userRoutes);
 router.use("/api/auth", authRoutes);
-router.use("*", invalidRouter);
+router.use("/api", invalidRouter);
 
 export default router;

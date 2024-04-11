@@ -3,9 +3,9 @@ import { rateLimit } from "express-rate-limit";
 const ENV = process.env.NODE_ENV || "development";
 
 const allowedOrigins = [
-  "localhost:5000",
-  "http://localhost:4000",
-  "http://127.0.0.1:6000",
+  "localhost:3000",
+  "http://localhost:3000",
+  "http://127.0.0.1:3000",
 ];
 
 export const apiLimiter = rateLimit({
