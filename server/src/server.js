@@ -28,7 +28,7 @@ app.use(appRouter);
 app.listen(PORT, (err) => {
   if (err) console.error('Error starting server',err);
   console.log(
-    `✅ Server 🆗 is running 💯 on http://localhost:${PORT}/api/docs`
+    `✅ Server 🆗 is running 💯 on http://localhost:${PORT}/docs`
   );
   connectDB();
 });

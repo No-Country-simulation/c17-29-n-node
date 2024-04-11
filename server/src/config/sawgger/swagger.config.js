@@ -43,8 +43,8 @@ const swaggerConfig = {
           (env?.trim() === "production" ? "production" : "development"),
         variables: {
           basePath: {
-            enum: ["", "api"],
-            default: "",
+            enum: ["api"],
+            default: "api",
             description: "this value is assigned by the service provider",
           },
         },
@@ -53,7 +53,7 @@ const swaggerConfig = {
     consumes: ["application/json"],
     produces: ["application/json"],
   },
-  apis: ["src/**/**/*.doc.js", "src/**/**/**/*.doc.js"],
+  apis: ["src/**/doc/*.doc.js", "src/**/**/doc/*.doc.js"],
 };
 
 const swaggerOptions = {
