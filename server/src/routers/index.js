@@ -25,7 +25,7 @@ appRouter.post("/api/file", uploader.single("myFile"), (req, res) => {
 });
 
 appRouter.use(favicon(join(root, "assets/ico/favicon.ico")));
-appRouter.use("/docs", middleware, controller);
+appRouter.use("/api/docs", middleware, controller);
 appRouter.use("/api/start", startRouter);
 appRouter.use("/api/users", userRoutes);
 appRouter.use("/api/auth", authRoutes);
