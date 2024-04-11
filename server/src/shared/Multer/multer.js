@@ -7,7 +7,7 @@ const __dirname = dirname(__filename);
 
 const storage = multer.diskStorage({
   destination: function (req, file, callback) {
-    callback(null, join(__dirname,'/public/image'));
+    callback(null, join(__dirname,'/assets/img'));
   },
   filename: function (req, file, callback) {
     callback(null, `${Date.now()}-${file.originalname}`);
