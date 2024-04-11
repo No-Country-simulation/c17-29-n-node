@@ -1,6 +1,6 @@
 import Image from "next/image";
 import axios from "axios";
-import { TravelCard } from "@/components/widgets/travelCard";
+import { TravelCard } from "@/components/widgets/TravelCard";
 
 export default function Home() {
   return (
