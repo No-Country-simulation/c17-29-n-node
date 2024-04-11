@@ -1,6 +1,6 @@
 import { Router } from "express";
 
-import { controller, middleware } from "../config/sawgger/swagger.config.js";
+import { controller, middleware } from "../shared/sawgger/swagger.config.js";
 import { invalidRouter } from "../apis/Invalid/router/invalid.router.js";
 import { startRouter } from "../apis/start/router/start.router.js";
 import { authRoutes } from "../apis/auth/router/auth.router.js";
