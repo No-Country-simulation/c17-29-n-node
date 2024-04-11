@@ -1,6 +1,6 @@
 import multer from 'multer';
 
-const storage = multer.diskStorage({
+export const storage = multer.diskStorage({
   destination: function (req, file, callback) {
     callback(null, '/assets/img');
   },
