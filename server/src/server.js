@@ -7,6 +7,8 @@ import { config } from "dotenv";
 import { appRouter } from "./routers/index.js";
 import { connectDB } from "./shared/database/db.js";
 import { apiLimiter } from "./shared/rateLimit/rateLimit.js";
+import { corsConfig } from "./config/cors/cors.config.js";
+import { helmetConfig } from "./config/helmet/helmet.config.js";
 
 config();
 
@@ -17,8 +19,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extends: true }));
 app.use(cookieParser());
 app.use(logger("dev"));
-app.use(cors());
-app.use(helmet());
+app.use(cors(corsConfig));
+app.use(helmet(helmetConfig));
 app.use(apiLimiter);
 
 app.use(appRouter);
