@@ -11,7 +11,6 @@ import { uploader } from "../shared/multer/multer.js";
 
 const router = express.Router();
 
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const root = join(__dirname, "..");
@@ -31,6 +30,6 @@ router.use("/api/docs", middleware, controller);
 router.use("/api/start", startRouter);
 router.use("/api/users", userRoutes);
 router.use("/api/auth", authRoutes);
-router.use("*", invalidRouter);
+router.use("/", invalidRouter);
 
 export default router;
