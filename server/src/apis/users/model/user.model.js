@@ -3,7 +3,7 @@ import { Schema, model } from 'mongoose';
 const userSchema = new Schema({
   name: {
     type: String,
-    required: [true, 'this field is required']
+    //required: [true, 'this field is required']
   },
   email: {
     type: String,
@@ -17,17 +17,17 @@ const userSchema = new Schema({
 
   age: {
     type: Number,
-    required: [true, 'this field is required']
+    //required: [true, 'this field is required']
   },
 
   phoneNumber: {
     type: Number,
-    required: [true, 'this field is required']
+    //required: [true, 'this field is required']
   },
 
   role: {
     type: String,
-    required: [true, "this field is required"],
+    //required: [true, "this field is required"],
     enum: ["user", "admin"],
     default: "user"
   },

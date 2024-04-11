@@ -15,34 +15,41 @@
  *          type: string
  *          example: 1234
  * paths:
- *  /login:
+ *  /auth/login:
  *   post:
  *    tags:
  *      - Auth Route
- *    summary: login of the api.
+ *    summary: login of the app.
+ *    description: login of the app.
+ *    operationId: login
+ *    requestBody:
+ *      description: login of the app.
+ *      required: true
+ *      content:
+ *        application/json:
+ *          schema:
+ *            $ref: '#/components/schemas/Login'
  *    responses:
  *      200:
- *        description: Success
+ *        description: Successful operation
  *        content:
  *         application/json:
  *          schema:
- *            type: array
- *            items:
- *              $ref: '#/components/schemas/Login'
+ *            $ref: '#/components/schemas/Login'
  *      404:
  *        description: Not Found
  *        content:
  *         application/json:
  *          schema:
- *            type: array
- *            items:
- *              $ref: '#/components/schemas/NotFound'
+ *            $ref: '#/components/schemas/NotFound'
  *      500:
  *        description: Internal Server Error
  *        content:
  *         application/json:
  *          schema:
- *            type: array
- *            items:
- *              $ref: '#/components/schemas/NotServer'
+ *            $ref: '#/components/schemas/NotServer'
+ *    security:
+ *      - api_auth:
+ *         - write:api
+ *         - read:api
  */

@@ -27,6 +27,20 @@
  *        msg:
  *          type: object
  *          example: data
+ *    ApiResponse:
+ *      description: The Api responde entity
+ *      type: object
+ *      properties:
+ *        code:
+ *          type: integer
+ *          format: int32
+ *          example: 200
+ *        type:
+ *          type: string
+ *          example: success
+ *        msg:
+ *          type: object
+ *          example: data{}
  *    NotFound:
  *      type: object
  *      description: Not found

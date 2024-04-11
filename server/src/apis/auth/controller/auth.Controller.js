@@ -1,6 +1,9 @@
 import jwt from "jsonwebtoken";
-import { createUserService, getUserBy } from "../../users/services/user.services.js";
-import { createHash, validatePassword } from "../../shared/bcrypt/bcrypt.js";
+import {
+  createUserService,
+  getUserBy,
+} from "../../../users/services/user.services.js";
+import { createHash, validatePassword } from "../../../shared/bcrypt/bcrypt.js";
 
 const register = async (req, res) => {
   const { name, email, password, age, phoneNumber } = req.body;
