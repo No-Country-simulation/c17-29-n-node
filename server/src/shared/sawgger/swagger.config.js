@@ -63,8 +63,7 @@ const swaggerOptions = {
   docExpansion: "list",
   filter: true,
   customSiteTitle: "Api Rest Full Dynamic",
-  customCss:
-    `${darkStyle}
+  customCss: `${darkStyle}
     .swagger-ui .main{
       background-image: url("/assets/img/logo.png");
       background-size: 60px 60px;
