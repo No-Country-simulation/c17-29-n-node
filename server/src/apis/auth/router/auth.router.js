@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { login, profile, register } from "../controller/auth.Controller.js";
-import { validateJWT } from "../../../shared/middlewares/jwtExtractor.js";
+import { validateJWT } from "../../../shared/jwt/jwtExtractor.js";
 
 export const authRoutes = Router();
 

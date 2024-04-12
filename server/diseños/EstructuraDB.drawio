@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram name="Esquema" id="jahxwv80Ce01JsiryU6Z">
-        <mxGraphModel dx="746" dy="598" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="854" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="p4Bq-ALb1kUGbg0ZxvAY-0"/>
                 <mxCell id="p4Bq-ALb1kUGbg0ZxvAY-1" parent="p4Bq-ALb1kUGbg0ZxvAY-0"/>
@@ -124,7 +124,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="s5tlBuPr0LCP311UnEXv" name="Entida Relación">
-        <mxGraphModel dx="1865" dy="4803" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
+        <mxGraphModel dx="1553" dy="4399" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -469,7 +469,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="zZyZ-m2vZYpSDQ8pteQ-" name="Api Relations">
-        <mxGraphModel dx="746" dy="598" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+        <mxGraphModel dx="854" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -563,7 +563,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="55ftzjVeDL-uVrbzgLZA" name="restful-rest-diagram-api">
-        <mxGraphModel dx="746" dy="598" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+        <mxGraphModel dx="854" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>

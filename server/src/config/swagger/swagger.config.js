@@ -2,14 +2,13 @@ import swaggerUI from "swagger-ui-express";
 import swaggerJsDoc from "swagger-jsdoc";
 import { SwaggerTheme, SwaggerThemeNameEnum } from "swagger-themes";
 
-const env = process.env.NODE_ENV;
+const env = process.env.NODE_ENV || "development";
 const port = process.env.PORT || 3000;
 const theme = new SwaggerTheme();
 const darkStyle = theme.getBuffer(SwaggerThemeNameEnum.DARK);
 const serverUrl =
   env?.trim() === "production"
-    ? //? "https://c17-29-n-node.vercel.app/{basePath}"
-      "https://c17-29-n-node-git-feat-swaggerdocumentation-c17node29s-projects.vercel.app//{basePath}"
+    ? "https://c17-29-n-node.vercel.app/{basePath}"
     : `http://localhost:${port}/{basePath}`;
 
 const swaggerConfig = {
@@ -54,7 +53,7 @@ const swaggerConfig = {
     consumes: ["application/json"],
     produces: ["application/json"],
   },
-  apis: ["src/*/*/*.doc.js", "src/*/*/*/*.doc.js"],
+  apis: ["src/**/*.doc.js"],
 };
 
 const swaggerOptions = {
@@ -63,8 +62,7 @@ const swaggerOptions = {
   docExpansion: "list",
   filter: true,
   customSiteTitle: "Api Rest Full Dynamic",
-  customCss:
-    `${darkStyle}
+  customCss: `${darkStyle}
     .swagger-ui .main{
       background-image: url("/assets/img/logo.png");
       background-size: 60px 60px;
@@ -76,7 +74,7 @@ const swaggerOptions = {
     .topbar{ display: none;}`,
   customCssUrl:
     "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.1.0/swagger-ui.min.css",
-  customfavIcon: "https://i.imgur.com/fPaQMKf.png",
+  customfavIcon: "/assets/ico/favicon.ico",
 };
 
 const config = swaggerJsDoc(swaggerConfig);

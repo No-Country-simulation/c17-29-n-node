@@ -1,4 +1,5 @@
 import jwt from "jsonwebtoken";
+import { config } from "dotenv";
 import {
   createUserService,
   getUserBy,
@@ -41,8 +42,8 @@ const login = async (req, res) => {
       email: user.email,
       role: user.role,
     },
-    "secretjwt",
-    { expiresIn: "1h" }
+    secreto,
+    { expiresIn: expToken }
   );
 
   return res.send({ status: "Success", token });
