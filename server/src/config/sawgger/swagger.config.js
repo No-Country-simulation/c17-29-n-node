@@ -27,6 +27,7 @@ const swaggerConfig = {
       },
       license: {
         name: "MIT",
+        identifier: "MIT",
         url: "https://opensource.org/license/mit/",
       },
       version: "1.0.0",
@@ -76,6 +77,8 @@ const swaggerOptions = {
     }
     .topbar{ display: none;}`,
   customfavIcon: "/assets/ico/favicon.ico",
+  customCssUrl:
+    "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.1.0/swagger-ui.min.css",
 };
 
 const config = swaggerJsDoc(swaggerConfig);
