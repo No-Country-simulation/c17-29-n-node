@@ -1,6 +1,6 @@
 import React from 'react'
-import { Card, CardHeader, CardBody, CardFooter, Divider, Link, Image, Avatar, Button } from "@nextui-org/react";
-import { FaRegStar, FaStar, FaStarHalfStroke, FaLocationDot } from "react-icons/fa6";
+import { Card, CardHeader, CardBody, CardFooter, Divider, Link, Image, Avatar, Button, Chip } from "@nextui-org/react";
+import { FaRegStar, FaStar, FaStarHalfStroke, FaLocationDot, FaCircle } from "react-icons/fa6";
 
 
 export const TravelCard = () => {
@@ -30,18 +30,24 @@ export const TravelCard = () => {
             <Divider />
             <CardBody>
                 <article className='flex flex-col'>
-                    <div className='h-fit w-fit'>
+                    <div className='h-fit w-fit [&>*>*]:mr-6'>
                         {/* black dot */}
-                        <svg className='w-3 h-3' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                            <circle cx="10" cy="10" r="10" />
-                        </svg>
+                        <div className='flex flex-row w-full items-center justify-center'>
+                            <FaCircle className='w-3 h-3' />
+                            <h3>Neuquen</h3>
+                        </div>
                         {/* black line */}
-                        <svg className='w-1 h-10' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                            <rect height={"100%"} width={"100%"} x={0} y={0} preserveAspectRatio='none' />
-                        </svg>
-                        <FaLocationDot />
+                        <div className='w-1 h-6 bg-neutral-50 ml-1'></div>
+                        <div className='flex flex-row w-full items-center justify-center'>
+                            <FaLocationDot className='w-3 h-4' />
+                            <h3>Santa Fe</h3>
+                        </div>
                     </div>
-                    <div></div>
+                    <article>
+                        <span>Asientos libres</span>
+                        <p>00/00/2024 | 00:00pm</p>
+                        <Chip radius="sm">Ida y vuelta</Chip>
+                    </article>
                 </article>
             </CardBody>
             <Divider />
@@ -50,6 +56,6 @@ export const TravelCard = () => {
                     <Link href="#">Ver Viajes</Link>
                 </Button>
             </CardFooter>
-        </Card>
+        </Card >
     )
 }
