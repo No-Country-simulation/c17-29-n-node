@@ -73,11 +73,17 @@ const swaggerOptions = {
       align-content: center;
     }
     .topbar{ display: none;}
-    .opblock-summary-path-description-wrapper { align-items: center; display: flex; flex-wrap: wrap; gap: 0 10px; padding: 0 10px; width: 100%; }
     `,
   customfavIcon: "/assets/ico/favicon.ico",
-  customCssUrl:
-    "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.3.0/swagger-ui.min.css",
+  customJs: [
+    "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.9.4/swagger-ui-bundle.min.js",
+    "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.9.4/swagger-ui-standalone-preset.min.js",
+  ],
+  customCssUrl: [
+    "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.9.4/swagger-ui.min.css",
+    "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.9.4/swagger-ui-standalone-preset.min.css",
+    "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.9.4/swagger-ui.css",
+  ],
 };
 
 const config = swaggerJsDoc(swaggerConfig);
