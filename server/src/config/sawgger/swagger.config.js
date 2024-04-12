@@ -54,7 +54,7 @@ const swaggerConfig = {
     consumes: ["application/json"],
     produces: ["application/json"],
   },
-  apis: ["src/**/*.doc.js"],
+  apis: ["./**/doc/*.doc.js"],
 };
 
 const swaggerOptions = {
@@ -72,7 +72,9 @@ const swaggerOptions = {
       height: 60px;
       align-content: center;
     }
-    .topbar{ display: none;}`,
+    .topbar{ display: none;}
+    .opblock-summary-path-description-wrapper { align-items: center; display: flex; flex-wrap: wrap; gap: 0 10px; padding: 0 10px; width: 100%; }
+    `,
   customfavIcon: "/assets/ico/favicon.ico",
   customCssUrl:
     "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.3.0/swagger-ui.min.css",
