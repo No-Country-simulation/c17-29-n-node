@@ -66,7 +66,7 @@ const swaggerOptions = {
   filter: true,
   customSiteTitle: "Api Rest Full Dynamic",
   customCss: `${darkStyle}
-    .swagger-ui .main{
+    .main{
       background-image: url("/assets/img/logo.png");
       background-size: 60px 60px;
       background-repeat: no-repeat;
@@ -75,8 +75,6 @@ const swaggerOptions = {
       align-content: center;
     }
     .topbar{ display: none;}`,
-  customCssUrl:
-    "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.1.0/swagger-ui.min.css",
   customfavIcon: "/assets/ico/favicon.ico",
 };
 
