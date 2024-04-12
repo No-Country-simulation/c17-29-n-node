@@ -3,10 +3,10 @@
 @contentType = application/json
 
 ## Dev
-@hostdev = http://localhost
+@hostdev = localhost
 @port = 3000
 @basepath = api
-@dev = {{hostdev}}:{{port}}/{{basepath}}
+@dev = http://{{hostdev}}:{{port}}/{{basepath}}
 
 ## Prod
 @hostprod = https://c17-29-n-node.vercel.app
@@ -16,13 +16,14 @@
 
 
 ### the server in dev mode
-get {{dev}}/start
+get {{dev}}/start HTTP/1.1
 
 ### Login User
+
 post {{dev}}/auth/login HTTP/1.1
 
 content-type: application/json
-body:
+
 {
   "email": "core2@coreo.com",
   "password": "1234"
