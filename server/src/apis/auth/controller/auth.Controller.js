@@ -6,6 +6,11 @@ import {
 } from "../../../apis/users/services/user.services.js";
 import { createHash, validatePassword } from "../../../shared/bcrypt/bcrypt.js";
 
+config();
+
+const secreto = process.env.JWT_SECRET;
+const expToken = process.env.JWT_EXPIRATION;
+
 const register = async (req, res) => {
   const { name, email, password, age, phoneNumber } = req.body;
 

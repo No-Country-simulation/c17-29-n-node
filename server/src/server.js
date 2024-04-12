@@ -19,8 +19,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extends: true }));
 app.use(cookieParser());
 app.use(logger("dev"));
-app.use(cors(corsConfig));
-app.use(helmet(helmetConfig));
+app.use(cors());
+app.use(helmet());
 app.use(apiLimiter);
 
 app.use(appRouter);
@@ -28,7 +28,7 @@ app.use(appRouter);
 app.listen(PORT, (err) => {
   if (err) console.error('Error starting server',err);
   console.log(
-    `✅ Server 🆗 is running 💯 on http://localhost:${PORT}/docs`
+    `✅ Server 🆗 is running 💯 on http://localhost:${PORT}/api/docs`
   );
   connectDB();
 });

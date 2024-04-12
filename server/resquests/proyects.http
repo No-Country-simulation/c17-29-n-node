@@ -1,2 +1,42 @@
+# Environment Variables
 
-http://localhost:3000/api/start
+@contentType = application/json
+
+## Dev
+@hostdev = http://localhost
+@port = 3000
+@basepath = api
+@dev = {{hostdev}}:{{port}}/{{basepath}}
+
+## Prod
+@hostprod = https://c17-29-n-node.vercel.app
+@basepath = api
+@version = v1
+@prod = {{hostprod}}/{{basepath}}
+
+
+### the server in dev mode
+get {{dev}}/start
+
+### Login User
+post {{dev}}/auth/login HTTP/1.1
+
+content-type: application/json
+body:
+{
+  "email": "core2@coreo.com",
+  "password": "1234"
+}
+
+### the server in prod mode
+
+get {{prod}}/start
+
+### Login User
+post {{prod}}/login HTTP/1.1
+content-type: {{contentType}}
+
+{
+  "email": "core5@coreo.com",
+  "password": "1234"
+}
