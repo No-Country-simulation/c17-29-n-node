@@ -1,14 +1,14 @@
 import React from 'react'
-import { Card, CardHeader, CardBody, CardFooter, Divider, Link, Image, Avatar } from "@nextui-org/react";
-import { FaRegStar, FaStar, FaStarHalfStroke } from "react-icons/fa6";
+import { Card, CardHeader, CardBody, CardFooter, Divider, Link, Image, Avatar, Button } from "@nextui-org/react";
+import { FaRegStar, FaStar, FaStarHalfStroke, FaLocationDot } from "react-icons/fa6";
 
 
 export const TravelCard = () => {
     return (
-        <Card className="max-w-[400px]">
+        <Card className="px-5">
             <CardHeader className="flex gap-3 justify-between">
-                <div className="flex flex-col">
-                    <p className="text-md">User User</p>
+                <section className="flex flex-col">
+                    <h2 className="text-md">User User</h2>
                     <div className='flex gap-1 items-center'>
                         <span className='border-black-500 border-1 rounded text-center bg-black-500 text-white w-fit px-1'>5.0</span>
                         {/* 5 stars */}
@@ -16,7 +16,7 @@ export const TravelCard = () => {
                             <FaStar key={i} />
                         ))}
                     </div>
-                </div>
+                </section>
                 <Avatar
                     isBordered
                     as="button"
@@ -29,17 +29,26 @@ export const TravelCard = () => {
             </CardHeader>
             <Divider />
             <CardBody>
-                <p>Make beautiful websites regardless of your design experience.</p>
+                <article className='flex flex-col'>
+                    <div className='h-fit w-fit'>
+                        {/* black dot */}
+                        <svg className='w-3 h-3' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <circle cx="10" cy="10" r="10" />
+                        </svg>
+                        {/* black line */}
+                        <svg className='w-1 h-10' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <rect height={"100%"} width={"100%"} x={0} y={0} preserveAspectRatio='none' />
+                        </svg>
+                        <FaLocationDot />
+                    </div>
+                    <div></div>
+                </article>
             </CardBody>
             <Divider />
-            <CardFooter>
-                <Link
-                    isExternal
-                    showAnchorIcon
-                    href="https://github.com/nextui-org/nextui"
-                >
-                    Visit source code on GitHub.
-                </Link>
+            <CardFooter className='items-center justify-center'>
+                <Button color="primary" variant="flat">
+                    <Link href="#">Ver Viajes</Link>
+                </Button>
             </CardFooter>
         </Card>
     )
