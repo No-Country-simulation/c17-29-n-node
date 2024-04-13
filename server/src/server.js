@@ -13,8 +13,8 @@ import { helmetConfig } from "./config/helmet/helmet.config.js";
 config();
 
 const PORT = process.env.PORT || 3000;
-
 const server = express();
+
 server.use(express.json());
 server.use(express.urlencoded({ extends: true }));
 server.use(cookieParser());
@@ -22,13 +22,13 @@ server.use(logger("dev"));
 server.use(cors(corsConfig));
 server.use(helmet(helmetConfig));
 server.use(apiLimiter);
-
 server.use(serverRouter);
+
+connectDB();
 
 server.listen(PORT, (err) => {
   if (err) console.error('Error starting server',err);
   console.log(
     `✅ Server 🆗 is running 💯 on http://localhost:${PORT}/api/docs`
   );
-  connectDB();
 });
