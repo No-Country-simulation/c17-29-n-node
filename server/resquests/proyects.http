@@ -1,6 +1,6 @@
 # Environment Variables
 @contentType = application/json
-@token =
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MWQ5MDlmZjc3ODk5YmI4OGE1ZWJhMiIsImVtYWlsIjoiY29yZTVAY29yZW8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MTMyMTM2MDgsImV4cCI6MTcxMzIxNzIwOH0.vKf-2tqs7E7JlWbJQtM66aUStVxuMhXyCaLPjUkUYuY
 
 ## Dev
 @hostdev = localhost
@@ -16,57 +16,89 @@
 
 # Endpoints
 
+# Gets Route.
+
 ## api docs
 ### dev mode
-get {{dev}}/docs HTTP/1.1
+get {{dev}}/docs
 
 ### prod mode.
 get {{prod}}/docs HTTP/1.1
 
 ## Inavlod route
 ### dev mode
-get {{dev}}/ HTTP/1.1
+get {{dev}}
 
 ### prod mode.
-get {{prod}}/ HTTP/1.1
+get {{prod}} HTTP/1.1
 
 ## Start Server
 ### dev mode
-get {{dev}}/start HTTP/1.1
+get {{dev}}/start
 
 ### prod mode.
 get {{prod}}/start HTTP/1.1
 
-## Login User
-### dev mode
-post {{dev}}/auth/login HTTP/1.1
-content-type: application/json
-
-{
-  "email": "core2@coreo.com",
-  "password": "1234"
-}
+## Get All Users
+### dev mode.
+get {{dev}}/users
 
 ### prod mode.
-post {{prod}}//auth/login HTTP/1.1
+get {{prod}}/users HTTP/1.1
+
+## Get All Cars
+### dev mode.
+get {{dev}}/cars
+
+### prod mode.
+get {{prod}}/cars HTTP/1.1
+
+## Get Profile
+### dev mode.
+get {{dev}}/auth/profile HTTP/1.1
+Authorization: Bearer {{token}}
+
+### prod mode.
+get {{prod}}/auth/profile HTTP/1.1
+Authorization: Bearer {{token}}
+
+#Post Route
+
+## Register User
+### dev mode.
+post {{dev}}/auth/register
 content-type: {{contentType}}
-Authorization: bearer {{token}}
 
 {
   "email": "core5@coreo.com",
   "password": "1234"
 }
 
-## Get All Users
-### dev mode.
-get {{dev}}/users HTTP/1.1
+### prod mode.
+post {{prod}}/auth/register HTTP/1.1
+content-type: {{contentType}}
+
+{
+  "email": "core5@coreo.com",
+  "password": "1234"
+}
+
+
+## Login User
+### dev mode
+post {{dev}}/auth/login
+content-type: {{contentType}}
+
+{
+  "email": "core6@coreo.com",
+  "password": "1234"
+}
 
 ### prod mode.
-get {{prod}}//users HTTP/1.1
+post {{prod}}/auth/login HTTP/1.1
+content-type: {{contentType}}
 
-## Get All Cars
-### dev mode.
-get {{dev}}/cars HTTP/1.1
-
-### prod mode.
-get {{prod}}//cars HTTP/1.1
+{
+  "email": "core5@coreo.com",
+  "password": "1234"
+}
