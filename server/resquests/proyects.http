@@ -1,6 +1,6 @@
 # Environment Variables
-
 @contentType = application/json
+@token =
 
 ## Dev
 @hostdev = localhost
@@ -14,14 +14,32 @@
 @version = v1
 @prod = {{hostprod}}/{{basepath}}
 
+# Endpoints
 
-### the server in dev mode
+## api docs
+### dev mode
+get {{dev}}/docs HTTP/1.1
+
+### prod mode.
+get {{prod}}/docs HTTP/1.1
+
+## Inavlod route
+### dev mode
+get {{dev}}/ HTTP/1.1
+
+### prod mode.
+get {{prod}}/ HTTP/1.1
+
+## Start Server
+### dev mode
 get {{dev}}/start HTTP/1.1
 
-### Login User
+### prod mode.
+get {{prod}}/start HTTP/1.1
 
+## Login User
+### dev mode
 post {{dev}}/auth/login HTTP/1.1
-
 content-type: application/json
 
 {
@@ -29,15 +47,26 @@ content-type: application/json
   "password": "1234"
 }
 
-### the server in prod mode
-
-get {{prod}}/start
-
-### Login User
-post {{prod}}/login HTTP/1.1
+### prod mode.
+post {{prod}}//auth/login HTTP/1.1
 content-type: {{contentType}}
+Authorization: bearer {{token}}
 
 {
   "email": "core5@coreo.com",
   "password": "1234"
 }
+
+## Get All Users
+### dev mode.
+get {{dev}}/users HTTP/1.1
+
+### prod mode.
+get {{prod}}//users HTTP/1.1
+
+## Get All Cars
+### dev mode.
+get {{dev}}/cars HTTP/1.1
+
+### prod mode.
+get {{prod}}//cars HTTP/1.1
