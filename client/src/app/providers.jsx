@@ -10,6 +10,6 @@ export const Providers = ({ children }) => {
             <ThemeProvider attribute="class" enableSystem={true}>
                 {children}
             </ThemeProvider>
-        </NextUIProvider >
+        </NextUIProvider>
     )
 }
