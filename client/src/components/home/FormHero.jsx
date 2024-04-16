@@ -56,9 +56,16 @@ export const FormHero = () => {
 
     const router = useRouter()
     return (
-        <form action="" className='flex flex-row gap-3' onSubmit={handleSubmit}>
-            <Input type='text' label="Origen" placeholder='Rosario, Santa Fe' isRequired onChange={handleInputChange} name="location" nameValidation={locationRegex} color={locationRegex ? "danger" : "success"} errorMessage={locationRegex ? "Location must be between 3 and 35 characters" : ""} onValueChange={setLocationValue} />
-            <Input type="text" label="Origen" placeholder="Rosario, Santa Fe" isRequired onChange={handleInputChange} name='location' locationValidation={isLocationInvalid} color={isLocationInvalid ? "danger" : "success"} errorMessage={isLocationInvalid ? "Location must be between 3 and 35 characters" : ""} onValueChange={setLocationValue} />
+        <form action="" className='flex flex-row gap-3 [&>*]:w-fit' onSubmit={handleSubmit}>
+            <Input variant="underlined" type="text" label="Origen" placeholder='Rosario, Santa Fe' isRequired onChange={handleInputChange} name="Origen" locationValidation={isLocationInvalid} color={isLocationInvalid ? "danger" : "success"} errorMessage={isLocationInvalid ? "Location must be between 3 and 35 characters" : ""} onValueChange={setLocationValue} isInvalid={isLocationInvalid} className={{
+                errorMessage: [
+                    "absolute",
+                    "bottom-0",
+                    "left-0",
+                    "text-danger",
+                    "text-xs"
+                ]
+            }} />
             <Input type="text" label='Destino' placeholder='La Cumbrecita, Córdoba' isRequired />
             <Input type="date" label='Partida' isRequired />
             <Input type="number" min={1} label="Pasajeros" placeholder='4 Pasajeros' isRequired />
