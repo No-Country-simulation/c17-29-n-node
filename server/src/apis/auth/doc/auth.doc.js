@@ -1,7 +1,7 @@
 /**
  * @swagger
  *  tags:
- *   name: Users Route
+ *   name: Auth Route
  *   description: Users route
  *   summary: Users route api
  */
