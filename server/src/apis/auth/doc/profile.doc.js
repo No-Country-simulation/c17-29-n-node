@@ -16,19 +16,19 @@
  *         content:
  *          application/json:
  *           schema:
- *             $ref: '#/components/schemas/ApiResponse'
+ *             $ref: '#/components/responses/ApiResponse'
  *       404:
  *         description: Not Found
  *         content:
  *          application/json:
  *           schema:
- *             $ref: '#/components/schemas/NotFound'
+ *             $ref: '#/components/responses/NotFound'
  *       500:
  *         description: Internal Server Error
  *         content:
  *          application/json:
  *           schema:
- *             $ref: '#/components/schemas/NotServer'
+ *             $ref: '#/components/responses/NotServer'
  *     security:
  *       - bearerAuth: []
  */

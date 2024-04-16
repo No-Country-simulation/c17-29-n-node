@@ -14,4 +14,11 @@
  *      description: Specifies the page number of the artists to be displayed
  *      schema:
  *        type: integer
+ *    Id:
+ *      name: :id
+ *      in: path
+ *      description: Id User
+ *      required: true
+ *      schema:
+ *        type: string
  */

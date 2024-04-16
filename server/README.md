@@ -70,7 +70,7 @@ API process log
 #### Get -> getUserById
 
 - [x] Endpoint
-- [ ] Documentation
+- [x] Documentation
 
 #### Post -> addUser
 
