@@ -2,7 +2,7 @@
  * @swagger
  * components:
  *  body:
- *    raw:
+ *    user:
  *      description: The login entity
  *      type: object
  *      properties:
@@ -12,4 +12,14 @@
  *        password:
  *          type: string
  *          example: 1234
+ *    edit:
+ *      description: The edit user
+ *      type: object
+ *      properties:
+ *        role:
+ *          type: string
+ *          example: user | admin
+ *        name:
+ *          type: string
+ *          example: test
  */

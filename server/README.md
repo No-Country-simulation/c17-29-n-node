@@ -80,7 +80,7 @@ API process log
 #### Path -> editUser
 
 - [x] Endpoint
-- [ ] Documentation
+- [x] Documentation
 
 #### Delete -> deleteUser
 

@@ -1,7 +1,5 @@
 /**
  * @swagger
- * security:
- *   - bearerAuth: []
  * paths:
  *  /auth/profile:
  *    get:

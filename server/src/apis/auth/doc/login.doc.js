@@ -14,7 +14,7 @@
  *       content:
  *         application/json:
  *           schema:
- *             $ref: '#/components/body/raw'
+ *             $ref: '#/components/body/user'
  *     responses:
  *       200:
  *         description: Successful operation

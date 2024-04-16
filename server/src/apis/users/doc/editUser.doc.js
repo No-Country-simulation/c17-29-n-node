@@ -1,14 +1,22 @@
-
 /**
- *  @swagger
+ * @swagger
  * paths:
- *  /users:
- *    get:
+ *  /users/edit/{:id}:
+ *    patch:
  *      tags:
  *        - Users Route
- *      summary: All Users.
- *      description: All Users.
- *      operationId: getUsers
+ *      summary: Edit User.
+ *      description: Edit Users.
+ *      operationId: ediUser
+ *      parameters:
+ *        - $ref: '#/components/parameters/Id'
+ *      requestBody:
+ *       description: login of the app.
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/body/edit'
  *      responses:
  *        200:
  *          description: Success
@@ -34,4 +42,6 @@
  *                type: array
  *                items:
  *                  $ref: '#/components/responses/NotServer'
+ *      security:
+ *        - bearerAuth: []
  */

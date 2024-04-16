@@ -30,7 +30,6 @@ export const getUserById = async (req, res) => {
     res.status(500).json(error);
   }
 };
-
 export const editUser = async (req, res) => {
   try {
     //-- Get id & payload for the edit service params
