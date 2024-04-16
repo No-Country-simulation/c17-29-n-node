@@ -5,7 +5,7 @@
  *  /*:
  *    get:
  *      tags:
- *        - Invalid Route
+ *        - Invalid Routes
  *      summary:
  *        the Invalid router api.
  *      description:

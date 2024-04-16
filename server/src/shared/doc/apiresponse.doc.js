@@ -2,7 +2,7 @@
  * @swagger
  * components:
  *  responses:
- *    ApiResponse:
+ *    apiResponse:
  *      description: The Api responde entity
  *      type: object
  *      properties:
@@ -19,7 +19,7 @@
  *        data:
  *          type: object
  *          example: data{}
- *    NotFound:
+ *    notFound:
  *      properties:
  *        code:
  *          type: integer
@@ -34,7 +34,7 @@
  *        data:
  *          type: object
  *          example: data{}
- *    NotServer:
+ *    notServer:
  *      properties:
  *        code:
  *          type: integer

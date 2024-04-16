@@ -4,7 +4,7 @@
  *  /users/{:id}:
  *    get:
  *      tags:
- *        - Users Route
+ *        - User Routes
  *      summary: User By Id.
  *      description: Users By Id
  *      operationId: getUserById

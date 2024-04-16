@@ -4,7 +4,7 @@
  *  /users/create:
  *    post:
  *      tags:
- *        - Users Route
+ *        - User Routes
  *      summary: Create User.
  *      description: Create User
  *      operationId: postUser

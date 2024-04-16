@@ -1,22 +1,15 @@
 /**
- * @swagger
+ *  @swagger
  * paths:
- *  /users/edit/{:id}:
- *    patch:
+ *  /cars/{:id}:
+ *    get:
  *      tags:
- *        - User Routes
- *      summary: Edit User.
- *      description: Edit Users.
- *      operationId: ediUser
+ *        - Car Routes
+ *      summary: Cars By Id.
+ *      description: Cars By Id
+ *      operationId: getCarById
  *      parameters:
  *        - $ref: '#/components/parameters/id'
- *      requestBody:
- *       description: login of the app.
- *       required: true
- *       content:
- *         application/json:
- *           schema:
- *             $ref: '#/components/body/userEdit'
  *      responses:
  *        200:
  *          description: Success
@@ -42,6 +35,4 @@
  *                type: array
  *                items:
  *                  $ref: '#/components/responses/notServer'
- *      security:
- *        - bearerAuth: []
  */

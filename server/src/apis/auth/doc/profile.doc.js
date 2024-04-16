@@ -4,7 +4,7 @@
  *  /auth/profile:
  *    get:
  *     tags:
- *       - Auth Route
+ *       - Auth Routes
  *     summary: profile the user.
  *     description: profile the user.
  *     operationId: Profile
@@ -14,19 +14,19 @@
  *         content:
  *          application/json:
  *           schema:
- *             $ref: '#/components/responses/ApiResponse'
+ *             $ref: '#/components/responses/apiResponse'
  *       404:
  *         description: Not Found
  *         content:
  *          application/json:
  *           schema:
- *             $ref: '#/components/responses/NotFound'
+ *             $ref: '#/components/responses/notFound'
  *       500:
  *         description: Internal Server Error
  *         content:
  *          application/json:
  *           schema:
- *             $ref: '#/components/responses/NotServer'
+ *             $ref: '#/components/responses/notServer'
  *     security:
  *       - bearerAuth: []
  */

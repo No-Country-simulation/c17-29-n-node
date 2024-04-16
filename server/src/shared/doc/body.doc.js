@@ -3,6 +3,7 @@
  * components:
  *  body:
  *    user:
+ *      name: User
  *      description: The login entity
  *      type: object
  *      properties:
@@ -12,14 +13,26 @@
  *        password:
  *          type: string
  *          example: 1234
- *    edit:
+ *    userEdit:
+ *      name: User Edit
  *      description: The edit user
  *      type: object
  *      properties:
  *        role:
  *          type: string
- *          example: user | admin
+ *          example: user | Admin
  *        name:
  *          type: string
  *          example: test
- */
+ *    carEdit:
+ *      name: Car Edit
+ *      description: The edit user
+ *      type: object
+ *      properties:
+ *        color:
+ *          type: string
+ *          example: blue
+ *        seats:
+ *          type: number
+ *          example: 4
+*/

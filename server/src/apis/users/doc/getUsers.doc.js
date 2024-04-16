@@ -5,7 +5,7 @@
  *  /users:
  *    get:
  *      tags:
- *        - Users Route
+ *        - User Routes
  *      summary: All Users.
  *      description: All Users.
  *      operationId: getUsers

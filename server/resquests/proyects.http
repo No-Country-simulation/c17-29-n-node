@@ -219,6 +219,39 @@ Authorization: Bearer {{tokenProd}}
 ----------------------------------------------
 
 *************************
+## Create Cars
+*************************
+
+### dev mode.
+# @name createUsersDev
+POST {{dev}}/cars
+content-type: {{contentType}}
+
+{
+  "brand": "Chevrolet",
+  "model": "Camaro",
+  "color": "amarillo",
+  "seats": 2,
+  "plateCode": "1234",
+  "isActive": true
+}
+
+### prod mode.
+# @name createUsersProd
+POST {{prod}}/cars HTTP/1.1
+content-type: {{contentType}}
+
+{
+  "brand": "Renault",
+  "model": "Clio",
+  "color": "red",
+  "seats": 4,
+  "plateCode": "1234",
+  "isActive": true
+}
+
+###
+*************************
 ## Get All Cars
 *************************
 ### dev mode.
@@ -228,3 +261,56 @@ GET {{dev}}/cars
 ### prod mode.
 # @name getAllCarsProd
 GET {{prod}}/cars HTTP/1.1
+
+*************************
+## Get By Id Car
+*************************
+
+### dev mode
+@:id= 661f0ef6220de1ef80f34486
+# @name getByIdUsersDev
+GET {{dev}}/cars/{{:id}}
+
+### prod mode.
+# @name getByIdUsersProd
+GET {{prod}}/cars/{{:id}} HTTP/1.1
+
+*************************
+## Edit Car
+*************************
+
+### dev mode
+# @name EditUsersDev
+PUT  {{dev}}/cars/{{:id}}
+Authorization: Bearer {{tokenDev}}
+content-type: {{contentType}}
+
+{
+  "color": "blue",
+  "seats": 2
+}
+
+### prod mode.
+# @name EditUsersProd
+PUT {{prod}}/cars/{{:id}} HTTP/1.1
+Authorization: Bearer {{tokenProd}}
+content-type: {{contentType}}
+
+{
+  "color": "blue",
+  "seats": 3
+}
+###
+*************************
+## Delete Users
+*************************
+
+### dev mode
+# @name EditUsersDev
+DELETE {{dev}}/cars/{{:id}}
+Authorization: Bearer {{tokenDev}}
+
+### prod mode.
+# @name EditUsersProd
+DELETE {{prod}}/cars/{{:id}} HTTP/1.1
+Authorization: Bearer {{tokenProd}}

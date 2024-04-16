@@ -4,7 +4,7 @@
  *  /start:
  *   get:
  *     tags:
- *       - Start Route
+ *       - Start Routes
  *     summary: start api.
  *     responses:
  *       200:

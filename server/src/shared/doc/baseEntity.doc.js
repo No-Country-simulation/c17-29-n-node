@@ -2,7 +2,8 @@
  * @swagger
  * components:
  *  schemas:
- *    BaseEntity:
+ *    baseEntity:
+ *      name: Base Entity
  *      type: object
  *      description: The base entity
  *      properties:

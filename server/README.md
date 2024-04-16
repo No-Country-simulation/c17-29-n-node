@@ -75,7 +75,7 @@ API process log
 #### Post -> addUser
 
 - [x] Endpoint
-- [ ] Documentation
+- [x] Documentation
 
 #### Path -> editUser
 
@@ -85,31 +85,31 @@ API process log
 #### Delete -> deleteUser
 
 - [x] Endpoint
-- [ ] Documentation
+- [x] Documentation
 
 ### Car Route
 
 #### Get -> getCars
 
 - [x] Endpoint
-- [ ] Documentation
+- [x] Documentation
 
 #### Get -> getCarById
 
 - [x] Endpoint
-- [ ] Documentation
+- [x] Documentation
 
 #### Post -> addCar
 
 - [x] Endpoint
-- [ ] Documentation
+- [x] Documentation
 
 #### Put -> updateCar
 
 - [x] Endpoint
-- [ ] Documentation
+- [x] Documentation
 
 #### Delete -> deleteCar
 
 - [x] Endpoint
-- [ ] Documentation
+- [x] Documentation
