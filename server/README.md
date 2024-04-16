@@ -2,19 +2,25 @@
 
 ![Logo](img/BANNER.png)
 
+## Technology
+
 [![node](https://img.shields.io/badge/node-20.x-green.svg)](https://nodejs.org/docs/latest-v20.x/api/index.html)[![npm](https://img.shields.io/badge/npm-10.x-red.svg)](https://www.npmjs.com/)[![Test](https://img.shields.io/badge/Test-Vitest_-yellow.svg)](https://vitest.dev/)
 
 ## 👀 Motivation
 
-...
+resumen de la motivación
 
-## 🧑‍💻 Developing
+## 🧑‍💻 Developer
 
-.. 
+Equipo
 
 ## ✅ Testing
 
+Si lo hay
+
 ## 🩻 Progress Report
+
+API process log
 
 ### Start Route
 

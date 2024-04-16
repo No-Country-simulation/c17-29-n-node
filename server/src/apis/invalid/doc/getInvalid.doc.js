@@ -1,6 +1,6 @@
 
 /**
- *  @swagger
+ * @swagger
  * components:
  *  schemas:
  *    Invalid:
@@ -30,23 +30,17 @@
  *          content:
  *            application/json:
  *              schema:
- *                type: array
- *                items:
- *                  $ref: '#/components/schemas/Invalid'
+ *                $ref: '#/components/schemas/Invalid'
  *        404:
  *          description: Not Found
  *          content:
  *            application/json:
  *              schema:
- *                type: array
- *                items:
- *                  $ref: '#/components/schemas/NotFound'
+ *                $ref: '#/components/schemas/NotFound'
  *        500:
  *          description: Internal Server Error
  *          content:
  *            application/json:
  *              schema:
- *                type: array
- *                items:
- *                  $ref: '#/components/schemas/NotServer'
+ *                $ref: '#/components/schemas/NotServer'
  */

@@ -1,19 +1,5 @@
 /**
  * @swagger
- * components:
- *  schemas:
- *    Login:
- *      required:
- *        - email
- *        - password
- *      type: object
- *      properties:
- *        email:
- *          type: string
- *          example: coreo@coreo.com
- *        password:
- *          type: string
- *          example: 1234
  * paths:
  *  /auth/login:
  *    post:
@@ -28,14 +14,14 @@
  *       content:
  *         application/json:
  *           schema:
- *             $ref: '#/components/schemas/Login'
+ *             $ref: '#/components/schemas/UserBasicEntity'
  *     responses:
  *       200:
  *         description: Successful operation
  *         content:
  *          application/json:
  *           schema:
- *             $ref: '#/components/schemas/Login'
+ *             $ref: '#/components/schemas/ApiResponse'
  *       404:
  *         description: Not Found
  *         content:
@@ -48,8 +34,4 @@
  *          application/json:
  *           schema:
  *             $ref: '#/components/schemas/NotServer'
- *    security:
- *      - api_auth:
- *         - write:api
- *         - read:api
  */
