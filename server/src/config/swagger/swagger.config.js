@@ -75,6 +75,7 @@ const swaggerOptions = {
     .topbar{ display: none;}
     `,
   customfavIcon: "/assets/ico/favicon.ico",
+  
 };
 
 const config = swaggerJsDoc(swaggerConfig);
