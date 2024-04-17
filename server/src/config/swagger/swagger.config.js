@@ -27,6 +27,7 @@ const swaggerConfig = {
       },
       license: {
         name: "MIT",
+        identifier: "MIT",
         url: "https://opensource.org/license/mit/",
       },
       version: "1.0.0",
@@ -43,8 +44,8 @@ const swaggerConfig = {
           (env?.trim() === "production" ? "production" : "development"),
         variables: {
           basePath: {
-            enum: ["", "api"],
-            default: "",
+            enum: ["api"],
+            default: "api",
             description: "this value is assigned by the service provider",
           },
         },
@@ -53,7 +54,7 @@ const swaggerConfig = {
     consumes: ["application/json"],
     produces: ["application/json"],
   },
-  apis: ["src/**/*.doc.js"],
+  apis: ["./**/doc/*.doc.js"],
 };
 
 const swaggerOptions = {
@@ -63,7 +64,7 @@ const swaggerOptions = {
   filter: true,
   customSiteTitle: "Api Rest Full Dynamic",
   customCss: `${darkStyle}
-    .swagger-ui .main{
+    .main{
       background-image: url("/assets/img/logo.png");
       background-size: 60px 60px;
       background-repeat: no-repeat;
@@ -71,10 +72,18 @@ const swaggerOptions = {
       height: 60px;
       align-content: center;
     }
-    .topbar{ display: none;}`,
-  customCssUrl:
-    "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.1.0/swagger-ui.min.css",
+    .topbar{ display: none;}
+    `,
   customfavIcon: "/assets/ico/favicon.ico",
+  customJs: [
+    "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.9.4/swagger-ui-bundle.min.js",
+    "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.9.4/swagger-ui-standalone-preset.min.js",
+  ],
+  customCssUrl: [
+    "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.9.4/swagger-ui.min.css",
+    "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.9.4/swagger-ui-standalone-preset.min.css",
+    "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.9.4/swagger-ui.css",
+  ],
 };
 
 const config = swaggerJsDoc(swaggerConfig);

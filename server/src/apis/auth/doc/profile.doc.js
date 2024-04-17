@@ -1,46 +1,32 @@
 /**
  * @swagger
- * components:
- *  schemas:
- *    Profile:
- *      description: The user profile entity
- *      type: object
- *      properties:
- *        uptime:
- *          type: string
- *        data:
- *          $ref: '#/components/schemas/Data'
- *        timestamp:
- *          type: string
  * paths:
- *  /profile:
- *   get:
+ *  /auth/profile:
+ *    get:
  *     tags:
- *       - Auth Route
- *     summary: profile router api.
+ *       - Auth Routes
+ *     summary: profile the user.
+ *     description: profile the user.
+ *     operationId: Profile
  *     responses:
  *       200:
  *         description: Success
  *         content:
  *          application/json:
  *           schema:
- *             type: array
- *             items:
- *               $ref: '#/components/schemas/Start'
+ *             $ref: '#/components/responses/apiResponse'
  *       404:
  *         description: Not Found
  *         content:
  *          application/json:
  *           schema:
- *             type: array
- *             items:
- *               $ref: '#/components/schemas/NotFound'
+ *             $ref: '#/components/responses/notFound'
  *       500:
  *         description: Internal Server Error
  *         content:
  *          application/json:
  *           schema:
- *             type: array
- *             items:
- *               $ref: '#/components/schemas/NotServer'
+ *             $ref: '#/components/responses/notServer'
+ *     security:
+ *       - bearerAuth: []
  */

@@ -1,14 +1,20 @@
-
 /**
  *  @swagger
  * paths:
- *  /users:
- *    get:
+ *  /users/create:
+ *    post:
  *      tags:
  *        - User Routes
- *      summary: All Users.
- *      description: All Users.
- *      operationId: getUsers
+ *      summary: Create User.
+ *      description: Create User
+ *      operationId: postUser
+ *      requestBody:
+ *       description: Create User.
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/body/user'
  *      responses:
  *        200:
  *          description: Success

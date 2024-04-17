@@ -1,2 +1,316 @@
+# Environment Variables
+@contentType = application/json
+@createdAt = {{$datetime iso8601}}
+@modifiedBy = {{$processEnv USERNAME}}
+@basepath = api
 
-http://localhost:3000/api/start
+## Dev
+@hostdev = localhost
+@port = 3000
+@dev = http://{{hostdev}}:{{port}}/{{basepath}}
+
+## Prod
+@hostprod = https://c17-29-n-node.vercel.app
+@version = v1
+@prod = {{hostprod}}/{{basepath}}
+
+
+# Endpoints
+
+----------------------------------------------
+## Docs Route
+----------------------------------------------
+
+### dev mode
+# @name docsDev
+GET {{dev}}/docs
+
+### prod mode.
+# @name docsProd
+GET {{prod}}/docs HTTP/1.1
+
+----------------------------------------------
+## Inavlod route
+----------------------------------------------
+
+### dev mode
+# @name invalidDev
+GET {{dev}}
+
+### prod mode.
+# @name invalidProd
+GET {{prod}} HTTP/1.1
+
+----------------------------------------------
+## Start Route
+----------------------------------------------
+
+### dev mode
+# @name startDev
+GET {{dev}}/start
+
+### prod mode.
+# @name startProd
+GET {{prod}}/start HTTP/1.1
+
+----------------------------------------------
+## Auth Route
+----------------------------------------------
+
+*************************
+## Profile
+*************************
+### dev mode.
+# @name profileDev
+@tokenProd = {{loginProd.response.body.$.token}}
+GET {{dev}}/auth/profile HTTP/1.1
+Authorization: Bearer {{tokenDev}}
+
+
+### prod mode.
+# @name profileProd
+@tokenDev = {{loginDev.response.body.$.token}}
+GET {{prod}}/auth/profile HTTP/1.1
+Authorization: Bearer {{tokenProd}}
+
+*************************
+## Register
+*************************
+### dev mode.
+# @name registerDev
+POST {{dev}}/auth/register
+content-type: {{contentType}}
+
+{
+  "email": "core5@coreo.com",
+  "password": "1234"
+}
+
+### prod mode.
+# @name registerProd
+POST {{prod}}/auth/register HTTP/1.1
+content-type: {{contentType}}
+
+{
+  "email": "core5@coreo.com",
+  "password": "1234"
+}
+###
+*************************
+## Login
+*************************
+
+### dev mode
+# @name loginDev
+POST {{dev}}/auth/login
+content-type: {{contentType}}
+
+{
+  "email": "core6@coreo.com",
+  "password": "1234"
+}
+
+### prod mode.
+# @name loginProd
+POST {{prod}}/auth/login
+content-type: {{contentType}}
+
+{
+  "email": "core6@coreo.com",
+  "password": "1234"
+}
+###
+----------------------------------------------
+## Users route
+----------------------------------------------
+
+*************************
+## Create Users
+*************************
+
+### dev mode.
+# @name createUsersDev
+POST {{dev}}/users/create
+content-type: {{contentType}}
+
+{
+  "email": "test1@test.com",
+  "password": "1234"
+}
+
+### prod mode.
+# @name createUsersProd
+POST {{prod}}/users/create HTTP/1.1
+content-type: {{contentType}}
+
+{
+  "email": "test2@coreo.com",
+  "password": "1234"
+}
+
+###
+*************************
+## Get All Users
+*************************
+
+### dev mode.
+# @name getAllUsersDev
+GET {{dev}}/users
+
+### prod mode.
+# @name getAllUsersProd
+GET {{prod}}/users HTTP/1.1
+
+*************************
+## Get By Id Users
+*************************
+
+### dev mode
+@:id= 661e19ad8a0bb47b7d2d74ff
+# @name getByIdUsersDev
+GET {{dev}}/users/{{:id}}
+
+### prod mode.
+# @name getByIdUsersProd
+GET {{prod}}/users/{{:id}} HTTP/1.1
+
+*************************
+## Edit Users
+*************************
+
+### dev mode
+# @name EditUsersDev
+PATCH  {{dev}}/users/edit/{{:id}}
+Authorization: Bearer {{tokenDev}}
+content-type: {{contentType}}
+
+{
+  "role": "Admin",
+  "name": "dev test"
+}
+
+### prod mode.
+# @name EditUsersProd
+PATCH {{prod}}/users/edit/{{:id}} HTTP/1.1
+Authorization: Bearer {{tokenProd}}
+content-type: {{contentType}}
+
+{
+  "role": "user",
+  "name": "prod test"
+}
+###
+*************************
+## Delete Users
+*************************
+
+### dev mode
+# @name EditUsersDev
+DELETE {{dev}}/users/delete/{{:id}}
+Authorization: Bearer {{tokenDev}}
+
+### prod mode.
+# @name EditUsersProd
+DELETE {{prod}}/users/delete/{{:id}} HTTP/1.1
+Authorization: Bearer {{tokenProd}}
+
+----------------------------------------------
+## Car ruote
+----------------------------------------------
+
+*************************
+## Create Cars
+*************************
+
+### dev mode.
+# @name createUsersDev
+POST {{dev}}/cars
+content-type: {{contentType}}
+
+{
+  "brand": "Chevrolet",
+  "model": "Camaro",
+  "color": "amarillo",
+  "seats": 2,
+  "plateCode": "1234",
+  "isActive": true
+}
+
+### prod mode.
+# @name createUsersProd
+POST {{prod}}/cars HTTP/1.1
+content-type: {{contentType}}
+
+{
+  "brand": "Renault",
+  "model": "Clio",
+  "color": "red",
+  "seats": 4,
+  "plateCode": "1234",
+  "isActive": true
+}
+
+###
+*************************
+## Get All Cars
+*************************
+### dev mode.
+# @name getAllCarsDev
+GET {{dev}}/cars
+
+### prod mode.
+# @name getAllCarsProd
+GET {{prod}}/cars HTTP/1.1
+
+*************************
+## Get By Id Car
+*************************
+
+### dev mode
+@:id= 661f0ef6220de1ef80f34486
+# @name getByIdUsersDev
+GET {{dev}}/cars/{{:id}}
+
+### prod mode.
+# @name getByIdUsersProd
+GET {{prod}}/cars/{{:id}} HTTP/1.1
+
+*************************
+## Edit Car
+*************************
+
+### dev mode
+# @name EditUsersDev
+PUT  {{dev}}/cars/{{:id}}
+Authorization: Bearer {{tokenDev}}
+content-type: {{contentType}}
+
+{
+  "color": "blue",
+  "seats": 2
+}
+
+### prod mode.
+# @name EditUsersProd
+PUT {{prod}}/cars/{{:id}} HTTP/1.1
+Authorization: Bearer {{tokenProd}}
+content-type: {{contentType}}
+
+{
+  "color": "blue",
+  "seats": 3
+}
+###
+*************************
+## Delete Users
+*************************
+
+### dev mode
+# @name EditUsersDev
+DELETE {{dev}}/cars/{{:id}}
+Authorization: Bearer {{tokenDev}}
+
+### prod mode.
+# @name EditUsersProd
+DELETE {{prod}}/cars/{{:id}} HTTP/1.1
+Authorization: Bearer {{tokenProd}}

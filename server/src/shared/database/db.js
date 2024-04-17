@@ -1,7 +1,9 @@
 import { connect } from "mongoose";
-import "dotenv/config";
+import { config } from "dotenv";
 
-const MONGO_URL = "mongodb+srv://c17node29:ay8B81LfdUkmv13I@cluster0.mqbzmmi.mongodb.net/c17node29"
+config();
+
+const MONGO_URL = process.env.URL_MONGO;
 
 export const connectDB = async () => {
   try {
@@ -11,4 +13,3 @@ export const connectDB = async () => {
     console.error(`☠️  Database Connection Error: ${error}`);
   }
 };
-

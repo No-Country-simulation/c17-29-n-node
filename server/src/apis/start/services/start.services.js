@@ -1,9 +1,5 @@
 export const getStart = async () => {
-  return ({
-    uptime: `${process.uptime()}`,
-    data: {
+  return {
       msg: `✅ Api 🆗 online 💯 % ✨`,
-    },
-    timestamp: `${Date.now()}`,
-  });
+    }
 };

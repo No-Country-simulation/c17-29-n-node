@@ -2,13 +2,13 @@
 /**
  *  @swagger
  * paths:
- *  /users:
+ *  /cars:
  *    get:
  *      tags:
- *        - User Routes
- *      summary: All Users.
- *      description: All Users.
- *      operationId: getUsers
+ *        - Car Routes
+ *      summary: All Cars.
+ *      description: All Cars.
+ *      operationId: getCars
  *      responses:
  *        200:
  *          description: Success

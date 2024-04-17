@@ -1,68 +1,36 @@
 /**
  * @swagger
- * components:
- *   schemas:
- *     Register:
- *       required:
- *         - email
- *         - password
- *       type: object
- *       properties:
- *         ref: '#/components/schemas/baseEntity'
- *         name:
- *           type: string
- *           example: usuario1
- *         email:
- *           type: string
- *           unique: true
- *           example: coreo@coreo.com
- *         password:
- *           type: string
- *           example: 1712613566149
- *         age:
- *           type: integer
- *           format: int64
- *           example: 18
- *         phoneNumber:
- *           type: integer
- *           format: int64
- *           example: 3123456789
  * paths:
- *  /register:
+ *  /auth/register:
  *   post:
  *    tags:
- *      - Auth Route
+ *      - Auth Routes
  *    summary: Registre the api.
  *    description: Register the api.
- *    operationId: registerUser
+ *    operationId: register
  *    requestBody:
  *      description: Register of the app.
- *      required: true
  *      content:
  *        application/json:
  *          schema:
- *            $ref: '#/components/schemas/Register'
+ *            $ref: '#/components/body/user'
  *    responses:
  *      200:
  *        description: Success
  *        content:
  *          application/json:
  *            schema:
- *              $ref: '#/components/schemas/Register'
+ *              $ref: '#/components/responses/apiResponse'
  *      404:
  *        description: Not Found
  *        content:
  *          application/json:
  *            schema:
- *               $ref: '#/components/schemas/NotFound'
+ *               $ref: '#/components/responses/notFound'
  *      500:
  *        description: Internal Server Error
  *        content:
  *          application/json:
  *            schema:
- *              $ref: '#/components/schemas/NotServer'
- *    security:
- *      - api_auth:
- *        - write:api
- *        - read:api
+ *              $ref: '#/components/responses/notServer'
  */
