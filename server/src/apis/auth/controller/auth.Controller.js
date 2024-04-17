@@ -1,10 +1,12 @@
 import jwt from "jsonwebtoken";
 import { config } from "dotenv";
-import {
-  createUserService,
-  getUserBy,
-} from "../../../apis/users/services/user.services.js";
 import { createHash, validatePassword } from "../../../shared/bcrypt/bcrypt.js";
+import { createUserService, getUserBy } from "../../users/services/user.services.js";
+
+config();
+
+const secreto = process.env.JWT_SECRET;
+const expToken = process.env.JWT_EXPIRATION;
 
 const register = async (req, res) => {
   const { name, email, password, age, phoneNumber } = req.body;

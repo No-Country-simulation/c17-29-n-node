@@ -1,14 +1,15 @@
-
 /**
  *  @swagger
  * paths:
- *  /users:
+ *  /cars/{:id}:
  *    get:
  *      tags:
- *        - User Routes
- *      summary: All Users.
- *      description: All Users.
- *      operationId: getUsers
+ *        - Car Routes
+ *      summary: Cars By Id.
+ *      description: Cars By Id
+ *      operationId: getCarById
+ *      parameters:
+ *        - $ref: '#/components/parameters/id'
  *      responses:
  *        200:
  *          description: Success

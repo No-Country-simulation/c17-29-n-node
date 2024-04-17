@@ -34,4 +34,4 @@ serverRouter.use("/api/auth", authRoutes);
 serverRouter.use("/api/cars", carRouter);
 serverRouter.use("/api/travel", travelRouter)
 serverRouter.use("/api", invalidRouter);
-serverRouter.use("/", invalidRouter);
+serverRouter.use("*", invalidRouter);

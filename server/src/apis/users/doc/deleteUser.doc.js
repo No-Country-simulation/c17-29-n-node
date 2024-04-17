@@ -1,14 +1,15 @@
-
 /**
- *  @swagger
+ * @swagger
  * paths:
- *  /users:
- *    get:
+ *  /users/delete/{:id}:
+ *    delete:
  *      tags:
  *        - User Routes
- *      summary: All Users.
- *      description: All Users.
- *      operationId: getUsers
+ *      summary: Delete User.
+ *      description: Delete Users.
+ *      operationId: deleteUser
+ *      parameters:
+ *        - $ref: '#/components/parameters/id'
  *      responses:
  *        200:
  *          description: Success
@@ -34,4 +35,6 @@
  *                type: array
  *                items:
  *                  $ref: '#/components/responses/notServer'
+ *      security:
+ *        - bearerAuth: []
  */

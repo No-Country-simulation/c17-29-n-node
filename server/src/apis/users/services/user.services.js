@@ -20,8 +20,8 @@ export const getUserBy = (param) => {
 export const editUserService = async (id, payload) => {
   const options = {
     new: true
-  };
-  return await userModel.findByIdAndUpdate(id, payload, options);
+  };//lo quite porque no cambiaba los datos
+  return await userModel.findByIdAndUpdate(id, payload);
 };
 
 export const deleteUserService = async (id) => {

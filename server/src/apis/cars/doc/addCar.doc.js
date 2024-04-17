@@ -1,14 +1,20 @@
-
 /**
  *  @swagger
  * paths:
- *  /users:
- *    get:
+ *  /cars/:
+ *    post:
  *      tags:
- *        - User Routes
- *      summary: All Users.
- *      description: All Users.
- *      operationId: getUsers
+ *        - Car Routes
+ *      summary: Create Car.
+ *      description: Create Carr
+ *      operationId: addCar
+ *      requestBody:
+ *       description: Create Car.
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/carEntity'
  *      responses:
  *        200:
  *          description: Success
@@ -34,4 +40,6 @@
  *                type: array
  *                items:
  *                  $ref: '#/components/responses/notServer'
+ *      security:
+ *        - bearerAuth: []
  */
