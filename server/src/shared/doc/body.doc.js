@@ -35,4 +35,21 @@
  *        seats:
  *          type: number
  *          example: 4
+ *    travelEdit:
+ *      name: Travel Edit
+ *      description: The edit travel
+ *      type: object
+ *      properties:
+ *        tripDistance:
+ *          type: number
+ *          format: float
+ *          example: 5000.00
+ *        numberSeatsAvailable:
+ *          type: integer
+ *          format: int32
+ *          example: 4
+ *        numberSeatsOccupied:
+ *          type: integer
+ *          format: int32
+ *          example: 0
 */

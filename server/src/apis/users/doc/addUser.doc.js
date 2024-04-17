@@ -1,22 +1,20 @@
 /**
  * @swagger
  * paths:
- *  /users/{:id}:
- *    put:
+ *  /users:
+ *    post:
  *      tags:
  *        - User Routes
- *      summary: Edit User.
- *      description: Edit Users.
- *      operationId: ediUser
- *      parameters:
- *        - $ref: '#/components/parameters/id'
+ *      summary: Create User.
+ *      description: Create User
+ *      operationId: postUser
  *      requestBody:
- *       description: login of the app.
+ *       description: Create User.
  *       required: true
  *       content:
  *         application/json:
  *           schema:
- *             $ref: '#/components/body/userEdit'
+ *             $ref: '#/components/body/user'
  *      responses:
  *        200:
  *          description: Success

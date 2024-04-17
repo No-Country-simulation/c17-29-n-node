@@ -1,64 +1,66 @@
 import travelModel from "../model/travel-model.js";
 
-async function createTravel(dataCar) {
+export async function createTravel(req, res) {
   try {
-    const { origen, destino, capacidad, dia, horario } = dataCar;
-
-    const newCar = new travelModel({  origen, destino, capacidad, dia, horario });
-
-    await newCar.save();
-
-    return newCar;
-  } catch (e) {
-    console.error("error al crear el auto", e);
+    const payload = req.body;
+    const newTravel = new travelModel(payload);
+    const sendTravel = await newTravel.save();
+    !sendTravel
+      ? res.status(404).json({ message: "user not found"})
+      : res.status(201).json(sendTravel);
+  } catch (error) {
+    res.status(404).json({ message: "Error en startCreateCar" });
   }
 }
 
-export async function startCreateTravel(req, res) {
+export async function getAllTravels(req, res) {
   try {
-    const sendCar = await createTravel(req.body);
-    res.status(201).json(sendCar);
+    const trips = await travelModel.find();
+    !trips
+      ? res.status(404).json({ message: "user not found" })
+      : res.status(200).json(trips);
   } catch (error) {
-    console.error("Error en startCreateCar:", error);
+    res.status(404).json({ message: "Error en getAllTravel" });
   }
 }
 
-
-export async function getAllTravel(req, res) {
+export const getTravelById = async (req, res) => {
   try {
-    const trips = await carModel.find();
-    res.status(200).json(trips);
+    const { id } = req.params;
+    const updateCar = await travelModel.findById(id);
+    !updateCar
+      ? res.status(404).json({ message: "user not found" })
+      : res.status(200).json(updateCar);
   } catch (error) {
-    console.error('Error al obtener los viajes:', error);
-    res.status(500).json({ message: 'Error interno del servidor' });
+    res.status(500).json({ message: "Error en getAllTravel" });
+  }
+};
+
+export async function updateTravel(req, res) {
+  try {
+    const { id } = req.params;
+    const updateData = req.body;
+
+    const updateTravel = await travelModel.findByIdAndUpdate(id, updateData, {
+      new: true,
+    });
+    !updateTravel
+      ? res.status(404).json({ message: "user not found"})
+      : res.status(200).json(updateTravel);
+  } catch (error) {
+    res.status(404).json({ message: "Error en updateTravel" });
+    //console.log("error desde update car model", error);
   }
 }
 
-export async function  updateTravelModel(req, res){
+export async function deleteTravel(req, res) {
   try {
-    const {id} = req.params
-    const updateData = req.body
-  
-    const updateCar = await carModel.findByIdAndUpdate(id, updateData, {new: true})
-  
-    res.status(200).json(updateCar)
-    
+    const { id } = req.params;
+    const deleteTravel = await travelModel.findByIdAndDelete(id);
+    !deleteTravel
+      ? res.status(404).json({ message: "user not found" })
+      : res.status(200).json(deleteTravel);
   } catch (error) {
-    console.log("error desde update car model", error);
-  }
-}
-
-
-  export async function  deleteTravelModel(req, res){
-  try {
-    const {id} = req.params
-    const updateData = req.body
-  
-    const updateCar = await carModel.findByIdAndDelete(id)
-  
-    res.status(200).json(updateCar)
-    
-  } catch (error) {
-    console.log("error al eliminar car model", error);
+    res.status(404).json({ message: "Error en deleteTravel" });
   }
 }

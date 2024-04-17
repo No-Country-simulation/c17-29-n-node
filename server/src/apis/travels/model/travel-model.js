@@ -3,7 +3,6 @@ import mongoose from 'mongoose';
 const collection = "Travel";
 
 const schema = new mongoose.Schema({
-   
     origen:{
         type: String,
         required: true

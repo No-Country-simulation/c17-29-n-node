@@ -5,8 +5,8 @@
  *    get:
  *     tags:
  *       - Auth Routes
- *     summary: profile the user.
- *     description: profile the user.
+ *     summary: Profile the user.
+ *     description: Profile the user.
  *     operationId: Profile
  *     responses:
  *       200:

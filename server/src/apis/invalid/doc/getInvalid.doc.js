@@ -6,10 +6,8 @@
  *    get:
  *      tags:
  *        - Invalid Routes
- *      summary:
- *        the Invalid router api.
- *      description:
- *        the Invalid router api.
+ *      summary: The Invalid router api.
+ *      description: The Invalid router api.
  *      responses:
  *        200:
  *          description: Success

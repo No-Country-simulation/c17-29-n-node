@@ -1,22 +1,20 @@
 /**
  * @swagger
  * paths:
- *  /users/{:id}:
- *    put:
+ *  /travels:
+ *    post:
  *      tags:
- *        - User Routes
- *      summary: Edit User.
- *      description: Edit Users.
- *      operationId: ediUser
- *      parameters:
- *        - $ref: '#/components/parameters/id'
+ *        - Travel Routes
+ *      summary: Create Travel.
+ *      description: Create Travel
+ *      operationId: startCreateTravel
  *      requestBody:
- *       description: login of the app.
+ *       description: Create Travel.
  *       required: true
  *       content:
  *         application/json:
  *           schema:
- *             $ref: '#/components/body/userEdit'
+ *             $ref: '#/components/schemas/travelEntity'
  *      responses:
  *        200:
  *          description: Success

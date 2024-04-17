@@ -3,13 +3,13 @@ import favicon from "serve-favicon";
 import { dirname, join } from "path";
 import { fileURLToPath } from "url";
 import { controller, middleware } from "../config/swagger/swagger.config.js";
+import { authRoutes } from "../apis/auth/router/auth.router.js";
+import { carRouter } from "../apis/cars/router/car.router.js";
 import { invalidRouter } from "../apis/invalid/router/invalid.router.js";
 import { startRouter } from "../apis/start/router/start.router.js";
-import { authRoutes } from "../apis/auth/router/auth.router.js";
-import { userRoutes } from "../apis/users/router/user.router.js";
+import { travelRouters } from "../apis/travels/router/travel-router.js";
 import { uploader } from "../shared/multer/multer.js";
-import { carRouter } from "../apis/cars/router/car.router.js";
-import { travelRouter } from "../apis/travels/router/travel-router.js";
+import { userRoutes } from "../apis/users/router/user.router.js";
 
 export const serverRouter = express.Router();
 
@@ -27,11 +27,10 @@ serverRouter.post("/api/file", uploader.single("myFile"), (req, res) => {
 });
 
 serverRouter.use(favicon(join(root, "assets/ico/favicon.ico")));
-serverRouter.use("/api/docs", middleware, controller);
-serverRouter.use("/api/start", startRouter);
-serverRouter.use("/api/users", userRoutes);
 serverRouter.use("/api/auth", authRoutes);
 serverRouter.use("/api/cars", carRouter);
-serverRouter.use("/api/travel", travelRouter)
-serverRouter.use("/api", invalidRouter);
+serverRouter.use("/api/docs", middleware, controller);
+serverRouter.use("/api/travels", travelRouters)
+serverRouter.use("/api/users", userRoutes);
+serverRouter.use("/api", startRouter);
 serverRouter.use("*", invalidRouter);

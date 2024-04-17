@@ -1,20 +1,22 @@
 /**
- *  @swagger
+ * @swagger
  * paths:
- *  /users/create:
- *    post:
+ *  /travels/{:id}:
+ *    put:
  *      tags:
- *        - User Routes
- *      summary: Create User.
- *      description: Create User
- *      operationId: postUser
+ *        - Travel Routes
+ *      summary: Edit Travel..
+ *      description: Edit Travel.
+ *      operationId: updateTravelModel
+ *      parameters:
+ *        - $ref: '#/components/parameters/id'
  *      requestBody:
- *       description: Create User.
+ *       description: login of the app.
  *       required: true
  *       content:
  *         application/json:
  *           schema:
- *             $ref: '#/components/body/user'
+ *             $ref: '#/components/body/travelEdit'
  *      responses:
  *        200:
  *          description: Success
@@ -40,4 +42,6 @@
  *                type: array
  *                items:
  *                  $ref: '#/components/responses/notServer'
+ *      security:
+ *        - bearerAuth: []
  */

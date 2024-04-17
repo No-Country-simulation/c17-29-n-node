@@ -35,4 +35,6 @@
  *                type: array
  *                items:
  *                  $ref: '#/components/responses/notServer'
+ *      security:
+ *        - bearerAuth: []
  */
