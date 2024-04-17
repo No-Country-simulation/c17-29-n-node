@@ -1,9 +1,11 @@
 import { getInvalid } from "../services/invalid.services.js";
+import { apiResponse } from "../../../shared/apiRespond/apiResponse.js";
+
 export const invalid = async (req, res) => {
   try {
-    const startResponse = await getInvalid();
-    res.status(200).json(startResponse);
+    const invalidResponse = await getInvalid();
+    apiResponse(res, 404, "", "", invalidResponse);
   } catch (error) {
-    res.status(501).json(error);
+    apiResponse(res, 500, "", "", error);
   }
 };

@@ -10,43 +10,43 @@
  *          type: integer
  *          format: int32
  *          example: 200
- *        type:
+ *        status:
  *          type: string
  *          example: success
- *        msg:
+ *        description:
  *          type: string
- *          example: created successfully
+ *          example: ok
  *        data:
  *          type: object
- *          example: data{}
+ *          example: { }
  *    notFound:
  *      properties:
  *        code:
  *          type: integer
  *          format: int32
  *          example: 404
- *        type:
+ *        status:
  *          type: string
- *          example: Error
- *        msg:
+ *          example: error
+ *        description:
  *          type: string
- *          example: Invalid credentials
+ *          example: Not found
  *        data:
  *          type: object
- *          example: data{}
+ *          example: { }
  *    notServer:
  *      properties:
  *        code:
  *          type: integer
  *          format: int32
  *          example: 500
- *        type:
+ *        status:
  *          type: string
  *          example: Error
- *        msg:
+ *        description:
  *          type: string
  *          example: Server error
  *        data:
  *          type: object
- *          example: data{}
+ *          example: { }
  */
