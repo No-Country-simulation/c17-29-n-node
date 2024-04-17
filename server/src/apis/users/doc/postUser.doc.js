@@ -23,7 +23,7 @@
  *              schema:
  *                type: array
  *                items:
- *                  $ref: '#/components/responses/ApiResponse'
+ *                  $ref: '#/components/responses/apiResponse'
  *        404:
  *          description: Not Found
  *          content:
@@ -31,7 +31,7 @@
  *              schema:
  *                type: array
  *                items:
- *                  $ref: '#/components/responses/NotFound'
+ *                  $ref: '#/components/responses/notFound'
  *        500:
  *          description: Internal Server Error
  *          content:
@@ -39,5 +39,5 @@
  *              schema:
  *                type: array
  *                items:
- *                  $ref: '#/components/responses/NotServer'
+ *                  $ref: '#/components/responses/notServer'
  */
