@@ -9,6 +9,7 @@ import { authRoutes } from "../apis/auth/router/auth.router.js";
 import { userRoutes } from "../apis/users/router/user.router.js";
 import { uploader } from "../shared/multer/multer.js";
 import { carRouter } from "../apis/cars/router/car.router.js";
+import { travelRouter } from "../apis/travels/router/travel-router.js";
 
 export const serverRouter = express.Router();
 
@@ -31,5 +32,6 @@ serverRouter.use("/api/start", startRouter);
 serverRouter.use("/api/users", userRoutes);
 serverRouter.use("/api/auth", authRoutes);
 serverRouter.use("/api/cars", carRouter);
+serverRouter.use("/api/travel", travelRouter)
 serverRouter.use("/api", invalidRouter);
 serverRouter.use("/", invalidRouter);
