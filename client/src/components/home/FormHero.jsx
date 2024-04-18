@@ -30,7 +30,7 @@ export const FormHero = () => {
     // validations
 
     // validate age
-    const quantityRegex = /^([1-9]?)$/
+    const quantityRegex = /^([1-9]|10?)$/
     // const ageValidation = handleValidation(ageRegex);
     const [quantityValue, setQuantityValue, isQuantityInvalid] = useValidation(quantityRegex);
 
@@ -41,8 +41,8 @@ export const FormHero = () => {
 
     const router = useRouter()
     return (
-        <form action="" className='flex flex-row gap-3 [&>*]:w-fit' onSubmit={handleSubmit}>
-            <Input variant="underlined" type="text" label="Origen" placeholder='Rosario, Santa Fe' isRequired onChange={handleInputChange} name="Origen" locationValidation={isOriginInvalid} color={isOriginInvalid ? "danger" : "success"} errorMessage={isOriginInvalid && "Entre 4 y 35 carácteres"} onValueChange={setOriginValue} isInvalid={isOriginInvalid} className={{
+        <form action="" className='flex flex-col md:flex-row gap-3 w-full md:[&>*]:w-fit' onSubmit={handleSubmit}>
+            <Input variant="underlined" type="text" label="Origen" placeholder='Rosario, Santa Fe' isRequired onChange={handleInputChange} name="origin" locationValidation={isOriginInvalid} color={isOriginInvalid ? "danger" : "success"} errorMessage={isOriginInvalid && "Entre 4 y 35 carácteres"} onValueChange={setOriginValue} isInvalid={isOriginInvalid} className={{
                 errorMessage: [
                     "absolute",
                     "bottom-0",
@@ -51,7 +51,7 @@ export const FormHero = () => {
                     "text-xs"
                 ]
             }} />
-            <Input variant="underlined" type="text" label='Destino' placeholder='La Cumbrecita, Córdoba' isRequired locationValidation={isDestinationInvalid} color={isDestinationInvalid ? "danger" : "success"} errorMessage={isDestinationInvalid && "Entre 4 y 35 carácteres"} onValueChange={setDestinationValue} isInvalid={isDestinationInvalid} className={{
+            <Input variant="underlined" type="text" label='Destino' placeholder='La Cumbrecita, Córdoba' isRequired onChange={handleInputChange} name="destination" locationValidation={isDestinationInvalid} color={isDestinationInvalid ? "danger" : "success"} errorMessage={isDestinationInvalid && "Entre 4 y 35 carácteres"} onValueChange={setDestinationValue} isInvalid={isDestinationInvalid} className={{
                 errorMessage: [
                     "absolute",
                     "bottom-0",
@@ -60,8 +60,8 @@ export const FormHero = () => {
                     "text-xs"
                 ]
             }} />
-            <Input type="date" label='Partida' isRequired />
-            <Input type="number" min={1} label="Pasajeros" placeholder='4 Pasajeros' isRequired onChange={handleInputChange} name="Pasajeros" quantityValidation={isQuantityInvalid} color={isQuantityInvalid ? "danger" : "success"} errorMessage={isQuantityInvalid ? "Debe ser entre 1 y 10 pasajeros" : ""} onValueChange={setQuantityValue} isInvalid={isQuantityInvalid} className={{
+            <Input type="date" label='Partida' isRequired name='departure' />
+            <Input type="number" min={1} label="Pasajeros" placeholder='4 Pasajeros' isRequired onChange={handleInputChange} name="passengers" quantityValidation={isQuantityInvalid} color={isQuantityInvalid ? "danger" : "success"} errorMessage={isQuantityInvalid ? "Debe ser entre 1 y 10 pasajeros" : ""} onValueChange={setQuantityValue} isInvalid={isQuantityInvalid} className={{
                 errorMessage: [
                     "absolute",
                     "bottom-0",
@@ -70,7 +70,8 @@ export const FormHero = () => {
                     "text-xs"
                 ]
             }} />
-            <Button type='submit' size='md' className="min-w-fit w-fit h-14" isLoading={false}>Buscar</Button>
+            <Button type='submit' size='md' className="min-w-full w-full md:min-w-fit md:w-fit h-14" isLoading={false} isDisabled={isQuantityInvalid || isOriginInvalid || isDestinationInvalid ? true : false}
+            >Buscar</Button>
         </form>
     )
 }
