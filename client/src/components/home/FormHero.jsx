@@ -68,7 +68,7 @@ export const FormHero = () => {
             }} />
             <Input type="text" label='Destino' placeholder='La Cumbrecita, Córdoba' isRequired />
             <Input type="date" label='Partida' isRequired />
-            <Input type="number" min={1} label="Pasajeros" placeholder='4 Pasajeros' isRequired onChange={handleInputChange} name="Origen" quantityValidation={isQuantityInvalid} color={isQuantityInvalid ? "danger" : "success"} errorMessage={isQuantityInvalid ? "Location must be between 3 and 35 characters" : ""} onValueChange={setQuantityValue} isInvalid={isQuantityInvalid} className={{
+            <Input type="number" min={1} label="Pasajeros" placeholder='4 Pasajeros' isRequired onChange={handleInputChange} name="Origen" quantityValidation={isQuantityInvalid} color={isQuantityInvalid ? "danger" : "success"} errorMessage={isQuantityInvalid ? "Quantity must be between 1 and 100 passengers" : ""} onValueChange={setQuantityValue} isInvalid={isQuantityInvalid} className={{
                 errorMessage: [
                     "absolute",
                     "bottom-0",
