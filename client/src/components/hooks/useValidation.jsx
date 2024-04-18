@@ -6,8 +6,8 @@ const useValidation = (regex) => {
     const validateRegex = (value) => value.match(regex);
 
     const isInvalid = useMemo(() => {
-        if (value === "") return false;
-        return validateRegex(value) ? false : true;
+        // if (value === "") return false;
+        return validateRegex(value) === null;
     }, [value, regex]);
 
     return [value, setValue, isInvalid];

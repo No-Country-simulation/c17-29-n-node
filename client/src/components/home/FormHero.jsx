@@ -60,8 +60,8 @@ export const FormHero = () => {
                     "text-xs"
                 ]
             }} />
-            <Input type="date" label='Partida' isRequired name='departure' />
-            <Input type="number" min={1} label="Pasajeros" placeholder='4 Pasajeros' isRequired onChange={handleInputChange} name="passengers" quantityValidation={isQuantityInvalid} color={isQuantityInvalid ? "danger" : "success"} errorMessage={isQuantityInvalid ? "Debe ser entre 1 y 10 pasajeros" : ""} onValueChange={setQuantityValue} isInvalid={isQuantityInvalid} className={{
+            <Input variant="underlined" type="date" label='Partida' isRequired name='departure' />
+            <Input variant="underlined" type="number" min={1} label="Pasajeros" placeholder='4 Pasajeros' isRequired onChange={handleInputChange} name="passengers" quantityValidation={isQuantityInvalid} color={isQuantityInvalid ? "danger" : "success"} errorMessage={isQuantityInvalid ? "Debe ser entre 1 y 10 pasajeros" : ""} onValueChange={setQuantityValue} isInvalid={isQuantityInvalid} className={{
                 errorMessage: [
                     "absolute",
                     "bottom-0",
@@ -70,7 +70,7 @@ export const FormHero = () => {
                     "text-xs"
                 ]
             }} />
-            <Button type='submit' size='md' className="min-w-full w-full md:min-w-fit md:w-fit h-14" isLoading={false} isDisabled={isQuantityInvalid || isOriginInvalid || isDestinationInvalid ? true : false}
+            <Button type='submit' size='md' className="min-w-full w-full md:min-w-fit md:w-fit h-14" isLoading={false} isDisabled={isQuantityInvalid ?? isOriginInvalid ?? isDestinationInvalid}
             >Buscar</Button>
         </form>
     )
