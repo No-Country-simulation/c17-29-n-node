@@ -30,34 +30,19 @@ export const FormHero = () => {
     // validations
 
     // validate age
-    const quantityRegex = /^(100|[1-9]?\d)$/
+    const quantityRegex = /^([1-9]?)$/
     // const ageValidation = handleValidation(ageRegex);
     const [quantityValue, setQuantityValue, isQuantityInvalid] = useValidation(quantityRegex);
-    // validate name
-    const nameRegex = /^[a-zA-Z0-9\s]{3,20}$/
-    const [nameValue, setNameValue, isNameInvalid] = useValidation(nameRegex);
-
-    // validate breed
-    const breedRegex = /^[a-zA-Z0-9\s]{3,20}$/
-    const [breedValue, setBreedValue, isBreedInvalid] = useValidation(breedRegex);
-
-    // validate health status
-    const healthStatusRegex = /^[a-zA-Z0-9\s]{3,20}$/
-    const [healthStatusValue, setHealthStatusValue, isHealthStatusInvalid] = useValidation(healthStatusRegex);
-
-    // validate behavior
-    const behaviorRegex = /^[a-zA-Z0-9\s]{3,20}$/
-    const [behaviorValue, setBehaviorValue, isBehaviorInvalid] = useValidation(behaviorRegex);
 
     // validate location
-    const locationRegex = /^[a-zA-Z0-9\s,.'":;¡!?¿-]{3,35}$/
-    const [locationValue, setLocationValue, isLocationInvalid] = useValidation(locationRegex);
-
+    const locationRegex = /^[a-zA-Z0-9\s,.'":;¡!?¿-]{4,35}$/
+    const [originValue, setOriginValue, isOriginInvalid] = useValidation(locationRegex);
+    const [destinationValue, setDestinationValue, isDestinationInvalid] = useValidation(locationRegex);
 
     const router = useRouter()
     return (
         <form action="" className='flex flex-row gap-3 [&>*]:w-fit' onSubmit={handleSubmit}>
-            <Input variant="underlined" type="text" label="Origen" placeholder='Rosario, Santa Fe' isRequired onChange={handleInputChange} name="Origen" locationValidation={isLocationInvalid} color={isLocationInvalid ? "danger" : "success"} errorMessage={isLocationInvalid ? "Location must be between 3 and 35 characters" : ""} onValueChange={setLocationValue} isInvalid={isLocationInvalid} className={{
+            <Input variant="underlined" type="text" label="Origen" placeholder='Rosario, Santa Fe' isRequired onChange={handleInputChange} name="Origen" locationValidation={isOriginInvalid} color={isOriginInvalid ? "danger" : "success"} errorMessage={isOriginInvalid && "Entre 4 y 35 carácteres"} onValueChange={setOriginValue} isInvalid={isOriginInvalid} className={{
                 errorMessage: [
                     "absolute",
                     "bottom-0",
@@ -66,9 +51,17 @@ export const FormHero = () => {
                     "text-xs"
                 ]
             }} />
-            <Input type="text" label='Destino' placeholder='La Cumbrecita, Córdoba' isRequired />
+            <Input variant="underlined" type="text" label='Destino' placeholder='La Cumbrecita, Córdoba' isRequired locationValidation={isDestinationInvalid} color={isDestinationInvalid ? "danger" : "success"} errorMessage={isDestinationInvalid && "Entre 4 y 35 carácteres"} onValueChange={setDestinationValue} isInvalid={isDestinationInvalid} className={{
+                errorMessage: [
+                    "absolute",
+                    "bottom-0",
+                    "left-0",
+                    "text-danger",
+                    "text-xs"
+                ]
+            }} />
             <Input type="date" label='Partida' isRequired />
-            <Input type="number" min={1} label="Pasajeros" placeholder='4 Pasajeros' isRequired onChange={handleInputChange} name="Origen" quantityValidation={isQuantityInvalid} color={isQuantityInvalid ? "danger" : "success"} errorMessage={isQuantityInvalid ? "Quantity must be between 1 and 100 passengers" : ""} onValueChange={setQuantityValue} isInvalid={isQuantityInvalid} className={{
+            <Input type="number" min={1} label="Pasajeros" placeholder='4 Pasajeros' isRequired onChange={handleInputChange} name="Pasajeros" quantityValidation={isQuantityInvalid} color={isQuantityInvalid ? "danger" : "success"} errorMessage={isQuantityInvalid ? "Debe ser entre 1 y 10 pasajeros" : ""} onValueChange={setQuantityValue} isInvalid={isQuantityInvalid} className={{
                 errorMessage: [
                     "absolute",
                     "bottom-0",
