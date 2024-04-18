@@ -18,7 +18,7 @@ const schema = new mongoose.Schema({
     },
     destinationAddress: {
         type: String,
-        required: true
+        required: false
     },
     capacity: {
         type: Number,
@@ -36,6 +36,12 @@ const schema = new mongoose.Schema({
         type: Number,
         required: true
     },
+
+    checkIn: {
+        type: Number,
+        required: false
+    },
+    
     isActive: {
         type: Boolean,
         required: true
