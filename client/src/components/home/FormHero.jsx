@@ -30,9 +30,9 @@ export const FormHero = () => {
     // validations
 
     // validate age
-    const ageRegex = /^(100|[1-9]?\d)$/
+    const quantityRegex = /^(100|[1-9]?\d)$/
     // const ageValidation = handleValidation(ageRegex);
-    const [ageValue, setAgeValue, isAgeInvalid] = useValidation(ageRegex);
+    const [quantityValue, setQuantityValue, isQuantityInvalid] = useValidation(quantityRegex);
     // validate name
     const nameRegex = /^[a-zA-Z0-9\s]{3,20}$/
     const [nameValue, setNameValue, isNameInvalid] = useValidation(nameRegex);
@@ -68,7 +68,15 @@ export const FormHero = () => {
             }} />
             <Input type="text" label='Destino' placeholder='La Cumbrecita, Córdoba' isRequired />
             <Input type="date" label='Partida' isRequired />
-            <Input type="number" min={1} label="Pasajeros" placeholder='4 Pasajeros' isRequired />
+            <Input type="number" min={1} label="Pasajeros" placeholder='4 Pasajeros' isRequired onChange={handleInputChange} name="Origen" quantityValidation={isQuantityInvalid} color={isQuantityInvalid ? "danger" : "success"} errorMessage={isQuantityInvalid ? "Location must be between 3 and 35 characters" : ""} onValueChange={setQuantityValue} isInvalid={isQuantityInvalid} className={{
+                errorMessage: [
+                    "absolute",
+                    "bottom-0",
+                    "left-0",
+                    "text-danger",
+                    "text-xs"
+                ]
+            }} />
             <Button type='submit' size='md' className="min-w-fit w-fit h-14" isLoading={false}>Buscar</Button>
         </form>
     )
