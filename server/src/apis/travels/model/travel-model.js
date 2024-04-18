@@ -4,24 +4,44 @@ const collection = "Travel";
 
 const schema = new mongoose.Schema({
    
-    origen:{
+    origin: {
         type: String,
         required: true
     },
-    destino:{
+    originAddress:{
         type: String,
         required: true
     },
-    capacidad: {
+    destination: {
+        type: String,
+        required: true
+    },
+    destinationAddress: {
+        type: String,
+        required: true
+    },
+    capacity: {
         type: Number,
         required: true
     },
-    dia:{
+    passengers: {
+        type: Array,
+        required: true
+    },
+    day: {
         type: String,
         required: true
     },
-    horario:{
+    hour: {
         type: Number,
+        required: true
+    },
+    isActive: {
+        type: Boolean,
+        required: true
+    },
+    departureTime: {
+        type: TimeRanges,
         required: true
     }
 });

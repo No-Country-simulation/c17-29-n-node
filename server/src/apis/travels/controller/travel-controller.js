@@ -2,9 +2,9 @@ import travelModel from "../model/travel-model.js";
 
 async function createTravel(dataCar) {
   try {
-    const { origen, destino, capacidad, dia, horario } = dataCar;
+    const { origin, originAddress, destination, destinationAddress, capacity, passengers, day, hour, isActive, departureTime  } = dataCar;
 
-    const newCar = new travelModel({  origen, destino, capacidad, dia, horario });
+    const newCar = new travelModel({  origin, originAddress, destination, destinationAddress, capacity, passengers, day, hour, isActive, departureTime });
 
     await newCar.save();
 
