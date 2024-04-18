@@ -11,16 +11,18 @@ export const postUser = async (req, res) => {
   try {
     //-- Get the payload from the body in order to use it as a param in the post user service
     const payload = req.body;
-    await createUserService(payload);
-    apiResponse(res, 201, "", "", { user: payload });
+    const user = await createUserService(payload);
+    if (!user) throw new Error("User was not created");
+    apiResponse(res, 201, "", "", { user: user });
   } catch (error) {
-    apiResponse(res, 500, "", "", { error: error.message});
+    apiResponse(res, 500, "", "", { error: error.message });
   }
 };
 
 export const getUsers = async (req, res) => {
   try {
     const servResponse = await getAllUsersService();
+    if (!servResponse) throw new Error("There are no users");
     apiResponse(res, 200, "", "", { users: servResponse });
   } catch (error) {
     apiResponse(res, 500, "", "", { error: error.message });
@@ -32,6 +34,7 @@ export const getUserById = async (req, res) => {
     //-- get ID from the url params in order to use it as a param in the service function
     const { id } = req.params;
     const servResponse = await getUserByIdService(id);
+    if (!servResponse) throw new Error("User not found");
     apiResponse(res, 200, "", "", { user: servResponse });
   } catch (error) {
     apiResponse(res, 500, "", "", { error: error.message });
@@ -43,6 +46,7 @@ export const editUser = async (req, res) => {
     const { id } = req.params;
     const payload = req.body;
     const servResponse = await editUserService(id, payload);
+    if (!servResponse) throw new Error("Unedited user");
     apiResponse(res, 200, "", "", { user: servResponse });
   } catch (error) {
     apiResponse(res, 500, "", "", { error: error.message });
@@ -54,6 +58,7 @@ export const deleteUser = async (req, res) => {
     //-- Get id from url params to use it in the delete user service
     const { id } = req.params;
     const servResponse = await deleteUserService(id);
+    if (!servResponse) throw new Error("user not deleted");
     apiResponse(res, 200, "", "", { user: servResponse });
   } catch (error) {
     apiResponse(res, 500, "", "", { error: error.message });

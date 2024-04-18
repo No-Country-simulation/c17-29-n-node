@@ -19,6 +19,7 @@ export const register = async (req, res) => {
     const hashedPassword = await createHash(password);
     const user = { name, email, password: hashedPassword, age, phoneNumber };
     const result = await createUserService(user);
+    if (!result) throw new Error("registration was made");
     apiResponse(res, 201, "", "", { message: "user created", id: result._id });
   } catch (error) {
     apiResponse(res, 500, "", "", { error: error.message });
@@ -31,6 +32,7 @@ export const login = async (req, res) => {
     const { email, password } = req.body;
     if (!email || !password) throw new Error("🩻 Credentials not found");
     const user = await getUserBy({ email });
+    if (!user) throw new Error("👻 Credentials not found");
     const isValidPassword = await validatePassword(password, user.password);
     if (!isValidPassword) throw new Error("☠️ Credentials not found");
     const token = jwt.sign(
