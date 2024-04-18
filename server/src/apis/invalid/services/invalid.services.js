@@ -1,6 +1,6 @@
 
 export const getInvalid = async () => {
   return ({
-    msg: `💀 Invalid route ☠️.`,
+    error: `💀 Invalid route ☠️.`,
   });
 };

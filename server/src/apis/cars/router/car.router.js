@@ -1,5 +1,5 @@
 import { Router } from "express";
-import CarController from "../controller/car.controller.js";
+import { CarController } from "../controller/car.controller.js";
 import { validateJWT } from "../../../shared/jwt/jwtExtractor.js";
 
 export const carRouter = Router();

@@ -6,6 +6,6 @@ export const invalid = async (req, res) => {
     const invalidResponse = await getInvalid();
     apiResponse(res, 404, "", "", invalidResponse);
   } catch (error) {
-    apiResponse(res, 500, "", "", error);
+    apiResponse(res, 500, "", "", error.message);
   }
 };
