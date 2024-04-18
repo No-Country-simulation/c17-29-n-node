@@ -1,21 +1,57 @@
+*************************
 # Environment Variables
+*************************
+
 @contentType = application/json
-@createdAt = {{$datetime iso8601}}
-@modifiedBy = {{$processEnv USERNAME}}
 @basepath = api
 
-## Dev
+*************************
+## Dev Host
+*************************
+
 @hostdev = localhost
 @port = 3000
 @dev = http://{{hostdev}}:{{port}}/{{basepath}}
 
-## Prod
+*************************
+## Prod Host
+*************************
+
 @hostprod = https://c17-29-n-node.vercel.app
 @version = v1
 @prod = {{hostprod}}/{{basepath}}
 
+*************************
+## Token dev mode.
+*************************
 
+@tokenDev = {{loginDev.response.body.data.token}}
+
+*************************
+## Token prod mode.
+*************************
+
+@tokenProd = {{loginProd.response.body.data.token}}
+
+*************************
+## Id dev mode.
+*************************
+
+@idUserDev = {{getAllUsersDev.response.body.data.users[0]._id}}
+@idCarDev = {{getAllCarsDev.response.body.data.cars[0]._id}}
+@idTravelDev = {{getAllTravelsDev.response.body.data.travels[0]._id}}
+
+*************************
+## Id prod mode.
+*************************
+
+@idUserProd = {{getAllUsersProd.response.body.data.users[1]._id}}
+@idCarProd = {{getAllCarsProd.response.body.data.cars[0]._id}}
+@idTravelProd = {{getAllTravelsProd.response.body.data.travels[0]._id}}
+
+*************************
 # Endpoints
+*************************
 
 ----------------------------------------------
 ## Docs Route
@@ -47,11 +83,11 @@ GET {{prod}} HTTP/1.1
 
 ### dev mode
 # @name startDev
-GET {{dev}}/start
+GET {{dev}}/
 
 ### prod mode.
 # @name startProd
-GET {{prod}}/start HTTP/1.1
+GET {{prod}}/ HTTP/1.1
 
 ----------------------------------------------
 ## Auth Route
@@ -60,22 +96,21 @@ GET {{prod}}/start HTTP/1.1
 *************************
 ## Profile
 *************************
+
 ### dev mode.
 # @name profileDev
-@tokenProd = {{loginProd.response.body.$.token}}
 GET {{dev}}/auth/profile HTTP/1.1
 Authorization: Bearer {{tokenDev}}
 
-
 ### prod mode.
 # @name profileProd
-@tokenDev = {{loginDev.response.body.$.token}}
 GET {{prod}}/auth/profile HTTP/1.1
 Authorization: Bearer {{tokenProd}}
 
 *************************
 ## Register
 *************************
+
 ### dev mode.
 # @name registerDev
 POST {{dev}}/auth/register
@@ -106,17 +141,17 @@ POST {{dev}}/auth/login
 content-type: {{contentType}}
 
 {
-  "email": "core6@coreo.com",
+  "email": "core10@coreo.com",
   "password": "1234"
 }
 
 ### prod mode.
 # @name loginProd
-POST {{prod}}/auth/login
+POST {{prod}}/auth/login HTTP/1.1
 content-type: {{contentType}}
 
 {
-  "email": "core6@coreo.com",
+  "email": "core10@coreo.com",
   "password": "1234"
 }
 ###
@@ -125,12 +160,13 @@ content-type: {{contentType}}
 ----------------------------------------------
 
 *************************
-## Create Users
+## Create User
 *************************
 
 ### dev mode.
-# @name createUsersDev
-POST {{dev}}/users/create
+# @name createUserDev
+POST {{dev}}/users
+Authorization: Bearer {{tokenDev}}
 content-type: {{contentType}}
 
 {
@@ -139,8 +175,9 @@ content-type: {{contentType}}
 }
 
 ### prod mode.
-# @name createUsersProd
-POST {{prod}}/users/create HTTP/1.1
+# @name createUserProd
+POST {{prod}}/users HTTP/1.1
+Authorization: Bearer {{tokenProd}}
 content-type: {{contentType}}
 
 {
@@ -156,31 +193,34 @@ content-type: {{contentType}}
 ### dev mode.
 # @name getAllUsersDev
 GET {{dev}}/users
+Authorization: Bearer {{tokenDev}}
 
 ### prod mode.
 # @name getAllUsersProd
 GET {{prod}}/users HTTP/1.1
+Authorization: Bearer {{tokenProd}}
 
 *************************
-## Get By Id Users
+## Get By Id User
 *************************
 
 ### dev mode
-@:id= 661e19ad8a0bb47b7d2d74ff
-# @name getByIdUsersDev
-GET {{dev}}/users/{{:id}}
+# @name getByIdUserDev
+GET {{dev}}/users/{{idUserDev}}
+Authorization: Bearer {{tokenDev}}
 
 ### prod mode.
-# @name getByIdUsersProd
-GET {{prod}}/users/{{:id}} HTTP/1.1
+# @name getByIdUserProd
+GET {{prod}}/users/{{idUserProd}} HTTP/1.1
+Authorization: Bearer {{tokenProd}}
 
 *************************
-## Edit Users
+## Edit User
 *************************
 
 ### dev mode
-# @name EditUsersDev
-PATCH  {{dev}}/users/edit/{{:id}}
+# @name editUserDev
+PUT  {{dev}}/users/{{idUserDev}}
 Authorization: Bearer {{tokenDev}}
 content-type: {{contentType}}
 
@@ -190,8 +230,8 @@ content-type: {{contentType}}
 }
 
 ### prod mode.
-# @name EditUsersProd
-PATCH {{prod}}/users/edit/{{:id}} HTTP/1.1
+# @name editUserProd
+PUT {{prod}}/users/{{idUserProd}} HTTP/1.1
 Authorization: Bearer {{tokenProd}}
 content-type: {{contentType}}
 
@@ -201,17 +241,17 @@ content-type: {{contentType}}
 }
 ###
 *************************
-## Delete Users
+## Delete User
 *************************
 
 ### dev mode
-# @name EditUsersDev
-DELETE {{dev}}/users/delete/{{:id}}
+# @name deleteUserDev
+DELETE {{dev}}/users/{{idUserDev}}
 Authorization: Bearer {{tokenDev}}
 
 ### prod mode.
-# @name EditUsersProd
-DELETE {{prod}}/users/delete/{{:id}} HTTP/1.1
+# @name deleteUserProd
+DELETE {{prod}}/users/{{idUserProd}} HTTP/1.1
 Authorization: Bearer {{tokenProd}}
 
 ----------------------------------------------
@@ -219,12 +259,13 @@ Authorization: Bearer {{tokenProd}}
 ----------------------------------------------
 
 *************************
-## Create Cars
+## Create Car
 *************************
 
 ### dev mode.
-# @name createUsersDev
+# @name createCarDev
 POST {{dev}}/cars
+Authorization: Bearer {{tokenDev}}
 content-type: {{contentType}}
 
 {
@@ -237,8 +278,9 @@ content-type: {{contentType}}
 }
 
 ### prod mode.
-# @name createUsersProd
+# @name createCarProd
 POST {{prod}}/cars HTTP/1.1
+Authorization: Bearer {{tokenProd}}
 content-type: {{contentType}}
 
 {
@@ -257,31 +299,35 @@ content-type: {{contentType}}
 ### dev mode.
 # @name getAllCarsDev
 GET {{dev}}/cars
+Authorization: Bearer {{tokenDev}}
 
 ### prod mode.
 # @name getAllCarsProd
 GET {{prod}}/cars HTTP/1.1
+Authorization: Bearer {{tokenProd}}
 
 *************************
 ## Get By Id Car
 *************************
 
 ### dev mode
-@:id= 661f0ef6220de1ef80f34486
-# @name getByIdUsersDev
-GET {{dev}}/cars/{{:id}}
+
+# @name getByIdCarDev
+GET {{dev}}/cars/{{idCarDev}}
+Authorization: Bearer {{tokenDev}}
 
 ### prod mode.
-# @name getByIdUsersProd
-GET {{prod}}/cars/{{:id}} HTTP/1.1
+# @name getByIdCarProd
+GET {{prod}}/cars/{{idCarProd}} HTTP/1.1
+Authorization: Bearer {{tokenProd}}
 
 *************************
 ## Edit Car
 *************************
 
 ### dev mode
-# @name EditUsersDev
-PUT  {{dev}}/cars/{{:id}}
+# @name editCarDev
+PUT  {{dev}}/cars/{{idCarDev}}
 Authorization: Bearer {{tokenDev}}
 content-type: {{contentType}}
 
@@ -291,7 +337,7 @@ content-type: {{contentType}}
 }
 
 ### prod mode.
-# @name EditUsersProd
+# @name editCarProd
 PUT {{prod}}/cars/{{:id}} HTTP/1.1
 Authorization: Bearer {{tokenProd}}
 content-type: {{contentType}}
@@ -302,15 +348,150 @@ content-type: {{contentType}}
 }
 ###
 *************************
-## Delete Users
+## Delete Car
 *************************
 
 ### dev mode
-# @name EditUsersDev
-DELETE {{dev}}/cars/{{:id}}
+# @name deleteCarDev
+DELETE {{dev}}/cars/{{idCarDev}}
 Authorization: Bearer {{tokenDev}}
 
 ### prod mode.
-# @name EditUsersProd
-DELETE {{prod}}/cars/{{:id}} HTTP/1.1
+# @name deleteCarProd
+DELETE {{prod}}/cars/{{idCarProd}} HTTP/1.1
+Authorization: Bearer {{tokenProd}}
+
+----------------------------------------------
+## Tarvel Ruotes
+----------------------------------------------
+
+*************************
+## Create Travel
+*************************
+
+### dev mode.
+# @name createTravelDev
+POST {{dev}}/travels
+Authorization: Bearer {{tokenDev}}
+content-type: {{contentType}}
+
+{
+  "user": "id_User",
+  "car": "id_Car",
+  "driver": "id_Users",
+  "numberSeatsAvailable": 4,
+  "numberSeatsOccupied": 0,
+  "passengers": {
+    "1": null
+  },
+  "date": "14-12-2023",
+  "tripDistance": 234,
+  "hometown": "Buenos Aires",
+  "provinceOrigen": "Bahia Blanca",
+  "sourceAddress": "San Martin 1245",
+  "departureTime": "10:00",
+  "arrivalCity": "Neuquen",
+  "provinceArrival": "Neuquen",
+  "checkIn": "14:00",
+  "seatCost": 5000,
+  "isActive": true
+}
+
+### prod mode.
+# @name createTravelProd
+POST {{prod}}/travels HTTP/1.1
+Authorization: Bearer {{tokenProd}}
+content-type: {{contentType}}
+
+{
+  "user": "id_User",
+  "car": "id_Car",
+  "driver": "id_Users",
+  "numberSeatsAvailable": 4,
+  "numberSeatsOccupied": 0,
+  "passengers": {
+    "1": null
+  },
+  "date": "14-12-2023",
+  "tripDistance": 234,
+  "hometown": "Buenos Aires",
+  "provinceOrigen": "Bahia Blanca",
+  "sourceAddress": "San Martin 1245",
+  "departureTime": "10:00",
+  "arrivalCity": "Neuquen",
+  "provinceArrival": "Neuquen",
+  "checkIn": "14:00",
+  "seatCost": 5000,
+  "isActive": true
+}
+
+###
+*************************
+## Get All Travels
+*************************
+### dev mode.
+# @name getAllTravelsDev
+GET {{dev}}/travels
+Authorization: Bearer {{tokenDev}}
+
+### prod mode.
+# @name getAllTravelsProd
+GET {{prod}}/travels HTTP/1.1
+Authorization: Bearer {{tokenProd}}
+
+*************************
+## Get By Id Travel
+*************************
+
+### dev mode
+@:id= {{idTravelDev}}
+# @name getByIdTravelDev
+GET {{dev}}/travels/{{idTravelDev}}
+Authorization: Bearer {{tokenDev}}
+
+### prod mode.
+# @name getByIdTravelProd
+GET {{prod}}/travels/{{idTravelProd}} HTTP/1.1
+Authorization: Bearer {{tokenProd}}
+
+*************************
+## Edit Travel
+*************************
+
+### dev mode
+# @name editTravelDev
+PUT  {{dev}}/travels/{{idTravelDev}}
+Authorization: Bearer {{tokenDev}}
+content-type: {{contentType}}
+
+{
+  "numberSeatsAvailable": 4,
+  "numberSeatsOccupied": 0,
+  "tripDistance": 234,
+}
+
+### prod mode.
+# @name editTravelProd
+PUT {{prod}}/travels/{{idTravelProd}} HTTP/1.1
+Authorization: Bearer {{tokenProd}}
+content-type: {{contentType}}
+
+{
+  "numberSeatsAvailable": 4,
+  "numberSeatsOccupied": 0,
+  "tripDistance": 234,
+}
+###
+*************************
+## Delete Travel
+*************************
+
+### dev mode
+# @name deleteTravelDev
+DELETE {{dev}}/travels/{{idTravelDev}}
+Authorization: Bearer {{tokenDev}}
+
+### prod mode.
+# @name deleteTravelProd
+DELETE {{prod}}/travels/{{idTravelProd}} HTTP/1.1
 Authorization: Bearer {{tokenProd}}

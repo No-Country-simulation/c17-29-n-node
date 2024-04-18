@@ -1,11 +1,12 @@
 /**
  * @swagger
  * paths:
- *  /start:
+ *  /:
  *   get:
  *     tags:
  *       - Start Routes
- *     summary: start api.
+ *     summary: Start api.
+ *     description: Start api.
  *     responses:
  *       200:
  *         description: Success

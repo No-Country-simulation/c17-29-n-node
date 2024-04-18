@@ -1,64 +1,60 @@
+import { apiResponse } from "../../../shared/apiRespond/apiResponse.js";
 import travelModel from "../model/travel-model.js";
 
-async function createTravel(dataCar) {
+export async function createTravel(req, res) {
   try {
-    const { origen, destino, capacidad, dia, horario } = dataCar;
-
-    const newCar = new travelModel({  origen, destino, capacidad, dia, horario });
-
-    await newCar.save();
-
-    return newCar;
-  } catch (e) {
-    console.error("error al crear el auto", e);
+    const payload = req.body;
+    const newTravel = new travelModel(payload);
+    const sendTravel = await newTravel.save();
+    if (!sendTravel) throw new Error("trip was not created");
+    apiResponse(res, 201, "", "", { travel: sendTravel });
+  } catch (error) {
+    apiResponse(res, 500, "", "", { error: error.message });
   }
 }
 
-export async function startCreateTravel(req, res) {
+export async function getAllTravels(req, res) {
   try {
-    const sendCar = await createTravel(req.body);
-    res.status(201).json(sendCar);
+    const trips = await travelModel.find({ isActive: true }).lean();
+    if (!trips) throw new Error("trips does not exist");
+    apiResponse(res, 201, "", "", { travels: trips });
   } catch (error) {
-    console.error("Error en startCreateCar:", error);
+    apiResponse(res, 500, "", "", { error: error.message });
   }
 }
 
-
-export async function getAllTravel(req, res) {
+export const getTravelById = async (req, res) => {
   try {
-    const trips = await carModel.find();
-    res.status(200).json(trips);
+    const { id } = req.params;
+    const updateTravel = await travelModel.findById(id);
+    if (!updateTravel) throw new Error("trip does not exist");
+    apiResponse(res, 201, "", "", { travel: updateTravel });
   } catch (error) {
-    console.error('Error al obtener los viajes:', error);
-    res.status(500).json({ message: 'Error interno del servidor' });
+    apiResponse(res, 500, "", "", { error: error.message });
+  }
+};
+
+export async function updateTravel(req, res) {
+  try {
+    const { id } = req.params;
+    const updateData = req.body;
+    const updateTravel = await travelModel.findByIdAndUpdate(id, updateData, {
+      new: true,
+    });
+    if (!updateTravel) throw new Error("trip not updated");
+    apiResponse(res, 201, "", "", { travel: updateTravel });
+  } catch (error) {
+    apiResponse(res, 500, "", "", { error: error.message });
   }
 }
 
-export async function  updateTravelModel(req, res){
+export async function deleteTravel(req, res) {
   try {
-    const {id} = req.params
-    const updateData = req.body
-  
-    const updateCar = await carModel.findByIdAndUpdate(id, updateData, {new: true})
-  
-    res.status(200).json(updateCar)
-    
+    const { id } = req.params;
+    const deleteTravel = await travelModel.findByIdAndDelete(id);
+    if (!deleteTravel) throw new Error("trip was not deleted");
+    apiResponse(res, 201, "", "", { travel: deleteTravel });
   } catch (error) {
-    console.log("error desde update car model", error);
-  }
-}
-
-
-  export async function  deleteTravelModel(req, res){
-  try {
-    const {id} = req.params
-    const updateData = req.body
-  
-    const updateCar = await carModel.findByIdAndDelete(id)
-  
-    res.status(200).json(updateCar)
-    
-  } catch (error) {
-    console.log("error al eliminar car model", error);
+    apiResponse(res, 500, "", "", { error: error.message });
   }
 }

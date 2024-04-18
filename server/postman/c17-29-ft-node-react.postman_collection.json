@@ -12,12 +12,15 @@
 				{
 					"name": "Start",
 					"request": {
+						"auth": {
+							"type": "noauth"
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{pro}}/start",
+							"raw": "{{dev}}/start",
 							"host": [
-								"{{pro}}"
+								"{{dev}}"
 							],
 							"path": [
 								"start"
@@ -32,9 +35,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{pro}}",
+							"raw": "{{dev}}",
 							"host": [
-								"{{pro}}"
+								"{{dev}}"
 							]
 						}
 					},
@@ -67,20 +70,6 @@
 							],
 							"path": [
 								"file"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "root",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{root}}",
-							"host": [
-								"{{root}}"
 							]
 						}
 					},
@@ -142,7 +131,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"core6@coreo.com\",\r\n    \"password\": \"1234\"\r\n}",
+							"raw": "{\r\n    \"email\": \"test4@test.com\",\r\n    \"password\": \"1234\"getTravel\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -150,9 +139,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{prod}}/auth/login",
+							"raw": "{{dev}}/auth/login",
 							"host": [
-								"{{prod}}"
+								"{{dev}}"
 							],
 							"path": [
 								"auth",
@@ -306,6 +295,16 @@
 				{
 					"name": "getUsers",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -403,9 +402,9 @@
 							}
 						],
 						"url": {
-							"raw": "{{prod}}/users",
+							"raw": "{{dev}}/users",
 							"host": [
-								"{{prod}}"
+								"{{dev}}"
 							],
 							"path": [
 								"users"
@@ -417,6 +416,16 @@
 				{
 					"name": "getUserById",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -507,13 +516,13 @@
 							}
 						],
 						"url": {
-							"raw": "{{prod}}/users/661e19ad8a0bb47b7d2d74ff",
+							"raw": "{{prod}}/users/661f59ed16257ec3c6519985",
 							"host": [
 								"{{prod}}"
 							],
 							"path": [
 								"users",
-								"661e19ad8a0bb47b7d2d74ff"
+								"661f59ed16257ec3c6519985"
 							]
 						}
 					},
@@ -523,9 +532,16 @@
 					"name": "ediUser",
 					"request": {
 						"auth": {
-							"type": "noauth"
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
 						},
-						"method": "PATCH",
+						"method": "PUT",
 						"header": [
 							{
 								"name": "cache-control",
@@ -650,14 +666,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{dev}}/users/edit/661e19ad8a0bb47b7d2d74ff",
+							"raw": "{{dev}}/users/661f59ed16257ec3c6519985",
 							"host": [
 								"{{dev}}"
 							],
 							"path": [
 								"users",
-								"edit",
-								"661e19ad8a0bb47b7d2d74ff"
+								"661f59ed16257ec3c6519985"
 							]
 						}
 					},
@@ -666,30 +681,49 @@
 				{
 					"name": "deleteUser",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{prod}}/users/delete/660f12702119ce1f0014f814",
+							"raw": "{{dev}}/users/661f59ed16257ec3c6519985",
 							"host": [
-								"{{prod}}"
+								"{{dev}}"
 							],
 							"path": [
 								"users",
-								"delete",
-								"660f12702119ce1f0014f814"
+								"661f59ed16257ec3c6519985"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "cretaeUser",
+					"name": "addUser",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"email\": \"test@test.com\",\r\n  \"password\": \"1234\"\r\n}",
+							"raw": "{\r\n  \"email\": \"test4@test.com\",\r\n  \"password\": \"1234\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -697,13 +731,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{prod}}/users/create",
+							"raw": "{{dev}}/users/",
 							"host": [
-								"{{prod}}"
+								"{{dev}}"
 							],
 							"path": [
 								"users",
-								"create"
+								""
 							]
 						}
 					},
@@ -717,6 +751,16 @@
 				{
 					"name": "getCars",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -735,16 +779,26 @@
 				{
 					"name": "getCarById",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{prod}}/cars/661f0e20fbf278ebf7f67a23",
+							"raw": "{{dev}}/cars/661f0dadfbf278ebf7f67a1e",
 							"host": [
-								"{{prod}}"
+								"{{dev}}"
 							],
 							"path": [
 								"cars",
-								"661f0e20fbf278ebf7f67a23"
+								"661f0dadfbf278ebf7f67a1e"
 							]
 						}
 					},
@@ -753,6 +807,16 @@
 				{
 					"name": "addCar",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -778,8 +842,18 @@
 					"response": []
 				},
 				{
-					"name": "updateCar",
+					"name": "editCar",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [],
 						"body": {
@@ -792,31 +866,201 @@
 							}
 						},
 						"url": {
-							"raw": "{{dev}}/cars/661f0da4fbf278ebf7f67a1c",
+							"raw": "{{dev}}/cars/661f0dadfbf278ebf7f67a1e",
 							"host": [
 								"{{dev}}"
 							],
 							"path": [
 								"cars",
-								"661f0da4fbf278ebf7f67a1c"
+								"661f0dadfbf278ebf7f67a1e"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "New request",
+					"name": "deleteCar",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{dev}}/cars/661f0da4fbf278ebf7f67a1c",
+							"raw": "{{dev}}/cars/661f0dadfbf278ebf7f67a1e",
 							"host": [
 								"{{dev}}"
 							],
 							"path": [
 								"cars",
-								"661f0da4fbf278ebf7f67a1c"
+								"661f0dadfbf278ebf7f67a1e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Travels",
+			"item": [
+				{
+					"name": "getTravels",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{dev}}/travels",
+							"host": [
+								"{{dev}}"
+							],
+							"path": [
+								"travels"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getTravelById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{dev}}/travel/",
+							"host": [
+								"{{dev}}"
+							],
+							"path": [
+								"travel",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addYTravel",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"user\": \"id_User\",\r\n  \"car\": \"id_Car\",\r\n  \"driver\": \"id_Users\",\r\n  \"numberSeatsAvailable\": 4,\r\n  \"numberSeatsOccupied\": 0,\r\n  \"passengers\": {\r\n    \"1\": null\r\n  },\r\n  \"date\": \"14-12-2023\",\r\n  \"tripDistance\": 234,\r\n  \"hometown\": \"Buenos Aires\",\r\n  \"provinceOrigen\": \"Bahia Blanca\",\r\n  \"sourceAddress\": \"San Martin 1245\",\r\n  \"departureTime\": \"10:00\",\r\n  \"arrivalCity\": \"Neuquen\",\r\n  \"provinceArrival\": \"Neuquen\",\r\n  \"checkIn\": \"14:00\",\r\n  \"seatCost\": 5000,\r\n  \"isActive\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dev}}/travel",
+							"host": [
+								"{{dev}}"
+							],
+							"path": [
+								"travel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editTravel",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"numberSeatsAvailable\": 4,\r\n  \"numberSeatsOccupied\": 0,\r\n  \"tripDistance\": 234,\r\n}",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dev}}/travel",
+							"host": [
+								"{{dev}}"
+							],
+							"path": [
+								"travel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteTravel",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{dev}}/travel/id",
+							"host": [
+								"{{dev}}"
+							],
+							"path": [
+								"travel",
+								"id"
 							]
 						}
 					},

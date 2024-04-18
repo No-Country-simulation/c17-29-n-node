@@ -5,8 +5,8 @@
  *    post:
  *     tags:
  *      - Auth Routes
- *     summary: login of the app.
- *     description: login of the app.
+ *     summary: Login of the app.
+ *     description: Login of the app.
  *     operationId: login
  *     requestBody:
  *       description: login of the app.

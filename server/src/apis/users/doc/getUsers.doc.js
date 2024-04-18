@@ -1,6 +1,6 @@
 
 /**
- *  @swagger
+ * @swagger
  * paths:
  *  /users:
  *    get:
@@ -34,4 +34,6 @@
  *                type: array
  *                items:
  *                  $ref: '#/components/responses/notServer'
+ *      security:
+ *        - bearerAuth: []
  */

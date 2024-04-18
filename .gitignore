@@ -4,7 +4,6 @@
 .idea
 .env*
 .npm
-.vscode
 .nyc_output
 dist
 coverage
