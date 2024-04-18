@@ -43,7 +43,7 @@ API process log
 - [x] Endpoint
 - [x] Documentation
 
-### Authorization Route
+### Authorization Routes
 
 #### Get -> Profile
 
@@ -60,7 +60,7 @@ API process log
 - [x] Endpoint
 - [x] Documentation
 
-### User Route
+### User Routes
 
 #### Get -> getUsers
 
@@ -87,7 +87,7 @@ API process log
 - [x] Endpoint
 - [x] Documentation
 
-### Car Route
+### Car Routes
 
 #### Get -> getCars
 
@@ -114,4 +114,29 @@ API process log
 - [x] Endpoint
 - [x] Documentation
 
-### Travels Route
+### Travel Routes
+
+#### Get -> getCars
+
+- [] Endpoint
+- [] Documentation
+
+#### Get -> getCarById
+
+- [] Endpoint
+- [] Documentation
+
+#### Post -> addCar
+
+- [] Endpoint
+- [] Documentation
+
+#### Put -> updateCar
+
+- [] Endpoint
+- [] Documentation
+
+#### Delete -> deleteCar
+
+- [] Endpoint
+- [] Documentation

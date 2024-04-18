@@ -1,7 +1,7 @@
 /**
  *  @swagger
  * paths:
- *  /cars/:
+ *  /cars:
  *    post:
  *      tags:
  *        - Car Routes

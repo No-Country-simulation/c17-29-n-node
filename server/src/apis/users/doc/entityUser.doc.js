@@ -2,9 +2,12 @@
  * @swagger
  * components:
  *  schemas:
- *    UserEntity:
+ *    userEntity:
  *      description: User entity
  *      type: object
+ *      required:
+ *        - email
+ *        - password
  *      properties:
  *        name:
  *          type: string

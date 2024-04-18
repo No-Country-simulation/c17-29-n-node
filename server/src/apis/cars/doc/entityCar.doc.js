@@ -5,7 +5,18 @@
  *    carEntity:
  *      description: Car entity
  *      type: object
+ *      required:
+ *        - user
+ *        - brand
+ *        - model
+ *        - color
+ *        - seats
+ *        - plateCode
+ *        - isActive
  *      properties:
+ *        user:
+ *          type: string
+ *          example: id_User
  *        brand:
  *          type: string
  *          example: Toyota

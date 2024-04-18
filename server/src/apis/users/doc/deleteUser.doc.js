@@ -1,7 +1,7 @@
 /**
  * @swagger
  * paths:
- *  /users/delete/{:id}:
+ *  /users/{:id}:
  *    delete:
  *      tags:
  *        - User Routes
