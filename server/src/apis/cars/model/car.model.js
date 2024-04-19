@@ -1,6 +1,10 @@
 import { Schema, model } from 'mongoose'
 
 const carsSchema = new Schema({
+  user: {
+    type: String,
+    required: true
+  },
   brand: {
     type: String,
     required: true

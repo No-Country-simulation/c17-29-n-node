@@ -10,6 +10,7 @@ import { startRouter } from "../apis/start/router/start.router.js";
 import { travelRouters } from "../apis/travels/router/travel-router.js";
 import { uploader } from "../shared/multer/multer.js";
 import { userRoutes } from "../apis/users/router/user.router.js";
+import { ratingRouters } from "../apis/ratings/router/ratings.router.js";
 
 export const serverRouter = express.Router();
 
@@ -30,6 +31,7 @@ serverRouter.use(favicon(join(root, "assets/ico/favicon.ico")));
 serverRouter.use("/api/auth", authRoutes);
 serverRouter.use("/api/cars", carRouter);
 serverRouter.use("/api/docs", middleware, controller);
+serverRouter.use("/api/ratings", ratingRouters);
 serverRouter.use("/api/travels", travelRouters)
 serverRouter.use("/api/users", userRoutes);
 serverRouter.use("/api", startRouter);

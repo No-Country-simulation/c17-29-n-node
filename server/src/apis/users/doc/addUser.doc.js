@@ -14,7 +14,7 @@
  *       content:
  *         application/json:
  *           schema:
- *             $ref: '#/components/body/user'
+ *             $ref: '#/components/schemas/userEntity'
  *      responses:
  *        200:
  *          description: Success

@@ -4,8 +4,8 @@ import { apiResponse } from "../../../shared/apiRespond/apiResponse.js";
 export const invalid = async (req, res) => {
   try {
     const invalidResponse = await getInvalid();
-    apiResponse(res, 404, "", "", invalidResponse);
+    apiResponse(res, 404, invalidResponse);
   } catch (error) {
-    apiResponse(res, 500, "", "", error.message);
+    apiResponse(res, 500, { error: error.message });
   }
 };

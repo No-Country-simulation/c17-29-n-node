@@ -9,9 +9,9 @@ export class CarController {
         try {
             const cars = await this.carService.getCars({ isActive: true });
             if (!cars) throw new Error("There are no active cars");
-            apiResponse(res, 200, "", "", { cars: cars });
+            apiResponse(res, 200, { cars: cars });
         } catch (error) {
-            apiResponse(res, 500, "", "", { error: error.message });
+            apiResponse(res, 500, { error: error.message });
         }
     };
     getCarById = async (req, res) => {
@@ -19,9 +19,9 @@ export class CarController {
             const { cid } = req.params;
             const car = await this.carService.getCarById({ _id: cid });
             if (!car) throw new Error("Car not found");
-            apiResponse(res, 200, "", "", { car: car });
+            apiResponse(res, 200, { car: car });
         } catch (error) {
-            apiResponse(res, 500, "", "", { error: error.message });
+            apiResponse(res, 500, { error: error.message });
         }
     };
     addCar = async (req, res) => {
@@ -29,9 +29,9 @@ export class CarController {
             const { body } = req;
             const car = await this.carService.addCar(body);
             if (!car) throw new Error("Car was not created");
-            apiResponse(res, 201, "", "", { car: car });
+            apiResponse(res, 201, { message: "Car created" });
         } catch (error) {
-            apiResponse(res, 500, "", "", { error: error.message });
+            apiResponse(res, 500, { error: error.message });
         }
     };
     updateCar = async (req, res) => {
@@ -40,9 +40,9 @@ export class CarController {
             const { body } = req;
             const car = await this.carService.updateCar({ _id: cid }, body);
             if (!car) throw new Error("Car was not updated");
-            apiResponse(res, 200, "", "", { car: car });
+            apiResponse(res, 200, { message: "Car updated" });
         } catch (error) {
-            apiResponse(res, 500, "", "", { error: error.message });
+            apiResponse(res, 500, { error: error.message });
         }
     };
     deleteCar = async (req, res) => {
@@ -53,9 +53,9 @@ export class CarController {
                 { isActive: false }
             );
             if (!result) throw new Error("Car was not deleted");
-            apiResponse(res, 200, "", "", { car: result });
+            apiResponse(res, 200, { message: "Car deleted" });
         } catch (error) {
-            apiResponse(res, 500, "", "", { error: error.message });
+            apiResponse(res, 500, { error: error.message });
         }
     };
 }

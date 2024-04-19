@@ -10,7 +10,6 @@
  *        - car
  *        - driver
  *        - numberSeatsAvailable
- *        - passengers
  *        - date
  *        - tripDistance
  *        - hometown
@@ -32,6 +31,9 @@
  *        driver:
  *          type: string
  *          example: id_Users
+ *        passenger:
+ *          type: string
+ *          example: idUsers
  *        numberSeatsAvailable:
  *          type: integer
  *          format: int32
@@ -40,11 +42,8 @@
  *          type: integer
  *          format: int32
  *          example: 0
- *        passengers:
- *          type: array
- *          example: {id_Users}
  *        date:
- *          type: date
+ *          type: string
  *          example: 14-12-2023
  *        tripDistance:
  *          type: number
@@ -53,7 +52,7 @@
  *        hometown:
  *          type: string
  *          example: Buenos Aires
- *        provinceOrigen:
+ *        provinceOrigin:
  *          type: string
  *          example: Bahia Blanca
  *        sourceAddress:
@@ -68,8 +67,11 @@
  *        provinceArrival:
  *          type: string
  *          example: Neuquen
+ *        arrivalAddress:
+ *          type: string
+ *          example: Av. Rivadavia 123
  *        checkIn:
- *          type: time
+ *          type: string
  *          example: 14:00
  *        seatCost:
  *          type: number

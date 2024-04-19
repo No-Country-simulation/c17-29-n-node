@@ -32,7 +32,7 @@ const userSchema = new Schema({
     default: "user"
   },
 
-  disabled: {
+  isActive: {
     type: Boolean,
     default: false
   }

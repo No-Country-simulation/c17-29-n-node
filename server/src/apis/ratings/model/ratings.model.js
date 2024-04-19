@@ -12,6 +12,10 @@ const ratingsSchema = new Schema({
     rating: {
         type: Number,
         required: true
+    },
+    isActive: {
+        type: Boolean,
+        default: true
     }
 })
 

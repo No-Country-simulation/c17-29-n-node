@@ -6,31 +6,31 @@ export async function createTravel(req, res) {
     const payload = req.body;
     const newTravel = new travelModel(payload);
     const sendTravel = await newTravel.save();
-    if (!sendTravel) throw new Error("trip was not created");
-    apiResponse(res, 201, "", "", { travel: sendTravel });
+    if (!sendTravel) throw new Error("Trip was not created");
+    apiResponse(res, 201, { message: "Travel created"});
   } catch (error) {
-    apiResponse(res, 500, "", "", { error: error.message });
+    apiResponse(res, 500, { error: error.message });
   }
 }
 
 export async function getAllTravels(req, res) {
   try {
     const trips = await travelModel.find({ isActive: true }).lean();
-    if (!trips) throw new Error("trips does not exist");
-    apiResponse(res, 201, "", "", { travels: trips });
+    if (!trips) throw new Error("Trips does not exist");
+    apiResponse(res, 201, { travels: trips });
   } catch (error) {
-    apiResponse(res, 500, "", "", { error: error.message });
+    apiResponse(res, 500, { error: error.message });
   }
 }
 
 export const getTravelById = async (req, res) => {
   try {
     const { id } = req.params;
-    const updateTravel = await travelModel.findById(id);
-    if (!updateTravel) throw new Error("trip does not exist");
-    apiResponse(res, 201, "", "", { travel: updateTravel });
+    const searchTravel = await travelModel.findById(id);
+    if (!searchTravel) throw new Error("Trip does not exist");
+    apiResponse(res, 201, { travel: searchTravel });
   } catch (error) {
-    apiResponse(res, 500, "", "", { error: error.message });
+    apiResponse(res, 500, { error: error.message });
   }
 };
 
@@ -41,10 +41,10 @@ export async function updateTravel(req, res) {
     const updateTravel = await travelModel.findByIdAndUpdate(id, updateData, {
       new: true,
     });
-    if (!updateTravel) throw new Error("trip not updated");
-    apiResponse(res, 201, "", "", { travel: updateTravel });
+    if (!updateTravel) throw new Error("Trip not updated");
+    apiResponse(res, 201, { message: "Travel updated"});
   } catch (error) {
-    apiResponse(res, 500, "", "", { error: error.message });
+    apiResponse(res, 500, { error: error.message });
   }
 }
 
@@ -52,9 +52,9 @@ export async function deleteTravel(req, res) {
   try {
     const { id } = req.params;
     const deleteTravel = await travelModel.findByIdAndDelete(id);
-    if (!deleteTravel) throw new Error("trip was not deleted");
-    apiResponse(res, 201, "", "", { travel: deleteTravel });
+    if (!deleteTravel) throw new Error("Trip was not deleted");
+    apiResponse(res, 201, { message: "Travel deleted"});
   } catch (error) {
-    apiResponse(res, 500, "", "", { error: error.message });
+    apiResponse(res, 500, { error: error.message });
   }
 }

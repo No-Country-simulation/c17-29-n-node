@@ -1,12 +1,23 @@
 import { Router } from 'express'
 import ratingsController from '../controller/ratings.controller.js'
+import { validateJWT } from '../../../shared/jwt/jwtExtractor.js';
 
-export const ratingsRouter = Router()
-const { getRatings, getRatingById, getRatingByRaterId, getRatingByRateeId, createRating } = new ratingsController
+export const ratingRouters = Router()
+const {
+  getRatings,
+  getRatingById,
+  getRatingByRaterId,
+  getRatingByRateeId,
+  createRating,
+  updateRating,
+  deleteRating,
+} = new ratingsController();
 
-ratingsRouter
-    .get('/', getRatings)
-    .get('/raterId', getRatingByRaterId)
-    .get('/rateeId', getRatingByRateeId)
-    .get('/:id', getRatingById)
-    .post('/createrating', createRating)
+ratingRouters
+  .get("/", validateJWT, getRatings)
+  .get("/:id", validateJWT, getRatingById)
+  .get("/ratee/:id", validateJWT, getRatingByRateeId)
+  .get("/rater/:id", validateJWT, getRatingByRaterId)
+  .post("/", validateJWT, createRating)
+  .put("/:id", validateJWT, updateRating)
+  .delete("/:id", validateJWT, deleteRating);
