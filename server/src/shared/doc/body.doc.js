@@ -3,7 +3,7 @@
  * components:
  *  body:
  *    user:
- *      name: User
+ *      name: User body
  *      description: The login entity
  *      type: object
  *      properties:
@@ -13,6 +13,15 @@
  *        password:
  *          type: string
  *          example: 1234
+ *    ratingEdit:
+ *      name: rating Edit
+ *      description: The edit rating
+ *      type: object
+ *      properties:
+ *        rating:
+ *          type: Number,
+ *          format: int32
+ *          example: 3
  *    userEdit:
  *      name: User Edit
  *      description: The edit user
@@ -26,7 +35,7 @@
  *          example: test
  *    carEdit:
  *      name: Car Edit
- *      description: The edit user
+ *      description: The edit car
  *      type: object
  *      properties:
  *        color:

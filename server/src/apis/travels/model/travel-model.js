@@ -1,54 +1,80 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const collection = "Travel";
 
 const schema = new mongoose.Schema({
-    origin: {
-        type: String,
-        required: true
-    },
-    originAddress:{
-        type: String,
-        required: true
-    },
-    destination: {
-        type: String,
-        required: true
-    },
-    destinationAddress: {
-        type: String,
-        required: false
-    },
-    capacity: {
-        type: Number,
-        required: true
-    },
-    passengers: {
-        type: Array,
-        required: true
-    },
-    day: {
-        type: String,
-        required: true
-    },
-    hour: {
-        type: Number,
-        required: true
-    },
-
-    checkIn: {
-        type: Number,
-        required: false
-    },
-    
-    isActive: {
-        type: Boolean,
-        required: true
-    },
-    departureTime: {
-        type: TimeRanges,
-        required: true
-    }
+  user: {
+    type: String,
+    required: true,
+  },
+  car: {
+    type: String,
+    required: true,
+  },
+  driver: {
+    type: String,
+    required: true,
+  },
+  passengers: {
+    type: String,
+    required: false,
+  },
+  numberSeatsAvailable: {
+    type: Number,
+    required: true,
+  },
+  numberSeatsOccupied: {
+    type: Number,
+    required: false,
+  },
+  date: {
+    type: String,
+    required: true,
+  },
+  tripDistance: {
+    type: Number,
+    required: true,
+  },
+  hometown: {
+    type: String,
+    required: true,
+  },
+  provinceOrigin: {
+    type: String,
+    required: true,
+  },
+  sourceAddress: {
+    type: String,
+    required: true,
+  },
+  departureTime: {
+    type: String,
+    required: true,
+  },
+  arrivalCity: {
+    type: String,
+    required: true,
+  },
+  provinceArrival: {
+    type: String,
+    required: true,
+  },
+  arrivalAddress: {
+    type: String,
+    required: true,
+  },
+  checkIn: {
+    type: String,
+    required: true,
+  },
+  seatsCost: {
+    type: Number,
+    required: false,
+  },
+  isActive: {
+    type: Boolean,
+    required: true,
+  },
 });
 
 const travelModel = mongoose.model(collection, schema);

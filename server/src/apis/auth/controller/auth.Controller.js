@@ -20,10 +20,9 @@ export const register = async (req, res) => {
     const user = { name, email, password: hashedPassword, age, phoneNumber };
     const result = await createUserService(user);
     if (!result) throw new Error("registration was made");
-    apiResponse(res, 201, "", "", { message: "user created", id: result._id });
+    apiResponse(res, 201,{ message: "User resgistered"});
   } catch (error) {
-    apiResponse(res, 500, "", "", { error: error.message });
-    //res.status(404).json({ message: "Error en register" });
+    apiResponse(res, 500, { error: error.message });
   }
 };
 
@@ -44,17 +43,16 @@ export const login = async (req, res) => {
       secreto,
       { expiresIn: expToken }
     );
-    apiResponse(res, 200, "", "", { token: token });
+    apiResponse(res, 200, { message: "user logged in", token: token });
   } catch (error) {
-    apiResponse(res, 500, "", "", { error: error.message });
+    apiResponse(res, 500, { error: error.message });
   }
 };
 
 export const profile = async (req, res) => {
   try {
-    apiResponse(res, 200, "", "", { user: req.user });
+    apiResponse(res, 200, { profile: req.user });
   } catch (error) {
-    apiResponse(res, 404, "", "", { error: error.message });
-    //res.status(404).json({ message: "Error en profile" });
+    apiResponse(res, 404, { error: error.message });
   }
 };

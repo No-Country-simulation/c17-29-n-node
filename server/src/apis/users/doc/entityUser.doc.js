@@ -32,7 +32,7 @@
  *            - user
  *            - admin
  *          example: user
- *        disable:
+ *        isActive:
  *          type: boolean
  *          example: false
  */

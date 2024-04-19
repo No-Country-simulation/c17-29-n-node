@@ -1,7 +1,7 @@
 import { userModel } from "../model/user.model.js";
 
 export const getAllUsersService = async () => {
-  return await userModel.find({ disabled: false }).lean();
+  return await userModel.find({ isActive: true }).lean();
 };
 
 export const createUserService = async (payload) => {

@@ -1,22 +1,20 @@
 /**
  * @swagger
  * paths:
- *  /users/{:id}:
- *    put:
+ *  /ratings:
+ *    post:
  *      tags:
- *        - User Routes
- *      summary: Edit User.
- *      description: Edit Users.
- *      operationId: ediUser
- *      parameters:
- *        - $ref: '#/components/parameters/id'
+ *        - Rating Routes
+ *      summary: Create rating.
+ *      description: Create rating
+ *      operationId: createRating
  *      requestBody:
- *       description: User of the api.
+ *       description: Create rating.
  *       required: true
  *       content:
  *         application/json:
  *           schema:
- *             $ref: '#/components/body/userEdit'
+ *             $ref: '#/components/schemas/ratingEntity'
  *      responses:
  *        200:
  *          description: Success

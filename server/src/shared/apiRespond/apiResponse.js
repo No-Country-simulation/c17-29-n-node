@@ -7,7 +7,7 @@ const findStatusCode = (code) => {
     .find((item) => item.code === code.toString());
 };
 
-export const apiResponse = ( res, code, status = "", message = "", data = "error") => {
+export const apiResponse = ( res, code, data) => {
   const isValidCode =
     code > 99 && code < 600 && code !== null && code !== undefined;
   if (isValidCode) {
@@ -16,9 +16,9 @@ export const apiResponse = ( res, code, status = "", message = "", data = "error
       foundData.status = statusCodes[code.toString().slice(0, -2) - 1]?.status;
       return res.status(code).json({
         code: code,
-        status: status || foundData.status,
-        description: message || foundData.description,
-        data: data || "no data",
+        status: foundData.status,
+        description: foundData.description,
+        data: data || {message:"no data"},
       });
     } else {
       return res.status(404).json({
