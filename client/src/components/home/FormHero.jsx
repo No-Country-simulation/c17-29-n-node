@@ -41,25 +41,9 @@ export const FormHero = () => {
 
     const router = useRouter()
     return (
-        <form action="" className='flex flex-col md:flex-row gap-3 w-full md:[&>*]:w-fit' onSubmit={handleSubmit}>
-            <Input variant="underlined" type="text" label="Origen" placeholder='Rosario, Santa Fe' isRequired onChange={handleInputChange} name="origin" locationValidation={isOriginInvalid} color={isOriginInvalid ? "danger" : "success"} errorMessage={isOriginInvalid && "Entre 4 y 35 carácteres"} onValueChange={setOriginValue} isInvalid={isOriginInvalid} className={{
-                errorMessage: [
-                    "absolute",
-                    "bottom-0",
-                    "left-0",
-                    "text-danger",
-                    "text-xs"
-                ]
-            }} />
-            <Input variant="underlined" type="text" label='Destino' placeholder='La Cumbrecita, Córdoba' isRequired onChange={handleInputChange} name="destination" locationValidation={isDestinationInvalid} color={isDestinationInvalid ? "danger" : "success"} errorMessage={isDestinationInvalid && "Entre 4 y 35 carácteres"} onValueChange={setDestinationValue} isInvalid={isDestinationInvalid} className={{
-                errorMessage: [
-                    "absolute",
-                    "bottom-0",
-                    "left-0",
-                    "text-danger",
-                    "text-xs"
-                ]
-            }} />
+        <form action="" className='flex flex-col md:flex-row gap-3 [&>*>*]:px-8 w-full md:[&>*]:w-fit [&_*]:placeholder:text-lg md:[&_*]:placeholder:text-sm' onSubmit={handleSubmit}>
+            <Input variant="underlined" type="text" label="Origen" placeholder='Rosario, Santa Fe' isRequired onChange={handleInputChange} name="origin" locationValidation={isOriginInvalid} color={isOriginInvalid ? "danger" : "success"} errorMessage={isOriginInvalid && "Entre 4 y 35 carácteres"} onValueChange={setOriginValue} isInvalid={isOriginInvalid} />
+            <Input variant="underlined" type="text" label='Destino' placeholder='La Cumbrecita, Córdoba' isRequired onChange={handleInputChange} name="destination" locationValidation={isDestinationInvalid} color={isDestinationInvalid ? "danger" : "success"} errorMessage={isDestinationInvalid && "Entre 4 y 35 carácteres"} onValueChange={setDestinationValue} isInvalid={isDestinationInvalid} />
             <Input variant="underlined" type="date" label='Partida' isRequired name='departure' />
             <Input variant="underlined" type="number" min={1} label="Pasajeros" placeholder='4 Pasajeros' isRequired onChange={handleInputChange} name="passengers" quantityValidation={isQuantityInvalid} color={isQuantityInvalid ? "danger" : "success"} errorMessage={isQuantityInvalid ? "Debe ser entre 1 y 10 pasajeros" : ""} onValueChange={setQuantityValue} isInvalid={isQuantityInvalid} className={{
                 errorMessage: [
