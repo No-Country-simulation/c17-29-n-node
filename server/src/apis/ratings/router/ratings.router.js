@@ -14,10 +14,10 @@ const {
 } = new ratingsController();
 
 ratingRouters
-  .get("/", validateJWT, getRatings)
-  .get("/:id", validateJWT, getRatingById)
-  .get("/ratee/:id", validateJWT, getRatingByRateeId)
-  .get("/rater/:id", validateJWT, getRatingByRaterId)
+  .get("/", getRatings)
+  .get("/:id", getRatingById)
+  .get("/ratee/:id", getRatingByRateeId)
+  .get("/rater/:id", getRatingByRaterId)
   .post("/", validateJWT, createRating)
   .put("/:id", validateJWT, updateRating)
   .delete("/:id", validateJWT, deleteRating);
