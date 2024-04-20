@@ -9,7 +9,7 @@ const port = process.env.PORT || 3000;
 const hostDev = process.env.HOST_DEV || "localhost";
 const hostProd = process.env.HOST_PROD || "c17-29-n-node.vercel.app"
 const secretoHost = env?.trim() === "production"
-  ? `https://${hostProd}`
+  ? `${hostProd}`
   : `${hostDev}:${port}`;
 export const isApiKey = (req, res, next) => {
   try {
