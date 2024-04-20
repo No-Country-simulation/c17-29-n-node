@@ -18,8 +18,8 @@ export const isApiKey = (req, res, next) => {
     console.log("Host ->", host);
     console.log("HostS ->", secretoHost);
     console.log("apiS->", secretoKey);
-    if (!apikey) throw new Error(" ❎ Check authorization");
-    if (!host) throw new Error(" ❎ Check authorization");
+    if (!apikey) throw new Error("💀 Check authorization");
+    if (!host) throw new Error("☠️ Check authorization");
     if (apikey !== secretoKey) throw new Error(" ❌ Api Key not valid");
     if (host !== secretoHost) throw new Error(" ✖️ Host not valid");
     next();
