@@ -7,8 +7,9 @@
  *       type: http
  *       scheme: bearer
  *       bearerFormat: JWT
- *    api_key:
- *       name: Api Key
- *       in: header
+ *    apiKeyAuth:
  *       type: apiKey
+ *       scheme: apiKey
+ *       name: apiKey
+ *       in: header
  */

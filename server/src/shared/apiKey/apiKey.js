@@ -13,6 +13,7 @@ export const isApiKey = (req, res, next) => {
     const { apikey, host } = req.headers;
     console.log("Api Key ->", apikey);
     console.log("Host ->", host);
+    console.log('Host web -> ', req.get("host"));
     if (!apikey) throw new Error(" ❎ Check authorization");
     if (apikey !== secretoKey) throw new Error(" ❌ Api Key not valid");
     if (host !== secretoHost) throw new Error(" ✖️ Host not valid");
