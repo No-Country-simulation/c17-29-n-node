@@ -10,7 +10,7 @@ const theme = new SwaggerTheme();
 const darkStyle = theme.getBuffer(SwaggerThemeNameEnum.DARK);
 const serverUrl =
   env?.trim() === "production"
-    ? `https://${hostProd}/{basePath}`
+    ? `${hostProd}/{basePath}`
     : `http://${hostDev}:${port}/{basePath}`;
 const swaggerConfig = {
   failOnErrors: true,
