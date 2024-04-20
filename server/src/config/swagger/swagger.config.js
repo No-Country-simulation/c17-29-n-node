@@ -1,22 +1,17 @@
 import swaggerUI from "swagger-ui-express";
 import swaggerJsDoc from "swagger-jsdoc";
 import { SwaggerTheme, SwaggerThemeNameEnum } from "swagger-themes";
-import { config } from "dotenv";
-
-config();
 
 const env = process.env.NODE_ENV || "development";
-
-const serverUrl = env?.trim() === "production"
-  ? process.env.HOST_PROD
-  : process.env.HOST_DEV;
-
-const theme = new SwaggerTheme();
-
-const darkStyle = theme.getBuffer(SwaggerThemeNameEnum.DARK);
-
 const port = process.env.PORT || 3000;
-
+const hostDev = process.env.HOST_DEV || "localhost";
+const hostProd = process.env.HOST_PROD || "c17-29-n-node.vercel.app"
+const theme = new SwaggerTheme();
+const darkStyle = theme.getBuffer(SwaggerThemeNameEnum.DARK);
+const serverUrl =
+  env?.trim() === "production"
+    ? `https://${hostProd}/{basePath}`
+    : `http://${hostDev}:${port}/{basePath}`;
 const swaggerConfig = {
   failOnErrors: true,
   definition: {
@@ -92,6 +87,6 @@ const swaggerOptions = {
   ],
 };
 
-const swaggerConfiguration  = swaggerJsDoc(swaggerConfig);
+const config = swaggerJsDoc(swaggerConfig);
 export const middleware = swaggerUI.serve;
-export const controller = swaggerUI.setup(swaggerConfiguration, swaggerOptions);
+export const controller = swaggerUI.setup(config, swaggerOptions);

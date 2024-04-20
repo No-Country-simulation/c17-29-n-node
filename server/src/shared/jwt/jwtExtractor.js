@@ -9,7 +9,8 @@ const secreto = process.env.JWT_SECRET;
 export const validateJWT = (req, res, next) => {
   try {
     const authHeader = req.headers.authorization;
-    if (!authHeader)  throw new Error("Check authorization");
+    console.log('auth', authHeader)
+    if (!authHeader) throw new Error("Check authorization");
     const token = authHeader.split(" ")[1];
     const userInfo = jwt.verify(token, secreto);
     req.user = userInfo;

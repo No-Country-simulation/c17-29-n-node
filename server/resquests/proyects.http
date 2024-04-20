@@ -9,15 +9,15 @@
 ## Dev Host
 *************************
 
-@hostdev = localhost
-@port = 3000
+@hostdev = {{$dotenv HOST_DEV}}
+@port = {{$dotenv PORT}}
 @dev = http://{{hostdev}}:{{port}}/{{basepath}}
 
 *************************
 ## Prod Host
 *************************
 
-@hostprod = https://c17-29-n-node.vercel.app
+@hostprod = {{$dotenv HOST_PROD}}
 @version = v1
 @prod = {{hostprod}}/{{basepath}}
 
@@ -32,6 +32,12 @@
 *************************
 
 @tokenProd = {{loginProd.response.body.data.token}}
+
+*************************
+## Api Key.
+*************************
+
+@apiKey = {{$dotenv API_KEY}}
 
 *************************
 ## Id dev mode.
@@ -100,11 +106,13 @@ GET {{prod}}/ HTTP/1.1
 ### dev mode.
 # @name profileDev
 GET {{dev}}/auth/profile HTTP/1.1
+apikey: {{apiKey}}
 Authorization: Bearer {{tokenDev}}
 
 ### prod mode.
 # @name profileProd
 GET {{prod}}/auth/profile HTTP/1.1
+apikey: {{apiKey}}
 Authorization: Bearer {{tokenProd}}
 
 *************************
@@ -141,7 +149,7 @@ POST {{dev}}/auth/login
 content-type: {{contentType}}
 
 {
-  "email": "core10@coreo.com",
+  "email": "coreo@coreo.com",
   "password": "1234"
 }
 
@@ -151,7 +159,7 @@ POST {{prod}}/auth/login HTTP/1.1
 content-type: {{contentType}}
 
 {
-  "email": "core10@coreo.com",
+  "email": "coreo@coreo.com",
   "password": "1234"
 }
 ###
@@ -167,6 +175,7 @@ content-type: {{contentType}}
 # @name createUserDev
 POST {{dev}}/users
 Authorization: Bearer {{tokenDev}}
+
 content-type: {{contentType}}
 
 {

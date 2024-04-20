@@ -116,27 +116,64 @@ API process log
 
 ### Travel Routes
 
-#### Get -> getCars
+#### Get -> getTravels
 
-- [] Endpoint
-- [] Documentation
+- [x] Endpoint
+- [x] Documentation
 
-#### Get -> getCarById
+#### Get -> getTravelById
 
-- [] Endpoint
-- [] Documentation
+- [x] Endpoint
+- [x] Documentation
 
-#### Post -> addCar
+#### Post -> addTravel
 
-- [] Endpoint
-- [] Documentation
+- [x] Endpoint
+- [x] Documentation
 
-#### Put -> updateCar
+#### Put -> updateTravel
 
-- [] Endpoint
-- [] Documentation
+- [x] Endpoint
+- [x] Documentation
 
-#### Delete -> deleteCar
+#### Delete -> deleteTravel
 
-- [] Endpoint
-- [] Documentation
+- [x] Endpoint
+- [x] Documentation
+
+### Rating Routes
+
+#### Get -> getRatings
+
+- [x] Endpoint
+- [x] Documentation
+
+#### Get -> getRatingById
+
+- [x] Endpoint
+- [x] Documentation
+
+#### Get -> getRatingByRateeId
+
+- [x] Endpoint
+- [x] Documentation
+
+#### Get -> getRatingByRaterId
+
+- [x] Endpoint
+- [x] Documentation
+
+#### Post -> addRating
+
+- [x] Endpoint
+- [x] Documentation
+
+#### Put -> updateRating
+
+- [x] Endpoint
+- [x] Documentation
+
+#### Delete -> deleteRating
+
+- [x] Endpoint
+- [x] Documentation
