@@ -41,5 +41,6 @@
  *                items:
  *                  $ref: '#/components/responses/notServer'
  *      security:
+ *        - apiKeyAuth: []
  *        - bearerAuth: []
  */

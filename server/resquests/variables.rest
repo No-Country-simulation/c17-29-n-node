@@ -1,0 +1,9 @@
+# @name vars
+  @hostdev = {{$dotenv HOST_DEV}}
+  @port = {{$dotenv PORT}}
+  @basepath = api
+  @dev= "http://{{hostdev}}:{{port}}/{{basepath}}",
+  @apiKey= {{$dotenv API_KEY}}
+  @tokenDev= 1234567890
+
+###

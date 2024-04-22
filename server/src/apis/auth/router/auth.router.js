@@ -6,5 +6,5 @@ import { isApiKey } from "../../../shared/apiKey/apiKey.js";
 export const authRoutes = Router();
 
 authRoutes.get("/profile", isApiKey, validateJWT, profile);
-authRoutes.post("/register", register);
-authRoutes.post("/login", login);
+authRoutes.post("/register", isApiKey, register);
+authRoutes.post("/login", isApiKey, login);

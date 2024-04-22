@@ -33,4 +33,6 @@
  *          application/json:
  *            schema:
  *              $ref: '#/components/responses/notServer'
+ *    security:
+ *      - apiKeyAuth: []
  */

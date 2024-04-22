@@ -1,0 +1,44 @@
+@import ./variables.rest
+
+## Auth Route
+----------------------------------------------
+*************************
+## Profile
+*************************
+
+### dev mode.
+# @name profileDev
+GET {{@vars.dev}}/auth/profile HTTP/1.1
+apikey: {{@vars.apiKey}}
+Authorization: Bearer {{@vars.tokenDev}}
+
+### prod mode.
+# @name profileProd
+GET {{@prod}}/auth/profile HTTP/1.1
+apikey: {{@apiKey}}
+Authorization: Bearer {{@tokenProd}}
+
+*************************
+## Register
+*************************
+
+### dev mode.
+# @name registerDev
+POST {{@dev}}/auth/register
+content-type: {{@contentType}}
+
+{
+  "email": "core5@coreo.com",
+  "password": "1234"
+}
+
+### prod mode.
+# @name registerProd
+POST {{@prod}}/auth/register HTTP/1.1
+content-type: {{@contentType}}
+
+{
+  "email": "core5@coreo.com",
+  "password": "1234"
+}
+###

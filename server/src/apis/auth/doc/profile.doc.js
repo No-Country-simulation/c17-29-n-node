@@ -28,6 +28,6 @@
  *           schema:
  *             $ref: '#/components/responses/notServer'
  *     security:
- *       - bearerAuth: []
  *       - apiKeyAuth: []
+ *       - bearerAuth: []
  */
