@@ -9,13 +9,14 @@
     - [Front-End Teams 🖼️](#front-end-teams-️)
     - [Back-end Teams 🎛️](#back-end-teams-️)
     - [QA Teams 📊](#qa-teams-)
-  - [Project Workspaces 🗃️](#project-workspaces-️)
-  - [Scripts 🎚️](#scripts-️)
-    - [Client App 🧩](#client-app-)
-    - [Server App 🔧](#server-app-)
-    - [Project 🗃️](#project-️)
-      - [Repository](#repository)
-      - [Deploy](#deploy)
+  - [Project 🗃️](#project-️)
+    - [Workspaces 🛍️](#workspaces-️)
+    - [Repository 🧮](#repository-)
+    - [Deploy 🎑](#deploy-)
+    - [Data Base 🛢️](#data-base-️)
+    - [Scripts 🎚️](#scripts-️)
+      - [Client App 🧩](#client-app-)
+      - [Server App 🔧](#server-app-)
   - [Promotional Video 🎥](#promotional-video-)
   - [Technology Stack ⚙️](#technology-stack-️)
     - [UX UI Design tech stack 🎨](#ux-ui-design-tech-stack-)
@@ -84,9 +85,11 @@ npm run dev
 | ![Avatar](https://avatars.githubusercontent.com/u/92379528?s=96&v=4) |![Avatar](https://avatars.githubusercontent.com/u/87041074?s=96&v=4) |
 |:-:|:-:|
 | **Luciana Calvi** | **Juan Cris** |
-|[![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com)[![LinkedIn Link](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')](https://www.linkedin.com/in/luciana-belén-calvi-520111214) | [![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com/JuanCris09)[![LinkedIn Link](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')]( https://www.linkedin.com) |
+|[![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com)[![LinkedIn Link](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')](https://www.linkedin.com/in/luciana-belén-calvi-520111214) | [![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com/JuanCris09)[![LinkedIn Link](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')]( https://www.linkedin.com/in/jp-cristancho/) |
 
-## Project Workspaces 🗃️
+## Project 🗃️
+
+### Workspaces 🛍️
 
 The following table shows the project's workspaces.
 
@@ -96,30 +99,32 @@ The following table shows the project's workspaces.
 | `🖼️ client` | /client    | application Front-End    |[Front-End](https://rutasdoradas.vercel.app/) |
 | `🎛️ server` | /server    | application Back-End      |[Back-End](https://rutasdoradasback.vercel.app/api/docs) |
 
-## Scripts 🎚️
+### Repository 🧮
 
-### Client App 🧩
+[![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com/No-Country/c17-29-n-node)
+
+### Deploy 🎑
+
+[![Vercel Link](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white 'Vercel Link')](https://vercel.com/)
+
+### Data Base 🛢️
+
+[![MongoDB Link](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white 'MongoBD Link')](https://www.mongodb.com/atlas/database)
+
+### Scripts 🎚️
+
+#### Client App 🧩
 
 - `npm run start`: Run the application preview production client with next.
 - `npm run dev`: Run the application development client with next.
 - `npm rum build`: Builds the production bundle for the web application.
 - `npm rum lint`: Linting errors in the codebase automatically.
 
-### Server App 🔧
+#### Server App 🔧
 
 - `npm rum start`: Run the application development server with node
 - `npm run dev`: Run the application development server with node --wacth.
 - `npm rum dev:start`: Run the application development server with nodemon.
-
-### Project 🗃️
-
-#### Repository
-
-[![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com/No-Country/c17-29-n-node)
-
-#### Deploy
-
-[![Vercel Link](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white 'Vercel Link')](https://github.com/JuanCris09)
 
 ## Promotional Video 🎥
 
@@ -129,15 +134,15 @@ promo video section
 
 ### UX UI Design tech stack 🎨
 
-design tech stack
+[![Figma Link](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white 'Figma Link')](https://www.figma.com/files/recents-and-sharing?fuid=1121329785337751851)
 
 ### Front-End 🎆
 
-front end tech stack
+[![React Link](  https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB 'React Link')](https://react.dev/) [![Next Link](https://img.shields.io/badge/next%20js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white 'Next Link')](https://nextjs.org/)
 
 ### Back-End 🧰
 
-[![node](https://img.shields.io/badge/node-20.x-green.svg)](https://nodejs.org/docs/latest-v20.x/api/index.html) [![npm](https://img.shields.io/badge/npm-10.x-red.svg)](https://www.npmjs.com/) [![express](https://img.shields.io/badge/express-4.x-white.svg)](https://expressjs.com/) [![swagger](https://img.shields.io/badge/swagger_ui_express-3.x-greem.svg)](https://swagger.io/)
+[![Node Link](https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white 'Node Link')](https://nodejs.org/docs/latest-v20.x/api/index.html) [![Express Link]( https://img.shields.io/badge/Express%20js-000000?style=for-the-badge&logo=express&logoColor=white 'express Link')](https://expressjs.com/) [![Npm Link](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white 'Npm Link')](https://www.npmjs.com/) [![Postman Link](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white 'Postman Link')](https://www.postman.com/) [![Swagger Link](https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=Swagger&logoColor=black 'Swagger Link')](https://swagger.io/)
 
 ### Quality Assurance🧬
 
