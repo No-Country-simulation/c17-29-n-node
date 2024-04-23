@@ -5,7 +5,7 @@
   "homepage": "https://github.com/No-Country/c17-29-n-node",
   "version": "1.0.0",
   "license": "MIT",
-  "description": "Api del equipo No-country-c17-29-ft-node-react",
+  "description": "Api de la app Rutas Doradas",
   "keywords": [
     "Api",
     "Viajes",
@@ -39,7 +39,7 @@
     "dev-start": "nodemon src/server.js"
   },
   "dependencies": {
-    "@vercel/node": "^3.0.26",
+    "@vercel/node": "^3.0.27",
     "bcrypt": "^5.1.1",
     "connect-mongo": "^5.1.0",
     "cookie-parser": "^1.4.6",
@@ -52,16 +52,16 @@
     "helmet": "^7.1.0",
     "jsonwebtoken": "^9.0.2",
     "jws": "^4.0.0",
-    "mongoose": "^8.3.1",
+    "mongoose": "^8.3.2",
     "morgan": "^1.10.0",
-    "multer": "^1.4.5-lts.1",
+    "multer": "1.4.5-lts.1",
     "node-cron": "^3.0.3",
     "nodemon": "^3.1.0",
     "passport": "^0.7.0",
     "rate-limit-mongo": "^2.3.2",
     "serve-favicon": "^2.5.0",
-    "swagger-jsdoc": "6.2.8",
+    "swagger-jsdoc": "^6.2.8",
     "swagger-themes": "1.4.3",
-    "swagger-ui-express": "4.6.3"
+    "swagger-ui-express": "5.0.0"
   }
 }

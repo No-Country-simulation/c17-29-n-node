@@ -6,7 +6,7 @@
       "path": ".."
     },
     {
-      "name": "🖼️Cliente",
+      "name": "🖼️ Cliente",
       "path": "../client"
     },
     {
@@ -14,11 +14,9 @@
       "path": "../server"
     }
   ],
-  "extensions": {
-    "recommendations": [
-      "folke.vscode-monorepo-workspace",
-      "pomdtr.excalidraw-editor",
-      "hediet.vscode-drawio"
-    ]
-  }
+  "recommendations": [
+    "folke.vscode-monorepo-workspace",
+    "pomdtr.excalidraw-editor",
+    "hediet.vscode-drawio"
+  ]
 }
