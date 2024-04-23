@@ -7,7 +7,7 @@ const secretoKey = process.env.API_KEY;;
 const env = process.env.NODE_ENV || "development";
 const port = process.env.PORT || 3000;
 const hostDev = process.env.HOST_DEV || "localhost";
-const hostProd = process.env.HOST_PROD_BACK || "rutasdoradas.vercel.app"
+const hostProd = process.env.HOST_PROD_BACK || "rutasdoradasback.vercel.app"
 const secretoHost = env?.trim() === "production"
   ? `${hostProd}`
   : `${hostDev}:${port}`;
