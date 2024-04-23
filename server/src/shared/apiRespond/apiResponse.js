@@ -1,4 +1,4 @@
-import { statusCodes } from "../data/StausCode.js";
+import { statusCodes } from "../data/statusCode.js";
 
 const findStatusCode = (code) => {
   if (!Array.isArray(statusCodes)) return null;
