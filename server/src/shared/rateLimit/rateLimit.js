@@ -1,11 +1,17 @@
 import { rateLimit } from "express-rate-limit";
+import { config } from "dotenv";
 
-const ENV = process.env.NODE_ENV || "development";
+config();
+
+const env = process.env.NODE_ENV || "development";
+const port = process.env.PORT || 3000;
+const hostDev = process.env.HOST_DEV || "localhost";
 
 const allowedOrigins = [
-  "localhost:3000",
-  "http://localhost:3000",
-  "http://127.0.0.1:3000",
+  `${hostDev}:${port}`,
+  `http://${hostDev}:${port}`,
+  `127.0.0.1:${port}`,
+  `http://127.0.0.1:${port}`,
 ];
 
 export const apiLimiter = rateLimit({
@@ -22,7 +28,7 @@ export const apiLimiter = rateLimit({
   requestPropertyName: "req",
   legacyHeaders: false,
   skip: (req) => {
-    if (ENV === "development") {
+    if (env === "development") {
       console.log("skip host", req.get("host"));
       const host = req.get("host");
       return allowedOrigins.includes(host);

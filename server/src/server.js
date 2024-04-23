@@ -12,7 +12,13 @@ import { helmetConfig } from "./config/helmet/helmet.config.js";
 
 config();
 
-const PORT = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
+const env = process.env.NODE_ENV || "development";
+const hostDev = process.env.HOST_DEV || "localhost";
+const hostProd = process.env.HOST_PROD_BACK || "rutasdoradasback.vercel.app";
+const host = env?.trim() === "production"
+  ? `https://${hostProd}`
+  : `http://${hostDev}:${port}`;
 const server = express();
 
 server.use(express.json());
@@ -26,9 +32,9 @@ server.use(serverRouter);
 
 connectDB();
 
-server.listen(PORT, (err) => {
+server.listen(port, (err) => {
   if (err) console.error('Error starting server',err);
   console.log(
-    `✅ Server 🆗 is running 💯 on http://localhost:${PORT}/api/docs`
+    `✅ Server 🆗 is running 💯 on ${host}/api/docs`
   );
 });

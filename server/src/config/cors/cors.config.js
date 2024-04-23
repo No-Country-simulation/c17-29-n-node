@@ -4,11 +4,14 @@ config();
 
 const port = process.env.PORT || 3000;
 const hostDev = process.env.HOST_DEV || "localhost";
-const hostProd = process.env.HOST_PROD || "rutasdoradas.vercel.app";
+const hostProdBack = process.env.HOST_PROD_BACK || "rutasdoradasback.vercel.app";
+const hostProdFront = process.env.HOST_PROD_FRONT || "rutasdoradas.vercel.app";
+
 
 const whitelist = [
   `http://${hostDev}:${port}`,
-  `https://${hostProd}`,
+  `https://${hostProdFront}`,
+  `https://${hostProdBack}`
 ];
 
 const contentTypes = [

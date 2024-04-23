@@ -10,6 +10,6 @@ export const connectDB = async () => {
     await connect(MONGO_URL);
     console.log(`✅ Database Connected with 🚀 mongo.`);
   } catch (error) {
-    console.error(`☠️  Database Connection Error: ${error}`);
+    console.error(`☠️ Database Connection Error: ${error}`);
   }
 };
