@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json.schemastore.org/vsconfig.json",
+  "folders": [
+    {
+      "name": "✨ root",
+      "path": ".."
+    },
+    {
+      "name": "🖼️Cliente",
+      "path": "../client"
+    },
+    {
+      "name": "🎛️ Server",
+      "path": "../server"
+    }
+  ],
+  "extensions": {
+    "recommendations": [
+      "folke.vscode-monorepo-workspace",
+      "pomdtr.excalidraw-editor",
+      "hediet.vscode-drawio"
+    ]
+  }
+}
