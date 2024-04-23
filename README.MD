@@ -4,20 +4,17 @@
 
 - [-Rutas Doradas App ✨](#-rutas-doradas-app-)
   - [📔 Table Of Contents](#-table-of-contents)
-  - [📋 About this project  🔝](#-about-this-project--)
+  - [📋 About this project 🔝](#-about-this-project-)
   - [🛠️ Run Locally 🔝](#️-run-locally-)
   - [🤵‍♂️Teams 🔝](#️teams-)
     - [👷‍♂️ Project Manager 🔝](#️-project-manager-)
-    - [🧑‍🎨 UX-UI Teams  🔝](#-ux-ui-teams--)
-    - [🧑‍💻 Front-End Teams  🔝](#-front-end-teams--)
+    - [🧑‍🎨 UX-UI Teams 🔝](#-ux-ui-teams-)
+    - [🧑‍💻 Front-End Teams 🔝](#-front-end-teams-)
     - [💻 Back-end Teams 🔝](#-back-end-teams-)
     - [📊 QA Teams 🔝](#-qa-teams-)
   - [🗃️ Project 🔝](#️-project-)
     - [📚 Workspaces 🔝](#-workspaces-)
-    - [🧮 Repository 🔝](#-repository-)
-    - [🛫 Deploy 🔝](#-deploy-)
-    - [🛢️ Data Base 🔝](#️-data-base-)
-    - [🔐 License 🔝](#-license-)
+    - [📚 More Info 🔝](#-more-info-)
     - [🎚️ Scripts 🔝](#️-scripts-)
       - [🧩 Client App 🔝](#-client-app-)
       - [🔧 Server App 🔝](#-server-app-)
@@ -28,7 +25,7 @@
     - [🧰 Back-End 🔝](#-back-end-)
     - [🌠 Quality Assurance 🔝](#-quality-assurance-)
 
-## 📋 About this project  [🔝](#-table-of-contents)
+## 📋 About this project [🔝](#-table-of-contents)
 
 This project involves the use of several technologies.
 
@@ -42,13 +39,25 @@ Clone our repository
 git clone https://github.com/No-Country/c17-29-n-node.git
 ```
 
-Move into Client Folder and install dependencies
+Move into client folder and install dependencies
 
 ```sh
-cd Client | npm i
+cd client | npm i
 ```
 
-Run the project locally
+Run the project locally of teh client
+
+```sh
+npm run dev
+```
+
+Move into serve folder and install dependencies
+
+```sh
+cd server | npm i
+```
+
+Run the project locally of the server
 
 ```sh
 npm run dev
@@ -63,14 +72,14 @@ npm run dev
 | **Jim Flores** |
 | [![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com/Jim-flores?tab=overview&from=2024-03-01&to=2024-03-31)[!['LinkedIn Link'](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')](https://www.linkedin.com/in/jim-flores-teves-328a1323a)|
 
-### 🧑‍🎨 UX-UI Teams  [🔝](#-table-of-contents)
+### 🧑‍🎨 UX-UI Teams [🔝](#-table-of-contents)
 
 | ![Avatar](https://avatars.githubusercontent.com/u/165418264?s=96&v=4) | ![Avatar](https://avatars.githubusercontent.com/u/165707449?s=96&v=4) | ![Avatar](https://avatars.githubusercontent.com/u/112505047?s=96&v=4) |
 |:-:|:-:|:-:|
 | **Sofia Molina** | **Valen Palmieri** | **Diego Alexander** |
 |[![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com/sofiavmolina)[![LinkedIn Link](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')]( https://www.linkedin.com/in/sofia-molina-3a2680267) | [![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com/ValenPalmieri)[![LinkedIn Link](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')](https://www.linkedin.com/in/valentina-palmieri-96-) [![Behance Link](https://img.shields.io/badge/Behance-E8E5E4.svg?&style=for-the-badge&logo=Behance&logoColor=black 'Behance Link')]( https://www.behance.net/valentinapalmieri)|[![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com/DiegoAlexander7)[![LinkedIn Link](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')](https://www.linkedin.com/in/diego-alexander-918a62210) |
 
-### 🧑‍💻 Front-End Teams  [🔝](#-table-of-contents)
+### 🧑‍💻 Front-End Teams [🔝](#-table-of-contents)
 
 | ![Avatar](https://avatars.githubusercontent.com/u/77463982?s=96&v=4) |
 |:-:|
@@ -103,21 +112,11 @@ The following table shows the project's workspaces.
 | `🖼️ client` | /client    | application Front-End    |[Front-End](https://rutasdoradas.vercel.app/) |
 | `🎛️ server` | /server    | application Back-End      |[Back-End](https://rutasdoradasback.vercel.app/api/docs) |
 
-### 🧮 Repository [🔝](#-table-of-contents)
+### 📚 More Info [🔝](#-table-of-contents)
 
-[![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com/No-Country/c17-29-n-node)
-
-### 🛫 Deploy [🔝](#-table-of-contents)
-
-[![Vercel Link](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white 'Vercel Link')](https://vercel.com/)
-
-### 🛢️ Data Base [🔝](#-table-of-contents)
-
-[![MongoDB Link](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white 'MongoBD Link')](https://www.mongodb.com/atlas/database)
-
-### 🔐 License [🔝](#-table-of-contents)
-
-Licensed under the [MIT license](./LICENSE).
+| Repository | Deploy | Data Base | License |
+|:-: | :-: | :-: | :-:|
+|[![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com/No-Country/c17-29-n-node) | [![Vercel Link](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white 'Vercel Link')](https://vercel.com/) | [![MongoDB Link](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white 'MongoBD Link')](https://www.mongodb.com/atlas/database) | [![License Link](https://img.shields.io/badge/MIT-FF0000?style=for-the-badge&logo=MIT&logoColor=white 'MongoBD Link')](./LICENSE.MD)|
 
 ### 🎚️ Scripts [🔝](#-table-of-contents)
 
