@@ -17,7 +17,7 @@ const swaggerConfig = {
   definition: {
     openapi: "3.0.0",
     info: {
-      title: "Api del equipo c17-29-ft-node-react",
+      title: "Rutas Doradas Api",
       summary: "Un Sistema de Viajes",
       description: "Sistema De Viajes By",
       termsOfService: "http://swagger.io/terms/",
@@ -63,7 +63,7 @@ const swaggerOptions = {
   swaggerUi: true,
   docExpansion: "list",
   filter: true,
-  customSiteTitle: "Api Rest Full Dynamic",
+  customSiteTitle: "Rutas doradas Api",
   customCss: `${darkStyle}
     .main{
       background-image: url("/assets/img/logo.png");

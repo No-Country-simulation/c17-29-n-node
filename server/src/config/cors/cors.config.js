@@ -1,6 +1,7 @@
 const whitelist = [
   'http://localhost:3000',
   'https://c17-29-n-node.vercel.app',
+  'https://rutasdoradas.vercel.app',
 ];
 
 const contentTypes = [
