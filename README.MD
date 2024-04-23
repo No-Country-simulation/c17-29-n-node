@@ -54,7 +54,6 @@ npm run dev
 |![Avatar](https://ca.slack-edge.com/T02KS88FB0E-U03RL89QSTV-a452f9eef294-69)|
 |:-:|
 | **Josefina Cordoba** |
-| Team Leader |
 |[!['LinkedIn Link'](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')](https://www.linkedin.com/in/cordobajosefinam/)|
 
 ### Project Manager 👷‍♂️
@@ -62,39 +61,34 @@ npm run dev
 |![Avatar](https://avatars.githubusercontent.com/u/49008175?s=96&v=4)|
 |:-:|
 | **Jim Flores** |
-| Project Manager |
-| [![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com/Jim-flores?tab=overview&from=2024-03-01&to=2024-03-31)[!['LinkedIn Link'](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')](https://www.linkedin.com/)|
+| [![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com/Jim-flores?tab=overview&from=2024-03-01&to=2024-03-31)[!['LinkedIn Link'](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')](https://www.linkedin.com/in/jim-flores-teves-328a1323a)|
 
 ### UX-UI Teams 🎉
 
-| ![Avatar]() | ![Avatar](https://ca.slack-edge.com/T02KS88FB0E-U06QAB7JR6W-d30976ee584f-69) | ![Avatar](https://avatars.githubusercontent.com/u/112505047?s=96&v=4) |
+| ![Avatar](https://avatars.githubusercontent.com/u/165418264?s=96&v=4) | ![Avatar](https://ca.slack-edge.com/T02KS88FB0E-U06QAB7JR6W-d30976ee584f-69) | ![Avatar](https://avatars.githubusercontent.com/u/112505047?s=96&v=4) |
 |:-:|:-:|:-:|
 | **Sofia Molina** | **Valen Palmieri** | **Diego Alexander** |
-| UX-UI Design | UX-UI Design | UX-UI Design |
-|[![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com/sofiavmolina)[![LinkedIn Link](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')](https://www.linkedin.com/) | [![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com/ValenPalmieri)[![LinkedIn Link](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')]( https://www.linkedin.com) | [![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com/DiegoAlexander7)[![LinkedIn Link](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')]( https://www.linkedin.com) |
+|[![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com/sofiavmolina)[![LinkedIn Link](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')]( https://www.linkedin.com/in/sofia-molina-3a2680267) | [![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com/ValenPalmieri)[![LinkedIn Link](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')]( https://www.linkedin.com) | [![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com/DiegoAlexander7)[![LinkedIn Link](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')]( https://www.linkedin.com) |
 
 ### Front-End Teams 🖼️
 
 | ![Avatar](https://avatars.githubusercontent.com/u/77463982?s=96&v=4) |![Avatar]() |
 |:-:|:-:|
 | **Adel Fetner** | **Jose Quinto** |
-| Front-End Dev | Front-End Dev |
-|[![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com/AdelFetner)[![LinkedIn Link](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')](https://github.com/josequinto) | [![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')]( https://github.com/josequinto)[![LinkedIn Link](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')]( https://www.linkedin.com) |
+|[![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com/AdelFetner)[![LinkedIn Link](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')](https://linkedin.com) | [![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')]( https://github.com/josequinto)[![LinkedIn Link](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')]( https://www.linkedin.com) |
 
 ### Back-end Teams 🎛️
 
 | ![Avatar](https://avatars.githubusercontent.com/u/69812733?s=96&v=4) |![Avatar](https://avatars.githubusercontent.com/u/65308067?s=96&v=4) | ![Avatar](https://avatars.githubusercontent.com/u/105892061?s=96&v=4) | ![Avatar](https://avatars.githubusercontent.com/u/83015542?s=96&v=4) | ![Avatar](https://avatars.githubusercontent.com/u/136535873?s=96&v=4) |
 |:-:|:-:|:-:|:-:|:-:|
 | **David Caycedo**  | **Rogelio Romo**  | **Pedro Molina**  | **Agustin Gracia**  | **Luis Correa** |
-| Back-End Dev | Back-End Dev | Back-End Dev | Back-End Dev | Back-End Dev |
-|[![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com/David-Coach-Dev)[![LinkedIn Link](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')](https://www.linkedin.com/in/davidcoachdev/) | [![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')]( https://github.com/RogelioRomo)[![LinkedIn Link](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')]( https://www.linkedin.com/in/rogelio-romo-5712591b8/) | [![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com/pedroMolina-lab)[![LinkedIn Link](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')](https://www.linkedin.com/in/pedro-molina-pem) | [![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com/Agustingmaggi)[![LinkedIn Link](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')](https://linkedin.com) | [![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com/luiscorrea7)[![LinkedIn Link](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')](https://www.linkedin.com) |
+|[![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com/David-Coach-Dev)[![LinkedIn Link](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')](https://www.linkedin.com/in/davidcoachdev/) | [![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')]( https://github.com/RogelioRomo)[![LinkedIn Link](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')]( https://www.linkedin.com/in/rogelio-romo-5712591b8/) | [![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com/pedroMolina-lab)[![LinkedIn Link](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')](https://www.linkedin.com/in/pedro-molina-pem) | [![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com/Agustingmaggi)[![LinkedIn Link](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')](https://www.linkedin.com/in/agustin-garcia-maggi/) | [![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com/luiscorrea7)[![LinkedIn Link](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')](https://www.linkedin.com) |
 
 ### QA Teams 📊
 
 | ![Avatar](https://avatars.githubusercontent.com/u/92379528?s=96&v=4) |![Avatar](https://avatars.githubusercontent.com/u/87041074?s=96&v=4) |
 |:-:|:-:|
 | **Luciana Calvi** | **Juan Cris** |
-| Tester QA | Tester QA |
 |[![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com)[![LinkedIn Link](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')](https://www.linkedin.com/in/luciana-belén-calvi-520111214) | [![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com/JuanCris09)[![LinkedIn Link](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')]( https://www.linkedin.com) |
 
 ## Project Workspaces 🗃️
