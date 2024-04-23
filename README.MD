@@ -154,4 +154,4 @@ promo video section
 
 ### 🌠 Quality Assurance [🔝](#table-of-contents)
 
-qa tech stack
+[![Excell Link](https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white 'Excell Link')](https://www.office.com/) [![Word Link](https://img.shields.io/badge/Microsoft_Word-2B579A?style=for-the-badge&logo=microsoft-word&logoColor=white 'Word Link')](https://www.office.com/)
