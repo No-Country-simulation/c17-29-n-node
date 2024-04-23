@@ -45,7 +45,7 @@ Move into client folder and install dependencies
 cd client | npm i
 ```
 
-Run the project locally of teh client
+Run the project locally of the client
 
 ```sh
 npm run dev
