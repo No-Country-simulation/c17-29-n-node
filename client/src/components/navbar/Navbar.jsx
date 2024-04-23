@@ -1,32 +1,13 @@
 "use client"
 import React from 'react'
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Input, DropdownItem, DropdownTrigger, Dropdown, DropdownMenu, Avatar } from "@nextui-org/react";
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Input, DropdownItem, DropdownTrigger, Dropdown, DropdownMenu, Avatar, Image } from "@nextui-org/react";
 import { FaRegUser, FaMagnifyingGlass } from "react-icons/fa6";
 
-// <nav className='flex justify-between items-center h-16 bg-white text-black relative shadow-sm' role='navigation'>
-//     <article className='pl-8 w-1/3 [&>*]:mx-4 [&>*]:text-2xl'>
-//         <a href='/'>Logo</a>
-//         <a href='/'>Inicio</a>
-//         <a href='/'>Informacion</a>
-//     </article>
-//     <article className='pr-8 w-1/3 flex justify-end gap-4 [&>*]:w-11 [&>*]:h-11 [&>*]:rounded-full [&>*]:hover:cursor-pointer'>
-//         {/* user svg */}
-//         <svg xmlns="http://www.w3.org/2000/svg" className="border-[#834AA4] border-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-//             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-//         </svg>
-//         {/* person svg for user logo */}
-//         <FaRegUser className='bg-[#834AA4]' />
-//     </article>
-// </nav>
 export const NavbarComponent = () => {
     return (
         <>
             <Navbar isBordered>
                 <NavbarContent justify="start">
-                    <NavbarBrand className="mr-4">
-                        <span>LOGO</span>
-                        <p className="hidden sm:block font-bold text-inherit">ACME</p>
-                    </NavbarBrand>
                     <NavbarContent className="hidden sm:flex gap-3">
                         <NavbarItem>
                             <Link color="foreground" href="#">
@@ -45,7 +26,9 @@ export const NavbarComponent = () => {
                         </NavbarItem>
                     </NavbarContent>
                 </NavbarContent>
-
+                <NavbarBrand className="mr-4">
+                    <Image src='/logo.svg' alt='Logo' className='h-full' />
+                </NavbarBrand>
                 <NavbarContent as="div" className="items-center" justify="end">
                     <Input
                         classNames={{

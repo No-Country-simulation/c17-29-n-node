@@ -6,28 +6,6 @@ import { FaRegStar, FaStar, FaStarHalfStroke, FaLocationDot, FaCircle } from "re
 export const TravelCard = () => {
     return (
         <Card className="px-5">
-            <CardHeader className="flex gap-3 justify-between">
-                <section className="flex flex-col">
-                    <h2 className="text-md">User User</h2>
-                    <div className='flex gap-1 items-center'>
-                        <span className='border-black-500 border-1 rounded text-center bg-black-500 text-white w-fit px-1'>5.0</span>
-                        {/* 5 stars */}
-                        {[...Array(5)].map((i) => (
-                            <FaStar key={i} />
-                        ))}
-                    </div>
-                </section>
-                <Avatar
-                    isBordered
-                    as="button"
-                    className="transition-transform"
-                    color="secondary"
-                    name="Jason Hughes"
-                    size="sm"
-                    src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
-                />
-            </CardHeader>
-            <Divider />
             <CardBody>
                 <article className='flex flex-col'>
                     <div className='h-fit w-fit [&>*>*]:mr-6'>
@@ -50,6 +28,27 @@ export const TravelCard = () => {
                     </article>
                 </article>
             </CardBody>
+            <CardHeader className="flex gap-3 justify-between">
+                <section className="flex flex-col">
+                    <h2 className="text-md">User User</h2>
+                    <div className='flex gap-1 items-center'>
+                        <span className='border-black-500 border-1 rounded text-center bg-black-500 text-white w-fit px-1'>5.0</span>
+                        {/* 5 stars */}
+                        {[...Array(5)].map((i) => (
+                            <FaStar key={i} />
+                        ))}
+                    </div>
+                </section>
+                <Avatar
+                    isBordered
+                    as="button"
+                    className="transition-transform"
+                    color="secondary"
+                    name="Jason Hughes"
+                    size="sm"
+                    src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
+                />
+            </CardHeader>
             <Divider />
             <CardFooter className='items-center justify-center'>
                 <Button color="primary" variant="flat">
