@@ -26,6 +26,14 @@
     "type": "git",
     "url": "https://github.com/No-Country/c17-29-n-node.git"
   },
+  "contributors": [
+    "(in alphabetical order)",
+    "David Caycedo <dcdevtk@gmail.com>",
+    "Luis Correa <correaluisfernando00@gmail.com>",
+    "Agustin Gracia <agustingmaggi@gmail.com>",
+    "Pedro Molina <pedropemmolina@gmail.com>",
+    "Rogelio Romo <rogelioromo955@gmail.com>"
+  ],
   "main": " src/server.js",
   "engines": {
     "node": ">=18.x",
