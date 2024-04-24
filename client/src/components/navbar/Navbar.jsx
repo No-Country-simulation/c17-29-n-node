@@ -1,12 +1,12 @@
 "use client"
 import React from 'react'
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Input, DropdownItem, DropdownTrigger, Dropdown, DropdownMenu, Avatar, Image } from "@nextui-org/react";
-import { FaMagnifyingGlass } from "react-icons/fa6";
+import { FiSearch, FiPlusCircle } from "react-icons/fi";
 
 export const NavbarComponent = () => {
     return (
         <>
-            <Navbar className='w-full'>
+            <Navbar className='w-full mainTheme bg-main'>
                 <NavbarBrand className="flex mr-4">
                     <Image src='/logo.svg' alt='Logo' className='h-full select-none pointer-events-none' draggable="false" />
                     <section className="flex flex-col justify-center ml-2 hidden md:block">
@@ -45,19 +45,25 @@ export const NavbarComponent = () => {
                     </Dropdown>
                 </NavbarContent>
                 <NavbarContent as="div" className="items-center" justify="end">
-                    <Input
-                        classNames={{
-                            base: "max-w-full sm:max-w-[10rem] h-10",
-                            mainWrapper: "h-full",
-                            input: "text-small",
-                            inputWrapper: "h-full font-normal text-default-500 bg-default-400/20 dark:bg-default-500/20",
-                        }}
-                        placeholder="Type to search..."
-                        size="sm"
-                        startContent={<FaMagnifyingGlass size={18} className='select-none pointer-events-none' draggable="false" />}
-                        type="search"
-                    />
-
+                    <NavbarItem>
+                        <Input
+                            classNames={{
+                                base: "max-w-full sm:max-w-[10rem] h-10",
+                                mainWrapper: "h-full",
+                                input: "text-small",
+                                inputWrapper: "h-full font-normal text-default-500 bg-default-400/20 dark:bg-default-500/20",
+                            }}
+                            placeholder="Type to search..."
+                            size="sm"
+                            startContent={<FiSearch size={18} className='select-none pointer-events-none' draggable="false" />}
+                            type="search"
+                        />
+                        <span className="sr-only">Search</span>
+                    </NavbarItem>
+                    <NavbarItem className="flex items-center justify-center ml-4">
+                        <FiPlusCircle size={30} className='select-none pointer-events-none' draggable="false" />
+                        <span className="text-sm pl-2 hidden md:block">Publicar Viaje</span>
+                    </NavbarItem>
                 </NavbarContent>
             </Navbar>
         </>

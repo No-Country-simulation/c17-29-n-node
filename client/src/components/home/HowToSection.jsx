@@ -12,7 +12,7 @@ export const HowToSection = () => {
                 <li>Llamá directamente e informale los detalles de tu viaje</li>
                 <li>Viajá a tu destino</li>
             </ol>
-            <Image src="HowToSection.svg" alt=" " className='w-full md:w-1/2' />
+            <Image src="HowToSection.svg" alt=" " className='md:hidden' />
         </article>
     )
 }

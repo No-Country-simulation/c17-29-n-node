@@ -5,7 +5,7 @@ import { FaRegStar, FaStar, FaStarHalfStroke, FaLocationDot, FaCircle } from "re
 
 export const TravelCard = () => {
     return (
-        <Card className="px-5">
+        <Card className="px-5 col-span-6 md:col-span-2">
             <CardBody>
                 <article className='flex flex-col'>
                     <div className='h-fit w-fit [&>*>*]:mr-6'>

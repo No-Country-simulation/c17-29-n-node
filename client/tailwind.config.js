@@ -32,17 +32,20 @@ module.exports = {
     nextui({
       themes: {
         "mainTheme": {
-          extend: "dark",
+          extend: "light",
           colors: {
-            main: '#1A202C',
+            main: '#FFF3B0',
             secondary: '#2D3748',
             primary: '#3182CE',
             accent: '#63B3ED',
             danger: '#E53E3E',
             success: '#48BB78',
             warning: '#ED8936',
+            background: "#FCFCFC",
           },
         }
-      }
-    })],
+      },
+      defaultTheme: "light",
+    },
+    )],
 };

@@ -12,8 +12,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className="light [&_*]:text-black">
+      <body className={`${inter.className} mainTheme [&>*]:bg-background`}>
         <Providers>
           <Navbar />
           {children}
