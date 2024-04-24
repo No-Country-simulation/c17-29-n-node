@@ -11,6 +11,7 @@ import { travelRouters } from "../apis/travels/router/travel-router.js";
 import { uploader } from "../shared/multer/multer.js";
 import { userRoutes } from "../apis/users/router/user.router.js";
 import { ratingRouters } from "../apis/ratings/router/ratings.router.js";
+import swStats from "swagger-stats";
 
 export const serverRouter = express.Router();
 
@@ -27,6 +28,7 @@ serverRouter.post("/api/file", uploader.single("myFile"), (req, res) => {
   res.send("File uploaded successfully!");
 });
 
+serverRouter.use(swStats.getMiddleware({ swaggerSpec: controller }));
 serverRouter.use(favicon(join(root, "assets/ico/favicon.ico")));
 serverRouter.use("/api/auth", authRoutes);
 serverRouter.use("/api/cars", carRouter);
