@@ -68,6 +68,7 @@
     "rate-limit-mongo": "^2.3.2",
     "serve-favicon": "^2.5.0",
     "swagger-jsdoc": "^6.2.8",
+    "swagger-stats": "^0.99.7",
     "swagger-themes": "1.4.3",
     "swagger-ui-express": "5.0.0"
   }
