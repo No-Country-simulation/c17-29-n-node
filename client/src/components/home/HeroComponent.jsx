@@ -7,10 +7,10 @@ import { FormHero } from './FormHero';
 
 export const HeroComponent = () => {
     return (
-        <main className="h-screen w-full flex justify-center items-center px-5">
+        <main className="h-screen w-full flex flex-col justify-end items-center gap-24 px-5">
+            <h1 className='text-5xl text-center'>Mejor acompañado que viajar solo</h1>
             <Card shadow className="flex flex-col w-full md:w-fit">
-                <CardHeader>Hero Component</CardHeader>
-                <CardBody className='flex flex-row gap-3'>
+                <CardBody className='flex flex-row'>
                     <FormHero />
                 </CardBody>
             </Card>
