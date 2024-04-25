@@ -15,7 +15,7 @@ export const TravelCard = () => {
                             <h3>Neuquen</h3>
                         </div>
                         {/* black line */}
-                        <div className='w-1 h-6 bg-neutral-50 ml-1'></div>
+                        <div className='w-1 h-6 bg-black ml-1'></div>
                         <div className='flex flex-row w-full items-center justify-center'>
                             <FaLocationDot className='w-3 h-4' />
                             <h3>Santa Fe</h3>

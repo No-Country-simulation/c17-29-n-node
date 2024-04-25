@@ -4,7 +4,7 @@ import React from 'react'
 
 export const PopularRoutesCard = () => {
     return (
-        <Card shadow="sm" isPressable onPress={() => console.log("item pressed")}>
+        <Card shadow="sm" isPressable onPress={() => console.log("item pressed")} className='col-span-6 md:col-span-2'>
             <CardBody className="overflow-visible p-0">
                 <Image
                     shadow="sm"
