@@ -6,7 +6,6 @@ import logger from "morgan";
 import { config } from "dotenv";
 import { serverRouter } from "./routers/routers.js";
 import { connectDB } from "./shared/database/db.js";
-import { apiLimiter } from "./shared/rateLimit/rateLimit.js";
 import { corsConfig } from "./config/cors/cors.config.js";
 import { helmetConfig } from "./config/helmet/helmet.config.js";
 
