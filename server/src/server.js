@@ -27,7 +27,6 @@ server.use(cookieParser());
 server.use(logger("dev"));
 server.use(cors(corsConfig));
 server.use(helmet(helmetConfig));
-server.use(apiLimiter);
 server.use(serverRouter);
 
 connectDB();

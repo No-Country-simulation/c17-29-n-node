@@ -1,5 +1,5 @@
-@import ./variables.rest
-
+###
+@import projects.http
 ## Auth Route
 ----------------------------------------------
 *************************
@@ -8,7 +8,7 @@
 
 ### dev mode.
 # @name profileDev
-GET {{@vars.dev}}/auth/profile HTTP/1.1
+GET {{[dev2]}}/auth/profile HTTP/1.1
 apikey: {{@vars.apiKey}}
 Authorization: Bearer {{@vars.tokenDev}}
 

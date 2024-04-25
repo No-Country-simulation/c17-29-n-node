@@ -1,13 +1,14 @@
 $dotenv
 *************************
-# Variables
+# @name Variables
 *************************
+@export dev2 = http://{{hostdev}}:{{port}}/{{basepath}}
 
 @contentType = application/json
 @basepath = api
 
 *************************
-## Dev Host
+# @name DevHost
 *************************
 
 @hostdev = {{$dotenv HOST_DEV}}

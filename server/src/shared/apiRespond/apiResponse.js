@@ -17,6 +17,8 @@ export const apiResponse = ( res, code, data) => {
       return res.status(code).json({
         code: code,
         status: foundData.status,
+        limit: res.get("RateLimit-Limit"),
+        remaining: res.get("RateLimit-Remaining"),
         description: foundData.description,
         data: data || {message:"no data"},
       });
