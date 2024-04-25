@@ -8,7 +8,9 @@ export const PopularRoutes = () => {
             <div className='text-center'>
                 <h2 className='text-3xl'>Rutas Populares</h2>
             </div>
-            <article className="flex flex-col gap-3 h-fit justify-center items-center w-full px-5 py-8">
+            <article className="grid grid-cols-6 max-w-3xl gap-3 h-fit justify-center items-center w-full px-5 py-8">
+                <PopularRoutesCard />
+                <PopularRoutesCard />
                 <PopularRoutesCard />
                 <PopularRoutesCard />
                 <PopularRoutesCard />
