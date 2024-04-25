@@ -2,10 +2,17 @@
 import { Input, Button } from '@nextui-org/react'
 import React, { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import useValidation from '../hooks/useValidation'
+import { useValidationContext } from '@/context/ValidationContext'
 
 
 export const FormHero = () => {
+    // validations
+    const {
+        quantityValue, setQuantityValue, isQuantityInvalid,
+        originValue, setOriginValue, isOriginInvalid,
+        destinationValue, setDestinationValue, isDestinationInvalid
+    } = useValidationContext()
+
     const [inputInfo, setInputInfo] = useState("");
     const [searchInfo, setSearchInfo] = useState({
         origin: "",
@@ -27,17 +34,7 @@ export const FormHero = () => {
         router.push('/search')
     }
 
-    // validations
 
-    // validate age
-    const quantityRegex = /^([1-9]|10?)$/
-    // const ageValidation = handleValidation(ageRegex);
-    const [quantityValue, setQuantityValue, isQuantityInvalid] = useValidation(quantityRegex);
-
-    // validate location
-    const locationRegex = /^[a-zA-Z0-9\s,.'":;¡!?¿-]{4,35}$/
-    const [originValue, setOriginValue, isOriginInvalid] = useValidation(locationRegex);
-    const [destinationValue, setDestinationValue, isDestinationInvalid] = useValidation(locationRegex);
 
     const router = useRouter()
     return (

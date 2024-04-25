@@ -1,8 +1,16 @@
 import React, { useState } from 'react'
 import { Input, Button } from '@nextui-org/react'
 import useValidation from '../hooks/useValidation'
+import { useValidationContext } from '@/context/ValidationContext'
 
 export const FilterBar = () => {
+    // validation context
+    const {
+        quantityValue, setQuantityValue, isQuantityInvalid,
+        originValue, setOriginValue, isOriginInvalid,
+        destinationValue, setDestinationValue, isDestinationInvalid
+    } = useValidationContext()
+
     const [inputInfo, setInputInfo] = useState("");
     const [searchInfo, setSearchInfo] = useState({
         origin: "",
@@ -23,14 +31,7 @@ export const FilterBar = () => {
         e.preventDefault()
         router.push('/search')
     }
-    const quantityRegex = /^([1-9]|10?)$/
-    // const ageValidation = handleValidation(ageRegex);
-    const [quantityValue, setQuantityValue, isQuantityInvalid] = useValidation(quantityRegex);
 
-    // validate location
-    const locationRegex = /^[a-zA-Z0-9\s,.'":;¡!?¿-]{4,35}$/
-    const [originValue, setOriginValue, isOriginInvalid] = useValidation(locationRegex);
-    const [destinationValue, setDestinationValue, isDestinationInvalid] = useValidation(locationRegex);
 
     return (
         <form action="" className='flex flex-col md:flex-row gap-2 md:py-4 md:gap-8 [&>*>input]:px-8 w-full md:[&>*]:w-fit [&_*]:placeholder:text-lg md:[&_*]:placeholder:text-tiny' onSubmit={handleSubmit}>
