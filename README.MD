@@ -5,7 +5,12 @@
 - [-Rutas Doradas App ✨](#-rutas-doradas-app-)
   - [📔 Table Of Contents](#-table-of-contents)
   - [📋 About this project 🔝](#-about-this-project-)
-  - [🛠️ Run Locally 🔝](#️-run-locally-)
+  - [🎥Promotional Video 🔝](#promotional-video-)
+  - [⚙️ Technology Stack 🔝](#️-technology-stack-)
+    - [🎨 UX UI Design tech stack 🔝](#-ux-ui-design-tech-stack-)
+    - [🎆 Front-End 🔝](#-front-end-)
+    - [🧰 Back-End 🔝](#-back-end-)
+    - [🌠 Quality Assurance 🔝](#-quality-assurance-)
   - [🤵‍♂️Teams 🔝](#️teams-)
     - [👷‍♂️ Project Manager 🔝](#️-project-manager-)
     - [🧑‍🎨 UX-UI Teams 🔝](#-ux-ui-teams-)
@@ -15,53 +20,37 @@
   - [🗃️ Project 🔝](#️-project-)
     - [📚 Workspaces 🔝](#-workspaces-)
     - [📚 More Info 🔝](#-more-info-)
+  - [🛠️ Run Locally 🔝](#️-run-locally-)
     - [🎚️ Scripts 🔝](#️-scripts-)
       - [🧩 Client App 🔝](#-client-app-)
       - [🔧 Server App 🔝](#-server-app-)
-  - [🎥Promotional Video 🔝](#promotional-video-)
-  - [⚙️ Technology Stack 🔝](#️-technology-stack-)
-    - [🎨 UX UI Design tech stack 🔝](#-ux-ui-design-tech-stack-)
-    - [🎆 Front-End 🔝](#-front-end-)
-    - [🧰 Back-End 🔝](#-back-end-)
-    - [🌠 Quality Assurance 🔝](#-quality-assurance-)
 
 ## 📋 About this project [🔝](#-rutas-doradas-app-)
 
 This project involves the use of several technologies.
 
-## 🛠️ Run Locally [🔝](#-rutas-doradas-app-)
+## 🎥Promotional Video [🔝](#-table-of-contents)
 
-👉🏻 To use locally Ruta Dorada, you need to:
+promo video section
 
-Clone our repository
+## ⚙️ Technology Stack [🔝](#-rutas-doradas-app-)
 
-```sh
-git clone https://github.com/No-Country/c17-29-n-node.git
-```
+### 🎨 UX UI Design tech stack [🔝](#-rutas-doradas-app-)
 
-Move into client folder and install dependencies
+[![Figma Link](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white 'Figma Link')](https://www.figma.com/files/recents-and-sharing?fuid=1121329785337751851)
 
-```sh
-cd client | npm i
-```
+### 🎆 Front-End [🔝](#-rutas-doradas-app-)
 
-Run the project locally of the client
+[![React Link](  https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB 'React Link')](https://react.dev/) [![Next Link](https://img.shields.io/badge/next%20js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white 'Next Link')](https://nextjs.org/)
 
-```sh
-npm run dev
-```
+### 🧰 Back-End [🔝](#-rutas-doradas-app-)
 
-Move into serve folder and install dependencies
+[![Node Link](https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white 'Node Link')](https://nodejs.org/docs/latest-v20.x/api/index.html) [![Express Link]( https://img.shields.io/badge/Express%20js-000000?style=for-the-badge&logo=express&logoColor=white 'express Link')](https://expressjs.com/) [![Npm Link](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white 'Npm Link')](https://www.npmjs.com/) [![Postman Link](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white 'Postman Link')](https://www.postman.com/) [![Swagger Link](https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=Swagger&logoColor=black 'Swagger Link')](https://swagger.io/) [![MongoDB Link](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white 'MongoBD Link')](https://www.mongodb.com/atlas/database)
 
-```sh
-cd server | npm i
-```
+### 🌠 Quality Assurance [🔝](#-rutas-doradas-app-)
 
-Run the project locally of the server
+[![Selenium Link](https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=Selenium&logoColor=white 'Selenium Link')](https://www.selenium.dev/) [![Excell Link](https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white 'Excell Link')](https://www.office.com/) [![Word Link](https://img.shields.io/badge/Microsoft_Word-2B579A?style=for-the-badge&logo=microsoft-word&logoColor=white 'Word Link')](https://www.office.com/)
 
-```sh
-npm run dev
-```
 
 ## 🤵‍♂️Teams [🔝](#-rutas-doradas-app-)
 
@@ -118,6 +107,40 @@ The following table shows the project's workspaces.
 |:-: | :-: | :-: | :-:|
 |[![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com/No-Country/c17-29-n-node) | [![Vercel Link](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white 'Vercel Link')](https://vercel.com/) | [![MongoDB Link](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white 'MongoBD Link')](https://www.mongodb.com/atlas/database) | [![License Link](https://img.shields.io/badge/MIT-FF0000?style=for-the-badge&logo=amazoniam&logoColor=white 'MongoBD Link')](./LICENSE.MD)|
 
+## 🛠️ Run Locally [🔝](#-rutas-doradas-app-)
+
+👉🏻 To use locally Ruta Dorada, you need to:
+
+Clone our repository
+
+```sh
+git clone https://github.com/No-Country/c17-29-n-node.git
+```
+
+Move into client folder and install dependencies
+
+```sh
+cd client | npm i
+```
+
+Run the project locally of the client
+
+```sh
+npm run dev
+```
+
+Move into server folder and install dependencies
+
+```sh
+cd server | npm i
+```
+
+Run the project locally of the server
+
+```sh
+npm run dev
+```
+
 ### 🎚️ Scripts [🔝](#-rutas-doradas-app-)
 
 #### 🧩 Client App [🔝](#-rutas-doradas-app-)
@@ -130,27 +153,5 @@ The following table shows the project's workspaces.
 #### 🔧 Server App [🔝](#-rutas-doradas-app-)
 
 - `npm rum start`: Run the application development server with node
-- `npm run dev`: Run the application development server with node --wacth.
+- `npm run dev`: Run the application development server with node --watch.
 - `npm rum dev:start`: Run the application development server with nodemon.
-
-## 🎥Promotional Video [🔝](#-table-of-contents)
-
-promo video section
-
-## ⚙️ Technology Stack [🔝](#-rutas-doradas-app-)
-
-### 🎨 UX UI Design tech stack [🔝](#-rutas-doradas-app-)
-
-[![Figma Link](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white 'Figma Link')](https://www.figma.com/files/recents-and-sharing?fuid=1121329785337751851)
-
-### 🎆 Front-End [🔝](#-rutas-doradas-app-)
-
-[![React Link](  https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB 'React Link')](https://react.dev/) [![Next Link](https://img.shields.io/badge/next%20js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white 'Next Link')](https://nextjs.org/)
-
-### 🧰 Back-End [🔝](#-rutas-doradas-app-)
-
-[![Node Link](https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white 'Node Link')](https://nodejs.org/docs/latest-v20.x/api/index.html) [![Express Link]( https://img.shields.io/badge/Express%20js-000000?style=for-the-badge&logo=express&logoColor=white 'express Link')](https://expressjs.com/) [![Npm Link](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white 'Npm Link')](https://www.npmjs.com/) [![Postman Link](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white 'Postman Link')](https://www.postman.com/) [![Swagger Link](https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=Swagger&logoColor=black 'Swagger Link')](https://swagger.io/)
-
-### 🌠 Quality Assurance [🔝](#-rutas-doradas-app-)
-
-[![Excell Link](https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white 'Excell Link')](https://www.office.com/) [![Word Link](https://img.shields.io/badge/Microsoft_Word-2B579A?style=for-the-badge&logo=microsoft-word&logoColor=white 'Word Link')](https://www.office.com/)

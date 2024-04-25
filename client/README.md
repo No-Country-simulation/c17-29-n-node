@@ -1,38 +1,74 @@
-#
+# ![Logo](/server/src/assets/img/logo.png)-Rutas Doradas ✨
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app)
+## 📔 Table Of Contents
 
-## Getting Started
+- [-Rutas Doradas ✨](#-rutas-doradas-)
+  - [📔 Table Of Contents](#-table-of-contents)
+  - [👀 Motivation 🔝](#-motivation-)
+  - [⚙️ Technology Stack 🔝](#️-technology-stack-)
+  - [🤵‍♂️Teams 🔝](#️teams-)
+  - [🗃️ Project 🔝](#️-project-)
+    - [📚 Workspaces 🔝](#-workspaces-)
+    - [📚 More Info 🔝](#-more-info-)
+    - [🛠️ Run Locally 🔝](#️-run-locally-)
+    - [🎚️ Scripts 🔝](#️-scripts-)
 
-First, run the development server:
+## 👀 Motivation [🔝](#-rutas-doradas-)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+escroibir la motivacion
+
+## ⚙️ Technology Stack [🔝](#-rutas-doradas-)
+
+[![React Link](  https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB 'React Link')](https://react.dev/) [![Next Link](https://img.shields.io/badge/next%20js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white 'Next Link')](https://nextjs.org/)
+
+## 🤵‍♂️Teams [🔝](#-rutas-doradas-)
+
+| ![Avatar](https://avatars.githubusercontent.com/u/77463982?s=96&v=4) |
+|:-:|
+| **Adel Fetner** |
+|[![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com/AdelFetner)[![LinkedIn Link](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')](https://www.linkedin.com/in/adelfetner) |
+
+## 🗃️ Project [🔝](#-rutas-doradas-)
+
+### 📚 Workspaces [🔝](#-rutas-doradas-)
+
+The following table shows the project's workspaces.
+
+| Name | Path | Description | url |
+| :-: | :-: | :-: | :-: |
+| `🖼️ client` | /client    | application Front-End    |[Front-End](https://rutasdoradas.vercel.app/) |
+
+### 📚 More Info [🔝](#-rutas-doradas-)
+
+| Repository | Deploy |  License |
+|:-: | :-: | :-:|
+|[![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com/No-Country/c17-29-n-node) | [![Vercel Link](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white 'Vercel Link')](https://vercel.com/) | [![License Link](https://img.shields.io/badge/MIT-FF0000?style=for-the-badge&logo=amazoniam&logoColor=white 'MongoBD Link')](./LICENSE.MD)|
+
+### 🛠️ Run Locally [🔝](#-rutas-doradas-)
+
+👉🏻 To use locally Ruta Dorada, you need to:
+
+Clone our repository
+
+```sh
+git clone https://github.com/No-Country/c17-29-n-node.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Move into client folder and install dependencies
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```sh
+cd client | npm i
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Run the project locally of the client
 
-## Learn More
+```sh
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+### 🎚️ Scripts [🔝](#-rutas-doradas-)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- `npm run start`: Run the application preview production client with next.
+- `npm run dev`: Run the application development client with next.
+- `npm rum build`: Builds the production bundle for the web application.
+- `npm rum lint`: Linting errors in the codebase automatically.

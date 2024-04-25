@@ -1,7 +1,28 @@
 {
   "name": "client",
   "version": "0.1.0",
+  "author": "No-country-Back-c17-29-ft-node-react",
+  "homepage": "https://github.com/No-Country/c17-29-n-node",
+  "license": "MIT",
   "private": true,
+  "description": "Front End de la app Rutas Doradas",
+  "keywords": [
+    "Front-End",
+    "React",
+    "nextjs",
+    "next"
+  ],
+  "bugs": {
+    "url": "https://github.com/No-Country/c17-29-n-node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/No-Country/c17-29-n-node.git"
+  },
+  "contributors": [
+    "(in alphabetical order)",
+    "Bruno Aguilar <brunoaguilar266@gmail.com>"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",

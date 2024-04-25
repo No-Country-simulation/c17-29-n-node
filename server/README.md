@@ -1,8 +1,8 @@
-# ![Logo](/server/src/assets/img/logo.png)-Rutas Doradas Api ✨
+# ![Logo](/server/src/assets/img/logo.png)-Rutas Doradas ✨
 
 ## 📔 Table of Contents
 
-- [-Rutas Doradas Api ✨](#-rutas-doradas-api-)
+- [-Rutas Doradas ✨](#-rutas-doradas-)
   - [📔 Table of Contents](#-table-of-contents)
   - [👀 Motivation 🔝](#-motivation-)
   - [🗃️ Technology 🔝](#️-technology-)
@@ -11,6 +11,7 @@
     - [📚 Workspaces 🔝](#-workspaces-)
     - [📚 More Info 🔝](#-more-info-)
   - [🛠️ Requirements 🔝](#️-requirements-)
+    - [🎚️ Scripts 🔝](#️-scripts-)
   - [🩻 Progress Report 🔝](#-progress-report-)
     - [✨ Start Route 🔝](#-start-route-)
     - [⛔ Invalid Route 🔝](#-invalid-route-)
@@ -22,24 +23,24 @@
     - [🌟 Rating Routes 🔝](#-rating-routes-)
     - [🌲 Tree Folder 🔝](#-tree-folder-)
 
-## 👀 Motivation [🔝](#-rutas-doradas-api-)
+## 👀 Motivation [🔝](#-rutas-doradas-)
 
 The full REST API for 'Rutas Doradas' streamlines access to data on highlighted trips, enhancing trip planning for travelers seeking passengers. Its goal is to seamlessly integrate users with published trips, fostering innovation and collaboration among users. Through 'rutas Doradas' travelers are encouraged to share their trips and find passengers, as well as those looking to travel comfortably and safely."
 
-## 🗃️ Technology [🔝](#-rutas-doradas-api-)
+## 🗃️ Technology [🔝](#-rutas-doradas-)
 
-[![Node Link](https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white 'Node Link')](https://nodejs.org/docs/latest-v20.x/api/index.html) [![Express Link]( https://img.shields.io/badge/Express%20js-000000?style=for-the-badge&logo=express&logoColor=white 'express Link')](https://expressjs.com/) [![Npm Link](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white 'Npm Link')](https://www.npmjs.com/) [![Postman Link](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white 'Postman Link')](https://www.postman.com/) [![Swagger Link](https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=Swagger&logoColor=black 'Swagger Link')](https://swagger.io/)
+[![Node Link](https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white 'Node Link')](https://nodejs.org/docs/latest-v20.x/api/index.html) [![Express Link]( https://img.shields.io/badge/Express%20js-000000?style=for-the-badge&logo=express&logoColor=white 'express Link')](https://expressjs.com/) [![Npm Link](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white 'Npm Link')](https://www.npmjs.com/) [![Postman Link](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white 'Postman Link')](https://www.postman.com/) [![Swagger Link](https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=Swagger&logoColor=black 'Swagger Link')](https://swagger.io/) [![MongoDB Link](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white 'MongoBD Link')](https://www.mongodb.com/atlas/database)
 
-## 🧑‍💻 Developer Teams [🔝](#-rutas-doradas-api-)
+## 🧑‍💻 Developer Teams [🔝](#-rutas-doradas-)
 
 | ![Avatar](https://avatars.githubusercontent.com/u/69812733?s=96&v=4) |![Avatar](https://avatars.githubusercontent.com/u/65308067?s=96&v=4) | ![Avatar](https://avatars.githubusercontent.com/u/105892061?s=96&v=4) | ![Avatar](https://avatars.githubusercontent.com/u/83015542?s=96&v=4) | ![Avatar](https://avatars.githubusercontent.com/u/136535873?s=96&v=4) |
 |:-:|:-:|:-:|:-:|:-:|
 | **David Caycedo**  | **Rogelio Romo**  | **Pedro Molina**  | **Agustin Gracia**  | **Luis Correa** |
 |[![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com/David-Coach-Dev)[![LinkedIn Link](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')](https://www.linkedin.com/in/davidcoachdev/) | [![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')]( https://github.com/RogelioRomo)[![LinkedIn Link](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')]( https://www.linkedin.com/in/rogelio-romo-5712591b8/) | [![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com/pedroMolina-lab)[![LinkedIn Link](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')](https://www.linkedin.com/in/pedro-molina-pem) | [![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com/Agustingmaggi)[![LinkedIn Link](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')](https://www.linkedin.com/in/agustin-garcia-maggi/) | [![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com/luiscorrea7)[![LinkedIn Link](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')](https://www.linkedin.com) |
 
-## 🗃️ Project [🔝](#-table-of-contents)
+## 🗃️ Project [🔝](#-rutas-doradas-)
 
-### 📚 Workspaces [🔝](#-table-of-contents)
+### 📚 Workspaces [🔝](#-rutas-doradas-)
 
 The following table shows the project's workspaces.
 
@@ -47,13 +48,13 @@ The following table shows the project's workspaces.
 | :-: | :-: | :-: | :-: |
 | `🎛️ server` | /server    | application Back-End      |[Back-End](https://rutasdoradasback.vercel.app/api/docs) |
 
-### 📚 More Info [🔝](#-table-of-contents)
+### 📚 More Info [🔝](#-rutas-doradas-)
 
 | Repository | Deploy | Data Base | License |
 |:-: | :-: | :-: | :-:|
 |[![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com/No-Country/c17-29-n-node) | [![Vercel Link](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white 'Vercel Link')](https://vercel.com/) | [![MongoDB Link](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white 'MongoBD Link')](https://www.mongodb.com/atlas/database) | [![License Link](https://img.shields.io/badge/MIT-FF0000?style=for-the-badge&logo=amazoniam&logoColor=white 'MongoBD Link')](./LICENSE.MD)|
 
-## 🛠️ Requirements [🔝](#-rutas-doradas-api-)
+## 🛠️ Requirements [🔝](#-rutas-doradas-)
 
 👉🏻 To use locally Ruta Dorada, you need to:
 
@@ -75,9 +76,15 @@ Run the project locally of the server
 npm run dev
 ```
 
-## 🩻 Progress Report [🔝](#-rutas-doradas-api-)
+### 🎚️ Scripts [🔝](#-rutas-doradas-)
 
-### ✨ Start Route [🔝](#-rutas-doradas-api-)
+- `npm rum start`: Run the application development server with node
+- `npm run dev`: Run the application development server with node --wacth.
+- `npm rum dev:start`: Run the application development server with nodemon.
+
+## 🩻 Progress Report [🔝](#-rutas-doradas-)
+
+### ✨ Start Route [🔝](#-rutas-doradas-)
 
 | Method | Router | Endpoint | Documentation | Api Key | Token |
 | :-: | :-: | :-: | :-: | :-: | :-: |
@@ -314,4 +321,4 @@ npm run dev
  ┗ 📜vercel.json
 ```
 
-[🔝](#-table-of-contents)
+[🔝](#-rutas-doradas-)
