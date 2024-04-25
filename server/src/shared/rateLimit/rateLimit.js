@@ -1,5 +1,6 @@
 import { rateLimit } from "express-rate-limit";
 import { config } from "dotenv";
+import MongoStore from 'rate-limit-mongo';
 
 config();
 
@@ -36,4 +37,13 @@ export const apiLimiter = rateLimit({
       return true;
     }
   },
+  store: new MongoStore({
+    uri: process.env.URL_MONGO,
+    user: process.env.USER_MONGO,
+    password: process.env.PASS_MONGO,
+    // should match windowMs
+    expireTimeMs: 15 * 60 * 1000,
+    errorHandler: console.error.bind(null, "rate-limit-mongo"),
+    // see Configuration section for more options and details
+  }),
 });
