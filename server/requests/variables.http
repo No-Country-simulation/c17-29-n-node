@@ -1,0 +1,11 @@
+$dotenv
+# vars
+@contentType = application/json
+@basepath = api
+@hostdev = {{$dotenv HOST_DEV}}
+@port = {{$dotenv PORT}}
+@dev= http://{{hostdev}}:{{port}}/{{basepath}}
+@hostprod = {{$dotenv HOST_PROD_BACK}}
+@version = v1
+@prod = {{hostprod}}/{{basepath}}
+@apiKey = {{$dotenv API_KEY}}

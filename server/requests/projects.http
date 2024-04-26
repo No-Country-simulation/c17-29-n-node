@@ -1,69 +1,64 @@
 $dotenv
-*************************
-# @name Variables
-*************************
-@export dev2 = http://{{hostdev}}:{{port}}/{{basepath}}
+######################
+# vars
+######################
 
 @contentType = application/json
 @basepath = api
 
-*************************
-# @name DevHost
-*************************
+######################
+## DevHost
+######################
 
 @hostdev = {{$dotenv HOST_DEV}}
 @port = {{$dotenv PORT}}
-@dev = http://{{hostdev}}:{{port}}/{{basepath}}
+@dev= http://{{hostdev}}:{{port}}/{{basepath}}
 
-*************************
+######################
 ## Prod Host
-*************************
+######################
 
-@hostprod = {{$dotenv HOST_PROD}}
+@hostprod = {{$dotenv HOST_PROD_BACK}}
 @version = v1
 @prod = {{hostprod}}/{{basepath}}
 
-*************************
+######################
 ## Token dev mode.
-*************************
+######################
 
 @tokenDev = {{loginDev.response.body.data.token}}
 
-*************************
+######################
 ## Token prod mode.
-*************************
+######################
 
 @tokenProd = {{loginProd.response.body.data.token}}
 
-*************************
+######################
 ## Api Key.
-*************************
+######################
 
 @apiKey = {{$dotenv API_KEY}}
 
-*************************
+######################
 ## Id dev mode.
-*************************
+######################
 
 @idUserDev = {{getAllUsersDev.response.body.data.users[0]._id}}
 @idCarDev = {{getAllCarsDev.response.body.data.cars[0]._id}}
 @idTravelDev = {{getAllTravelsDev.response.body.data.travels[0]._id}}
 
-*************************
+######################
 ## Id prod mode.
-*************************
+######################
 
 @idUserProd = {{getAllUsersProd.response.body.data.users[1]._id}}
 @idCarProd = {{getAllCarsProd.response.body.data.cars[0]._id}}
 @idTravelProd = {{getAllTravelsProd.response.body.data.travels[0]._id}}
 
-*************************
-# Endpoints
-*************************
-
-----------------------------------------------
+######################
 ## Docs Route
-----------------------------------------------
+######################
 
 ### dev mode
 # @name docsDev
@@ -73,9 +68,9 @@ GET {{dev}}/docs
 # @name docsProd
 GET {{prod}}/docs HTTP/1.1
 
-----------------------------------------------
+######################
 ## Inavlod route
-----------------------------------------------
+######################
 
 ### dev mode
 # @name invalidDev
@@ -85,9 +80,9 @@ GET {{dev}}
 # @name invalidProd
 GET {{prod}} HTTP/1.1
 
-----------------------------------------------
+######################
 ## Start Route
-----------------------------------------------
+######################
 
 ### dev mode
 # @name startDev
@@ -97,13 +92,13 @@ GET {{dev}}/
 # @name startProd
 GET {{prod}}/ HTTP/1.1
 
-----------------------------------------------
+######################
 ## Auth Route
-----------------------------------------------
+######################
 
-*************************
+######################
 ## Profile
-*************************
+######################
 
 ### dev mode.
 # @name profileDev
@@ -117,9 +112,9 @@ GET {{prod}}/auth/profile HTTP/1.1
 apikey: {{apiKey}}
 Authorization: Bearer {{tokenProd}}
 
-*************************
+######################
 ## Register
-*************************
+######################
 
 ### dev mode.
 # @name registerDev
@@ -141,9 +136,9 @@ content-type: {{contentType}}
   "password": "1234"
 }
 ###
-*************************
+######################
 ## Login
-*************************
+######################
 
 ### dev mode
 # @name loginDev
@@ -165,13 +160,13 @@ content-type: {{contentType}}
   "password": "1234"
 }
 ###
-----------------------------------------------
+######################
 ## Users route
-----------------------------------------------
+######################
 
-*************************
+######################
 ## Create User
-*************************
+######################
 
 ### dev mode.
 # @name createUserDev
@@ -197,9 +192,9 @@ content-type: {{contentType}}
 }
 
 ###
-*************************
+######################
 ## Get All Users
-*************************
+######################
 
 ### dev mode.
 # @name getAllUsersDev
@@ -211,9 +206,9 @@ Authorization: Bearer {{tokenDev}}
 GET {{prod}}/users HTTP/1.1
 Authorization: Bearer {{tokenProd}}
 
-*************************
+######################
 ## Get By Id User
-*************************
+######################
 
 ### dev mode
 # @name getByIdUserDev
@@ -225,9 +220,9 @@ Authorization: Bearer {{tokenDev}}
 GET {{prod}}/users/{{idUserProd}} HTTP/1.1
 Authorization: Bearer {{tokenProd}}
 
-*************************
+######################
 ## Edit User
-*************************
+######################
 
 ### dev mode
 # @name editUserDev
@@ -251,9 +246,9 @@ content-type: {{contentType}}
   "name": "prod test"
 }
 ###
-*************************
+######################
 ## Delete User
-*************************
+######################
 
 ### dev mode
 # @name deleteUserDev
@@ -265,13 +260,13 @@ Authorization: Bearer {{tokenDev}}
 DELETE {{prod}}/users/{{idUserProd}} HTTP/1.1
 Authorization: Bearer {{tokenProd}}
 
-----------------------------------------------
+######################
 ## Car ruote
-----------------------------------------------
+######################
 
-*************************
+######################
 ## Create Car
-*************************
+######################
 
 ### dev mode.
 # @name createCarDev
@@ -304,9 +299,9 @@ content-type: {{contentType}}
 }
 
 ###
-*************************
+######################
 ## Get All Cars
-*************************
+######################
 ### dev mode.
 # @name getAllCarsDev
 GET {{dev}}/cars
@@ -317,9 +312,9 @@ Authorization: Bearer {{tokenDev}}
 GET {{prod}}/cars HTTP/1.1
 Authorization: Bearer {{tokenProd}}
 
-*************************
+######################
 ## Get By Id Car
-*************************
+######################
 
 ### dev mode
 
@@ -332,9 +327,9 @@ Authorization: Bearer {{tokenDev}}
 GET {{prod}}/cars/{{idCarProd}} HTTP/1.1
 Authorization: Bearer {{tokenProd}}
 
-*************************
+######################
 ## Edit Car
-*************************
+######################
 
 ### dev mode
 # @name editCarDev
@@ -358,9 +353,9 @@ content-type: {{contentType}}
   "seats": 3
 }
 ###
-*************************
+######################
 ## Delete Car
-*************************
+######################
 
 ### dev mode
 # @name deleteCarDev
@@ -372,13 +367,13 @@ Authorization: Bearer {{tokenDev}}
 DELETE {{prod}}/cars/{{idCarProd}} HTTP/1.1
 Authorization: Bearer {{tokenProd}}
 
-----------------------------------------------
+######################
 ## Tarvel Ruotes
-----------------------------------------------
+######################
 
-*************************
+######################
 ## Create Travel
-*************************
+######################
 
 ### dev mode.
 # @name createTravelDev
@@ -437,9 +432,9 @@ content-type: {{contentType}}
 }
 
 ###
-*************************
+######################
 ## Get All Travels
-*************************
+######################
 ### dev mode.
 # @name getAllTravelsDev
 GET {{dev}}/travels
@@ -450,9 +445,9 @@ Authorization: Bearer {{tokenDev}}
 GET {{prod}}/travels HTTP/1.1
 Authorization: Bearer {{tokenProd}}
 
-*************************
+######################
 ## Get By Id Travel
-*************************
+######################
 
 ### dev mode
 @:id= {{idTravelDev}}
@@ -465,9 +460,9 @@ Authorization: Bearer {{tokenDev}}
 GET {{prod}}/travels/{{idTravelProd}} HTTP/1.1
 Authorization: Bearer {{tokenProd}}
 
-*************************
+######################
 ## Edit Travel
-*************************
+######################
 
 ### dev mode
 # @name editTravelDev
@@ -493,9 +488,9 @@ content-type: {{contentType}}
   "tripDistance": 234,
 }
 ###
-*************************
+######################
 ## Delete Travel
-*************************
+######################
 
 ### dev mode
 # @name deleteTravelDev

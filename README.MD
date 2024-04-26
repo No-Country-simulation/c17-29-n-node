@@ -86,7 +86,7 @@ promo video section
 
 | ![Avatar](https://avatars.githubusercontent.com/u/92379528?s=96&v=4) |![Avatar](https://avatars.githubusercontent.com/u/87041074?s=96&v=4) |
 |:-:|:-:|
-| **Luciana Calvi** | **Juan Cris** |
+| **Luciana Calvi** | **Juan Cristancho** |
 |[![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com)[![LinkedIn Link](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')](https://www.linkedin.com/in/luciana-belén-calvi-520111214) | [![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com/JuanCris09)[![LinkedIn Link](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')]( https://www.linkedin.com/in/jp-cristancho/) |
 
 ## 🗃️ Project [🔝](#-rutas-doradas-app-)

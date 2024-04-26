@@ -1,6 +1,6 @@
+import MongoStore from "rate-limit-mongo";
 import { rateLimit } from "express-rate-limit";
 import { config } from "dotenv";
-import MongoStore from "rate-limit-mongo";
 import { apiResponse } from "../apiRespond/apiResponse.js";
 
 config();
@@ -10,15 +10,15 @@ const port = process.env.PORT || 3000;
 const hostDev = process.env.HOST_DEV || "localhost";
 
 const allowedOrigins = [
-  //`${hostDev}:${port}`,
-  //`http://${hostDev}:${port}`,
+  `${hostDev}:${port}`,
+  `http://${hostDev}:${port}`,
   `127.0.0.1:${port}`,
   `http://127.0.0.1:${port}`,
 ];
 
 export const apiLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  limit: 100, // 10 requests per IP
+  limit: 500, // 10 requests per IP
   message: async (req, res) => {
     apiResponse(res, 429, {
       error: "Too many requests from this IP, please try again later.",
@@ -30,9 +30,7 @@ export const apiLimiter = rateLimit({
     console.log("ip req->", req.ip);
     if (req.ip) {
       const separador = env === "development" ? ":" : ".";
-      console.log('separador ->', separador)
       const ip = req.ip.toString().split(`${separador}`)
-      console.log('ip array ->', ip)
       const key = ip[ip.length - 1];
       console.log("key->", key);
       return key;
