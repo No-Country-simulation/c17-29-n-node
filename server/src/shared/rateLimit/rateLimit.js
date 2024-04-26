@@ -9,7 +9,12 @@ const env = process.env.NODE_ENV || "development";
 const port = process.env.PORT || 3000;
 const hostDev = process.env.HOST_DEV || "localhost";
 
-const allowedOrigins = [`127.0.0.1:${port}`, `http://127.0.0.1:${port}`];
+const allowedOrigins = [
+  //`${hostDev}:${port}`,
+  //`http://${hostDev}:${port}`,
+  `127.0.0.1:${port}`,
+  `http://127.0.0.1:${port}`,
+];
 
 export const apiLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
@@ -22,9 +27,10 @@ export const apiLimiter = rateLimit({
   statusCode: 429,
   standardHeaders: true,
   keyGenerator: async (req) => {
-    console.log('ip req->', req.ip);
+    console.log("ip req->", req.ip);
     if (req.ip) {
-      const ip = req.ip.toString().split(":")[req.ip.length - 1];
+      const separador = env === "development" ? ":" : ".";
+      const ip = req.ip.toString().split(separador)[req.ip.length - 1];
       console.log("IP->", ip);
       return ip;
     }
