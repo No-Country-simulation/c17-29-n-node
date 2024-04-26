@@ -92,19 +92,19 @@ npm run dev
 | :-: | :-: | :-: | :-: | :-: | :-: |
 | Get | /api | ✔️ | ✔️ | ❌ | ❌ |
 
-### ⛔ Invalid Route [🔝](#-rutas-doradas-api-)
+### ⛔ Invalid Route [🔝](#-rutas-doradas-)
 
 | Method | Router | Endpoint | Documentation | Api Key | Token |
 | :-: | :-: | :-: | :-: | :-: | :-: |
 | Get | /* |✔️ | ✔️ | ❌ | ❌ |
 
-### 📑 Doc Route [🔝](#-rutas-doradas-api-)
+### 📑 Doc Route [🔝](#-rutas-doradas-)
 
 | Method | Router | Endpoint | Documentation | Api Key | Token |
 | :-: | :-: | :-: | :-: | :-: | :-: |
 | Get | /api/docs | ✔️ | ✔️ | ❌ | ❌ |
 
-### 🔐 Authorization Routes [🔝](#-rutas-doradas-api-)
+### 🔐 Authorization Routes [🔝](#-rutas-doradas-)
 
 | Method | Router | Endpoint | Documentation | Api Key | Token |
 | :-: | :-: | :-: | :-: | :-: | :-: |
@@ -112,7 +112,7 @@ npm run dev
 | Post | /auth/register | ✔️ | ✔️ | ✔️ | ❌ |
 | Post | /auth/login | ✔️ | ✔️ | ✔️ | ❌ |
 
-### 🙎‍♂️User Routes [🔝](#-rutas-doradas-api-)
+### 🙎‍♂️User Routes [🔝](#-rutas-doradas-)
 
 | Method | Router | Endpoint | Documentation | Api Key | Token |
 | :-: | :-: | :-: | :-: | :-: | :-: |
@@ -122,7 +122,7 @@ npm run dev
 | Put | /users/:id | ✔️ | ✔️ | ✔️ | ✔️ |
 | Delete | /users/:id | ✔️ | ✔️ | ✔️ | ✔️ |
 
-### 🚘 Car Routes [🔝](#-rutas-doradas-api-)
+### 🚘 Car Routes [🔝](#-rutas-doradas-)
 
 | Method | Router | Endpoint | Documentation | Api Key | Token |
 | :-: | :-: | :-: | :-: | :-: | :-: |
@@ -132,7 +132,7 @@ npm run dev
 | Put | /cars/:id | ✔️ | ✔️ | ✔️ | ✔️ |
 | Delete | /cars/:id | ✔️ | ✔️ | ✔️ | ✔️ |
 
-### 🗺️ Travel Routes [🔝](#-rutas-doradas-api-)
+### 🗺️ Travel Routes [🔝](#-rutas-doradas-)
 
 | Method | Router | Endpoint | Documentation | Api Key | Token |
 | :-: | :-: | :-: | :-: | :-: | :-: |
@@ -142,7 +142,7 @@ npm run dev
 | Put | /travels/:id | ✔️ | ✔️ | ✔️ | ✔️ |
 | Delete | /rs/:id | ✔️ | ✔️ | ✔️ | ✔️ |
 
-### 🌟 Rating Routes [🔝](#-rutas-doradas-api-)
+### 🌟 Rating Routes [🔝](#-rutas-doradas-)
 
 | Method | Router | Endpoint | Documentation | Api Key | Token |
 | :-: | :-: | :-: | :-: | :-: | :-: |
@@ -301,7 +301,7 @@ npm run dev
  ┃ ┃ ┃ ┣ 📜apiResponse.doc.js
  ┃ ┃ ┃ ┣ 📜baseEntity.doc.js
  ┃ ┃ ┃ ┣ 📜body.doc.js
- ┃ ┃ ┃ ┣ 📜parametros.doc.js
+ ┃ ┃ ┃ ┣ 📜parámetros.doc.js
  ┃ ┃ ┃ ┗ 📜security.doc.js
  ┃ ┃ ┣ 📂jwt
  ┃ ┃ ┃ ┗ 📜jwtExtractor.js
