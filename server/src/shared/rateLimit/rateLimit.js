@@ -22,6 +22,7 @@ export const apiLimiter = rateLimit({
   statusCode: 429,
   standardHeaders: true,
   keyGenerator: async (req) => {
+    console.log('ip req->', req.ip);
     if (req.ip) {
       const ip = req.ip.toString().split(":")[req.ip.length - 1];
       console.log("IP->", ip);
