@@ -21,10 +21,10 @@ const secretHost = env?.trim() === "production"
 export const isApiKey = (req, res, next) => {
   try {
     const { apikey, host } = req.headers;
-    if (!apikey) throw new Error("400 : ☠️ Check authorization");
-    if (!host) throw new Error("☠️ Check authorization");
-    if (apikey !== secretoKey) throw new Error(" ❌ Api Key not valid");
-    if (!secretHost.includes(host)) throw new Error(" ✖️ Host not valid");
+    if (!apikey) throw new Error("400:☠️ Check Api Key");
+    if (!host) throw new Error("400 :☠️ Check Host");
+    if (apikey !== secretoKey) throw new Error("401:❌ Api Key not valid");
+    if (!secretHost.includes(host)) throw new Error("402:✖️ Host not valid");
     next();
   } catch (error) {
     console.log("Error code->", +(error.message.split(":")[0]));
