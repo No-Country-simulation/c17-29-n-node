@@ -1,5 +1,7 @@
 # ![Logo](/server/src/assets/img/logo.png)-Rutas Doradas App ✨
 
+![banner](/server/src/assets/img/banner.png)
+
 ## 📔 Table Of Contents
 
 - [-Rutas Doradas App ✨](#-rutas-doradas-app-)
