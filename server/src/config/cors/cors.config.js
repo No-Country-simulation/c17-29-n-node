@@ -9,7 +9,9 @@ const hostProdFront = process.env.HOST_PROD_FRONT || "rutasdoradas.vercel.app";
 
 
 const whitelist = [
+  `${hostDev}:${port}`,
   `http://${hostDev}:${port}`,
+  `127.0.0.1:${port}`,
   `http://127.0.0.1:${port}`,
   `https://${hostProdFront}`,
   `https://${hostProdBack}`
