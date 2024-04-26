@@ -14,10 +14,10 @@ const expToken = process.env.JWT_EXPIRATION;
 
 export const register = async (req, res) => {
   try {
-    const { name, email, password, age, phoneNumber } = req.body;
+    const { avatar ,name, email, password, age, phoneNumber } = req.body;
     if (!email || !password) throw new Error("💀 Credentials not found");
     const hashedPassword = await createHash(password);
-    const user = { name, email, password: hashedPassword, age, phoneNumber };
+    const user = { avatar, name, email, password: hashedPassword, age, phoneNumber };
     const result = await createUserService(user);
     if (!result) throw new Error("registration was made");
     apiResponse(res, 201,{ message: "User resgistered"});

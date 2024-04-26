@@ -2,7 +2,7 @@ import { Schema, model } from 'mongoose';
 
 const userSchema = new Schema({
   avatar: {
-    type: String
+    type: String,
   },
   name: {
     type: String,
