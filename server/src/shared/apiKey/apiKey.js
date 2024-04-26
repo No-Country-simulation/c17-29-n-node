@@ -12,8 +12,8 @@ const hostProdBack = process.env.HOST_PROD_BACK || "rutasdoradasback.vercel.app"
 const hostProdFront = process.env.HOST_PROD_FRONT || "rutasdoradas.vercel.app"
 
 const servesHots = [
-  `https://${hostProdFront}`,
-  `https://${hostProdBack}`,
+  `${hostProdFront}`,
+  `${hostProdBack}`,
   `${hostDev}:${port}`,
 ];
 
@@ -27,7 +27,7 @@ export const isApiKey = (req, res, next) => {
     if (!apikey) throw new Error("400:☠️ Check Api Key");
     if (!host) throw new Error("400 :☠️ Check Host");
     if (apikey !== secretoKey) throw new Error("401:❌ Api Key not valid");
-    if (!secretHost.includes(host)) throw new Error("402:✖️ Host not valid");
+    if (!secretHost.includes(host)) throw new Error(`402:✖️ Host not valid -> ${host}`);
     next();
   } catch (error) {
     console.log("Error code->", +(error.message.split(":")[0]));
