@@ -10,7 +10,7 @@ import { FilterCard } from '../widgets/FilterCard'
 export const BuscarMain = () => {
     const getAllTravels = async () => {
         try {
-            const res = await axios.get('https://rutasdoradasback.vercel.app/api/travels/', {
+            const res = await axios.get('https://rutasdoradasback.vercel.app/api/travels', {
                 headers: {
                     'Content-Type': 'application/json',
                     "apikey": 'R20D24AK000001'
