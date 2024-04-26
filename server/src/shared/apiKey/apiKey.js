@@ -9,18 +9,21 @@ const env = process.env.NODE_ENV || "development";
 const port = process.env.PORT || 3000;
 const hostDev = process.env.HOST_DEV || "localhost";
 const hostProdBack = process.env.HOST_PROD_BACK || "rutasdoradasback.vercel.app"
-const hostProdFront = process.env.HOST_PROD_FRONT || "rutasdoradasback.vercel.app"
+const hostProdFront = process.env.HOST_PROD_FRONT || "rutasdoradas.vercel.app"
 
 const servesHots = [
   `https://${hostProdFront}`,
   `https://${hostProdBack}`,
+  `${hostDev}:${port}`,
 ];
+
 const secretHost = env?.trim() === "production"
   ? servesHots
   : `${hostDev}:${port}`;
 export const isApiKey = (req, res, next) => {
   try {
     const { apikey, host } = req.headers;
+    console.log('object->', { apikey, host });
     if (!apikey) throw new Error("400:☠️ Check Api Key");
     if (!host) throw new Error("400 :☠️ Check Host");
     if (apikey !== secretoKey) throw new Error("401:❌ Api Key not valid");
