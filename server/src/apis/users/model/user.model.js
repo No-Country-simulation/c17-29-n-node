@@ -1,6 +1,9 @@
 import { Schema, model } from 'mongoose';
 
 const userSchema = new Schema({
+  avatar: {
+    type: String
+  },
   name: {
     type: String,
     //required: [true, 'this field is required']
@@ -14,24 +17,20 @@ const userSchema = new Schema({
     type: String,
     required: true
   },
-
   age: {
     type: Number,
     //required: [true, 'this field is required']
   },
-
   phoneNumber: {
     type: Number,
     //required: [true, 'this field is required']
   },
-
   role: {
     type: String,
     //required: [true, "this field is required"],
     enum: ["user", "admin"],
     default: "user"
   },
-
   isActive: {
     type: Boolean,
     default: false
