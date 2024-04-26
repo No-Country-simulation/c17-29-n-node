@@ -4,6 +4,7 @@ import { apiResponse } from "../apiRespond/apiResponse.js";
 config();
 
 const secretoKey = process.env.API_KEY;
+
 const env = process.env.NODE_ENV || "development";
 const port = process.env.PORT || 3000;
 const hostDev = process.env.HOST_DEV || "localhost";

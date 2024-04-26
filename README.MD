@@ -29,7 +29,8 @@
 
 ## 📋 About this project [🔝](#-rutas-doradas-app-)
 
-This project involves the use of several technologies.
+Rutas Doradas is a network where people share car trips from one city to another, covering medium and long distances, splitting costs fairly among all travelers or contributing under some agreement.
+Users themselves create trips according to where they need to go and when they are available to travel. Other users can request to join the trip with the driver based on the travel proposal that has been published.
 
 ## 🎥Promotional Video [🔝](#-table-of-contents)
 
