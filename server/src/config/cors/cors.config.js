@@ -21,6 +21,8 @@ const contentTypes = [
   "Accept-Version",
   "Accept",
   "Access-Control-Allow-Origin",
+  "Access-Control-Allow-Headers",
+  "Access-Control-Request-Headers",
   "application/atom+xml",
   "application/graphql",
   "application/json; charset=utf-8",
