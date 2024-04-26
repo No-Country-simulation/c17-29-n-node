@@ -1,12 +1,10 @@
-"use client"
-import { Input, Button } from '@nextui-org/react'
 import React, { useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { Input, Button } from '@nextui-org/react'
+import useValidation from '../hooks/useValidation'
 import { useValidationContext } from '@/context/ValidationContext'
 
-
-export const FormHero = () => {
-    // validations
+export const FilterBar = () => {
+    // validation context
     const {
         quantityValue, setQuantityValue, isQuantityInvalid,
         originValue, setOriginValue, isOriginInvalid,
@@ -35,10 +33,8 @@ export const FormHero = () => {
     }
 
 
-
-    const router = useRouter()
     return (
-        <form action="" className='flex flex-col md:flex-row gap-2 md:py-4 md:gap-8 [&>*>input]:px-8 w-full md:[&>*]:w-fit [&_*]:placeholder:text-lg md:[&_*]:placeholder:text-tiny' onSubmit={handleSubmit}>
+        <form action="" className='flex flex-col md:flex-row gap-2 md:py-4 md:gap-8 [&>*>input]:px-8 w-full md:[&>*]:w-fit [&_*]:placeholder:text-lg md:[&_*]:placeholder:text-tiny px-4' onSubmit={handleSubmit}>
             <Input variant="underlined" type="text" label="Origen" placeholder='Rosario, Santa Fe' isRequired onChange={handleInputChange} name="origin" locationValidation={isOriginInvalid} color={isOriginInvalid ? "danger" : "success"} errorMessage={isOriginInvalid && "Entre 4 y 35 carácteres"} onValueChange={setOriginValue} isInvalid={isOriginInvalid} />
             <Input variant="underlined" type="text" label='Destino' placeholder='La Cumbrecita, Córdoba' isRequired onChange={handleInputChange} name="destination" locationValidation={isDestinationInvalid} color={isDestinationInvalid ? "danger" : "success"} errorMessage={isDestinationInvalid && "Entre 4 y 35 carácteres"} onValueChange={setDestinationValue} isInvalid={isDestinationInvalid} />
             <Input variant="underlined" type="date" label='Partida' isRequired name='departure' />
