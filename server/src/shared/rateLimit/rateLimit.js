@@ -30,7 +30,7 @@ export const apiLimiter = rateLimit({
     console.log("ip req->", req.ip);
     if (req.ip) {
       const separador = env === "development" ? ":" : ".";
-      const ip = req.ip.toString().split(separador)[req.ip.length - 1];
+      const ip = req.ip.toString().split(`${ separador }`)[req.ip.length - 1];
       console.log("IP->", ip);
       return ip;
     }
