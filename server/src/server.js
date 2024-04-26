@@ -24,8 +24,8 @@ server.use(express.json());
 server.use(express.urlencoded({ extends: true }));
 server.use(cookieParser());
 server.use(logger("dev"));
-server.use(cors(corsConfig));
-server.use(helmet(helmetConfig));
+server.use(cors());
+server.use(helmet());
 server.use(serverRouter);
 
 connectDB();
