@@ -5,8 +5,8 @@ import { isApiKey } from "../../../shared/apiKey/apiKey.js";
 
 export const userRoutes = Router();
 
-userRoutes.get("/", isApiKey, validateJWT, getUsers);
-userRoutes.get("/:id", isApiKey, validateJWT, getUserById);
+userRoutes.get("/", isApiKey, getUsers);
+userRoutes.get("/:id", isApiKey, getUserById);
 userRoutes.post("/", isApiKey, validateJWT, postUser);
 userRoutes.put("/:id", isApiKey, validateJWT, editUser);
 userRoutes.delete("/:id", isApiKey, validateJWT, deleteUser);

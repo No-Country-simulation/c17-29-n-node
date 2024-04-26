@@ -8,8 +8,8 @@ const { getCars, getCarById, addCar, updateCar, deleteCar } =
   new CarController();
 
 carRouter
-  .get("/", isApiKey, validateJWT, getCars)
-  .get("/:cid", isApiKey, validateJWT, getCarById)
+  .get("/", isApiKey, getCars)
+  .get("/:cid", isApiKey, getCarById)
   .post("/", isApiKey, validateJWT, addCar)
   .put("/:cid", isApiKey, validateJWT, updateCar)
   .delete("/:cid", isApiKey, validateJWT, deleteCar);
