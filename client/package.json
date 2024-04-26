@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json.schemastore.org/package",
   "name": "client",
   "version": "0.1.0",
   "author": "No-country-Back-c17-29-ft-node-react",

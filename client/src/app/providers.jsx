@@ -7,7 +7,7 @@ import React from "react";
 export const Providers = ({ children }) => {
     return (
         <NextUIProvider>
-            <ThemeProvider attribute="class" enableSystem={true}>
+            <ThemeProvider attribute="class" forcedTheme={"light"} theme="light">
                 {children}
             </ThemeProvider>
         </NextUIProvider>

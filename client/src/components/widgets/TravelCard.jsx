@@ -5,7 +5,29 @@ import { FaRegStar, FaStar, FaStarHalfStroke, FaLocationDot, FaCircle } from "re
 
 export const TravelCard = () => {
     return (
-        <Card className="px-5">
+        <Card className="px-5 col-span-6 md:col-span-2">
+            <CardBody>
+                <article className='flex flex-col'>
+                    <div className='h-fit w-fit [&>*>*]:mr-6'>
+                        {/* black dot */}
+                        <div className='flex flex-row w-full items-center justify-center'>
+                            <FaCircle className='w-3 h-3' />
+                            <h3>Neuquen</h3>
+                        </div>
+                        {/* black line */}
+                        <div className='w-1 h-6 bg-black ml-1'></div>
+                        <div className='flex flex-row w-full items-center justify-center'>
+                            <FaLocationDot className='w-3 h-4' />
+                            <h3>Santa Fe</h3>
+                        </div>
+                    </div>
+                    <article>
+                        <span>Asientos libres</span>
+                        <p>00/00/2024 | 00:00pm</p>
+                        <Chip radius="sm">Ida y vuelta</Chip>
+                    </article>
+                </article>
+            </CardBody>
             <CardHeader className="flex gap-3 justify-between">
                 <section className="flex flex-col">
                     <h2 className="text-md">User User</h2>
@@ -27,29 +49,6 @@ export const TravelCard = () => {
                     src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
                 />
             </CardHeader>
-            <Divider />
-            <CardBody>
-                <article className='flex flex-col'>
-                    <div className='h-fit w-fit [&>*>*]:mr-6'>
-                        {/* black dot */}
-                        <div className='flex flex-row w-full items-center justify-center'>
-                            <FaCircle className='w-3 h-3' />
-                            <h3>Neuquen</h3>
-                        </div>
-                        {/* black line */}
-                        <div className='w-1 h-6 bg-neutral-50 ml-1'></div>
-                        <div className='flex flex-row w-full items-center justify-center'>
-                            <FaLocationDot className='w-3 h-4' />
-                            <h3>Santa Fe</h3>
-                        </div>
-                    </div>
-                    <article>
-                        <span>Asientos libres</span>
-                        <p>00/00/2024 | 00:00pm</p>
-                        <Chip radius="sm">Ida y vuelta</Chip>
-                    </article>
-                </article>
-            </CardBody>
             <Divider />
             <CardFooter className='items-center justify-center'>
                 <Button color="primary" variant="flat">

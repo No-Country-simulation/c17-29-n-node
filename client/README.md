@@ -1,6 +1,6 @@
-# ![Logo](/server/src/assets/img/logo.png)-Rutas Doradas ✨
+# ![Logo](./public/logo.svg)-Rutas Doradas ✨
 
-![banner](/server/src/assets/img/banner.png)
+![banner](./public/Banner.png)
 
 ## 📔 Table Of Contents
 
