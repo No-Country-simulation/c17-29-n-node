@@ -1,14 +1,16 @@
 "use client"
 import React from 'react'
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Input, DropdownItem, DropdownTrigger, Dropdown, DropdownMenu, Avatar, Image } from "@nextui-org/react";
+import { useRouter } from 'next/navigation'
 import { FiSearch, FiPlusCircle } from "react-icons/fi";
 
 export const NavbarComponent = () => {
+    const router = useRouter()
     return (
         <>
             <Navbar className='w-full mainTheme bg-main'>
                 <NavbarBrand className="flex mr-4">
-                    <Image src='/logo.svg' alt='Logo' className='h-full select-none pointer-events-none' draggable="false" />
+                    <Image src='/logo.svg' alt='Logo' className='h-full select-none pointer-events-none' draggable="false" onClick={(() => router.push("/"))} />
                     <section className="flex flex-col justify-center ml-2 hidden md:block">
                         <span className="text-xs">Viajá acompañado</span>
                         <h2 className="text-xl font-semibold">Rutas Doradas</h2>
