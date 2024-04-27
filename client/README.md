@@ -27,7 +27,7 @@ escroibir la motivacion
 
 | ![Avatar](https://avatars.githubusercontent.com/u/77463982?s=96&v=4) |
 |:-:|
-| **Adel Fetner** |
+| **Bruno Aguilar** |
 |[![Github Link](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white 'Github Link')](https://github.com/AdelFetner)[![LinkedIn Link](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white 'LinkedIn Link')](https://www.linkedin.com/in/adelfetner) |
 
 ## 🗃️ Project [🔝](#-rutas-doradas-)
