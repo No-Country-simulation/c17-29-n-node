@@ -31,7 +31,7 @@ export const FormHero = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        router.push('/search')
+        router.push('/busqueda')
     }
 
 
